@@ -1,39 +1,46 @@
 <template>
-  <header class="navbar" data-aos="fade-down">
+  <nav :class="['navbar', { open: isOpen, 'navbar-home': isHome }]" >
+    <!-- LOGO -->
     <div class="logo">
-      <router-link to="/"> Paginas Web </router-link>
-    </div>
+  <router-link to="/" class="logo-link">
+    <img src="/logo.png" alt="Logo CV Páginas Web" class="logo-img" />
+  </router-link>
+</div>
 
+
+    <!-- BOTÓN HAMBURGUESA -->
     <div class="hamburger" @click="toggleMenu">
-      <div :class="{ 'bar': true, 'open': isOpen }"></div>
-      <div :class="{ 'bar': true, 'open': isOpen }"></div>
-      <div :class="{ 'bar': true, 'open': isOpen }"></div>
+      <div :class="{ bar: true, open: isOpen }"></div>
+      <div :class="{ bar: true, open: isOpen }"></div>
+      <div :class="{ bar: true, open: isOpen }"></div>
     </div>
 
-       <div :class="['nav-links', { open: isOpen }]">
-    <nav :class="['nav-links', { 'open': isOpen }]" data-aos="fade-left">
+    <!-- ENLACES -->
+    <div :class="['nav-links', { open: isOpen }]">
       <router-link to="/" class="nav-item" @click="closeMenu">Inicio</router-link>
       <router-link to="/services" class="nav-item" @click="closeMenu">Servicios</router-link>
       <router-link to="/muestras" class="nav-item" @click="closeMenu">Muestras</router-link>
       <router-link to="/contact" class="nav-item" @click="closeMenu">Contacto</router-link>
-      <router-link to="/pricing"  class="nav-item" @click="closeMenu">Precios</router-link>
-
-    </nav>
+      <router-link to="/pricing" class="nav-item" @click="closeMenu">Precios</router-link>
     </div>
-    
+
+    <!-- SELECTOR DE IDIOMA -->
     <select v-model="selectedLang" @change="changeLang" class="lang-switch">
-      <option value="es"> ES</option>
-      <option value="ca"> CA</option>
+      <option value="es">ES</option>
+      <option value="ca">CA</option>
     </select>
-  </header>
-  
+  </nav>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import { useRoute } from 'vue-router'
  import { useI18n } from 'vue-i18n'
 
 const isOpen = ref(false)
+const route = useRoute()
+const isHome = computed(() => route.path === '/')
+
 
 function toggleMenu() {
   isOpen.value = !isOpen.value
@@ -54,13 +61,26 @@ function switchLang() {
 
 <style scoped>
 .navbar {
-  background-color: white;
+ display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(18px);
+  padding: 1.5rem 2rem;
+  gap: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: rgb(134, 136, 138);
   color: black;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .navbar-home {
-  background-color: black;
+  background-color: rgb(12, 12, 12);
   color: white;
   box-shadow: none;
 }
@@ -71,6 +91,8 @@ function switchLang() {
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
+  color: #1d1f1f;
+  gap: 1rem;
 }
 
 /* Enlaces por defecto (blanco o negro según fondo) */
@@ -87,16 +109,37 @@ function switchLang() {
 .nav-item:hover {
   color: #00b8b8;
 }
-
-/* Logo */
-.logo a {
-  font-weight: 700;
-  font-size: 1.4rem;
-  text-decoration: none;
-  color: inherit;
+.navbar-home .nav-item {
+  color: rgb(245, 241, 241);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 1rem;
+  
 }
 
-/* Botón hamburguesa */
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  width: 48px; 
+  height: 48px;
+  object-fit: contain;
+  border-radius: 50%; 
+ 
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
+}
+
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -119,36 +162,24 @@ function switchLang() {
   padding: 1rem 1rem;
   z-index: 100;
   box-shadow: 5px 2px 10px rgba(40, 141, 172, 0.3);
-  gap:1.1rem;
+  gap: 1.1rem;
+  color:#1d1f1f;
 }
 
 .logo a {
-color: #dbe4e7;
+ color: #5c5959;
   text-shadow: 2px 2px 8px rgb(0, 0, 0);
   font-size: 2rem;
   font-weight: 500;
   text-decoration: none;
-  text-shadow: 2px 2px 8px rgba(o, 0, 0,6);
-}
-
-.nav-links {
-     background: linear-gradient(45deg, #ffffff, #f6f7f8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease;
+   text-shadow: 2px 2px 8px rgb(37, 74, 95);
  
-    
-  display: flex;
-  gap: 2rem;
-margin-left: 0;
-  a:hover {
-  border-bottom: 2px solid #f4f8f8;
 }
 
-}
+
 
 .nav-item {
-  color: #ffffff;
+  color: #5c5959;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -163,10 +194,10 @@ margin-left: 0;
 }
 
 .lang-switch {
-  margin-left: auto;
+  margin-left: 1rem;
   padding: 0.3rem 0.6rem;
   border-radius: 6px;
-  border: 1px solid #00b8b8;
+  border: 1px solid #292b2b;
   background: white;
   color: #007d7d;
   font-weight: 600;
@@ -232,23 +263,42 @@ margin-left: 0;
 
   .nav-links {
     position: absolute;
-    background-color: #eef3f5;
+    background-color: #2c2f30;
     top: 40px;
     right: 0;
     flex-direction: column;
     align-items: center;
-    width: 50%;
-    padding: 1rem 1rem;
+    width: 30%;
+    padding: 0.5rem 0.1rem;
+    gap: 0.5rem;
     display: none;
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-10px);
     transition: all 0.3s ease;
+    
+  }
+.nav-links-home {
+    position: absolute;
+    background-color: #141414;
+    top: 40px;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    padding: 0.5rem 0.1rem;
+    gap: 0.1rem;
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    color: #f9fafa;
   }
 
   .nav-links.open {
     display: flex;
     opacity: 1;
     transform: translateY(0);
+   
   }
 
   .nav-item {
@@ -256,6 +306,14 @@ margin-left: 0;
     margin: 1rem 0;
     font-size: 1.2rem;
     text-align: left;
+   
+  }
+  .nav-item-home {
+    color:#ecf3f3;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    text-align: left;
+   
   }
   .lang-switch {
     position: absolute;
