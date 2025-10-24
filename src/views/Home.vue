@@ -82,18 +82,18 @@ const video = document.querySelector('.background-video')
   font-size: 3rem;
   margin-bottom: 1rem;
   color: #ffffff;
-   background: linear-gradient(45deg, #ffffff, #c2c2c2);
+   background: linear-gradient(45deg, #ffffff, #f0f3f3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease;
  
-text-shadow: 2px 2px 8px rgba(5, 5, 5, 0.781);
+text-shadow: 2px 2px 8px rgba(79, 82, 83, 0.781);
 }
 
 .hero-content p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  background: linear-gradient(45deg, #9c9c9b, #c2c2c2);
+  background: linear-gradient(45deg, #ffffff, #f6f7f8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease;
@@ -102,7 +102,7 @@ text-shadow: 2px 2px 8px rgba(5, 5, 5, 0.781);
 
 .btn {
   background-color: rgb(237, 241, 241);
-  background: linear-gradient(45deg, #0f7070, #f0eeee);
+  background: linear-gradient(45deg, #c8e9e9, #f0eeee);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease;

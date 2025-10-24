@@ -54,15 +54,70 @@ function switchLang() {
 
 <style scoped>
 .navbar {
+  background-color: white;
+  color: black;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.navbar-home {
+  background-color: black;
+  color: white;
+  box-shadow: none;
+}
+
+/* Enlaces */
+.nav-item {
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Enlaces por defecto (blanco o negro según fondo) */
+.navbar-home .nav-item {
+  color: white;
+}
+.navbar-home .nav-item:hover {
+  color: #00b8b8;
+}
+
+.nav-item {
+  color: black;
+}
+.nav-item:hover {
+  color: #00b8b8;
+}
+
+/* Logo */
+.logo a {
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Botón hamburguesa */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: currentColor;
+  border-radius: 2px;
+}
+.navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(253, 253, 253, 0.95);
+  background-color: rgba(10, 10, 10, 0.082);
   display: flex;
  justify-content: flex-start;
   padding: 1rem 1rem;
-  z-index: 1000;
-  backdrop-filter: blur(33px);
+  z-index: 100;
   box-shadow: 5px 2px 10px rgba(40, 141, 172, 0.3);
   gap:1.1rem;
 }
@@ -77,29 +132,33 @@ color: #dbe4e7;
 }
 
 .nav-links {
-    color: #5b6163;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+     background: linear-gradient(45deg, #ffffff, #f6f7f8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+ 
+    
   display: flex;
   gap: 2rem;
 margin-left: 0;
   a:hover {
-  border-bottom: 2px solid #00b8b8;
+  border-bottom: 2px solid #f4f8f8;
 }
 
 }
 
 .nav-item {
-  color: #cdd7db;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
   font-size: 2rem;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0);
+  text-shadow: 2px 2px 8px rgb(37, 74, 95);
    margin-left: 0px;
 }
 
-.nav-item:hover {
-  color: #00b8b8;
+.nav-links:hover {
+  color: #f9fafa;
   transform: scale(1.1);
 }
 
@@ -125,7 +184,8 @@ margin-left: 0;
   flex-direction: column;
   cursor: pointer;
   margin-left: auto;
-  gap: 5px;
+  gap: 1rem;
+  padding: 2rem 1rem;
 }
 
 
@@ -134,6 +194,7 @@ margin-left: 0;
   height: 3px;
   background-color: #889191;
   transition: all 0.3s ease;
+  
 }
 
 /* Efecto al abrir */
@@ -164,7 +225,8 @@ margin-left: 0;
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
-    padding: 0rem 1rem;
+    top: 15px;
+    right: 100px;
      
   }
 
@@ -198,7 +260,7 @@ margin-left: 0;
   .lang-switch {
     position: absolute;
     top: 15px;
-    right: 90px;
+    right: 130px;
   }
   }
 </style>

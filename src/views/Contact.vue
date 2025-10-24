@@ -15,7 +15,7 @@
           >
             <i class="fab fa-whatsapp"></i>
             <h2>Teléfono / WhatsApp</h2>
-    <p>+34 600 123 456</p>
+    <p>+34 634 688 218</p>
           </a>
   
 

@@ -39,6 +39,10 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.navbar {
+    color:#555;
+    background-color: #fff;
+}
 .services {
   min-height: 100vh;
   padding: 4rem 2rem;
