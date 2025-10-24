@@ -1,0 +1,134 @@
+<template>
+  <section class="home">
+    <!-- HERO PRINCIPAL -->
+    <div class="hero" data-aos="fade-up">
+      <h1>Diseño y Desarrollo de Páginas Web Personalizadas</h1>
+      <p>
+        Crea una presencia online profesional, moderna y adaptada a tus necesidades.
+        Páginas web económicas y totalmente optimizadas para atraer clientes.
+      </p>
+      <router-link to="/services" class="btn-primary">Descubre mis servicios</router-link>
+
+      
+    </div>
+
+    <!-- SECCIÓN BENEFICIOS -->
+    <div class="benefits" data-aos="fade-right">
+      <h2>Por qué elegirnos</h2>
+      <ul>
+        <li><strong>Diseños atractivos</strong> que destacan tu marca.</li>
+        <li><strong>Posicionamiento SEO</strong> para aparecer en Google.</li>
+        <li><strong>Soporte continuo</strong> y mantenimiento incluido.</li>
+      </ul>
+    </div>
+
+    <!-- SECCIÓN OBJETIVO -->
+    <div class="goal" data-aos="zoom-in">
+      <h2>Tu marca, tu estilo, tu web</h2>
+      <p>
+        Transformamos tus ideas en experiencias digitales únicas.
+        Desde Lleida, Catalunya, para toda España 🌍
+      </p>
+    </div>
+  </section>
+  <footer data-aos="fade-up" class="footer">
+    <p>© 2025 Paginas web - Cristina Voda Todos los derechos reservados.</p>
+  </footer>
+</template>
+
+<script setup>
+import { onMounted } from 'vue'
+import AOS from 'aos'
+
+onMounted(() => {
+  AOS.refresh()
+})
+
+import { useRouter } from 'vue-router'
+const router = useRouter()
+
+function goToServices() {
+  router.push('/services')
+  
+}
+// No necesitas lógica aquí aún, todo es contenido visual y animaciones
+</script>
+
+<style scoped>
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  background-color: #002f33; /* DarkCyan oscuro */
+  min-height: 100vh;
+  padding: 4rem 1rem;
+}
+
+.hero {
+  max-width: 900px;
+  margin-bottom: 5rem;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: #00b8b8; /* tono más brillante de DarkCyan */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #d9d9d9;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.btn-primary {
+  background-color: #00b8b8;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #008c8c;
+  transform: scale(1.05);
+}
+
+.benefits, .goal {
+  background: #013c40;
+  padding: 3rem 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  margin-bottom: 3rem;
+  max-width: 800px;
+}
+
+.benefits h2, .goal h2 {
+  color: #00b8b8;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.benefits ul {
+  list-style: none;
+  padding: 0;
+}
+
+.benefits li {
+  color: #e0e0e0;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.goal p {
+  color: #d9d9d9;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+</style>
