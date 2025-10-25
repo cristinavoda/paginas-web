@@ -1,17 +1,28 @@
 <template>
   <section class="home">
-    <!-- Video de fondo -->
+    
     <video autoplay muted loop class="background-video">
       <source src="/videos/online-store.mp4" type="video/mp4" />
       Tu navegador no soporta videos HTML5.
     </video>
 
-    <!-- Contenido principal -->
-    <div class="hero-content" data-aos="fade-up">
-      <h1>🌐 Paginas Web </h1>
-      <p>Creamos páginas web elegantes, interactivas y personalizadas para tu negocio.</p>
-      <button @click="goToServices" class="btn" data-aos="zoom-in">Descubre mis servicios</button>
+    
+    <div class="hero-content" data-aos="fade-up"> 
+  <div class="hero-title">
+    <div class="logo">
+      <router-link to="/" class="logo-link">
+        <img src="/logo.png" alt="Logo CV Páginas Web" class="logo-img" />
+      </router-link>
     </div>
+    <h1> Páginas Web</h1>
+  </div>
+
+  <p>Creamos páginas web elegantes, interactivas y personalizadas para tu negocio.</p>
+  <button @click="goToServices" class="btn" data-aos="zoom-in">
+    Descubre mis servicios
+  </button>
+</div>
+
   </section>
 </template>
 
@@ -33,7 +44,7 @@ const video = document.querySelector('.background-video')
 
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY
-    // Mueve el video ligeramente hacia arriba al hacer scroll
+    
     video.style.transform = `scale(1.1) translateY(${scrollY * 0.2}px)`
   })
 })
@@ -60,22 +71,36 @@ const video = document.querySelector('.background-video')
   object-fit: cover;
   z-index: -1;
   filter: brightness(1.1);
-   animation: zoomVideo 20s ease-in-out infinite alternate; /* oscurece el video para que el texto resalte */
+   animation: zoomVideo 20s ease-in-out infinite alternate; 
 }
 @keyframes zoomVideo {
   0% {
     transform: scale(1);
   }
   100% {
-    transform: scale(1.1); /* zoom suave hasta 110% */
+    transform: scale(1.1); 
   }
 }
+.hero-title {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 12px; 
+}
+
+.logo-img {
+  width: 60px; 
+  height: auto;
+  gap: 3rem;
+}
+
 .hero-content {
   position: relative;
   z-index: 1;
   max-width: 800px;
   padding: 0 1rem;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  gap: 3rem;
 }
 
 .hero-content h1 {
@@ -86,9 +111,38 @@ const video = document.querySelector('.background-video')
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease;
- 
-text-shadow: 2px 2px 8px rgba(79, 82, 83, 0.781);
+  text-shadow: 2px 2px 8px rgba(79, 82, 83, 0.781);
+  gap: 3rem; 
 }
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10rem 20rem;
+  gap: 5rem;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 5rem;
+}
+
+.logo-img {
+  width: 58px; 
+  height: 58px;
+  object-fit: contain;
+  border-radius: 50%; 
+ 
+  transition: transform 0.3s ease;
+  gap: 3rem;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
+}
+
 
 .hero-content p {
   font-size: 1.5rem;

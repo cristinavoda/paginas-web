@@ -1,4 +1,4 @@
  git add .
 
-git commit -m "background1"
+git commit -m "style"
 git push origin main

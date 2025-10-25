@@ -1,14 +1,13 @@
 <template>
   <section class="muestras">
 
-    <!-- 🌿 Carrusel principal -->
-    <div class="carrusel-section" data-aos="zoom-in">
+    <div class="carrusel-section" data-aos="fade-up">
       <h2>Web Pages</h2>
       <div class="carousel">
         <button @click="prevImage" class="nav-btn glass-btn">‹</button>
 
         <div class="carousel-window">
-          <transition name="fade" mode="out-in">
+         <transition name="scroll-up" mode="out-in">
             <img :src="currentImage" :key="currentImage" alt="" class="carousel-image" />
           </transition>
         </div>
@@ -30,7 +29,7 @@
       
     </div>
 
-    <!-- 💎 Cards para las demás secciones -->
+    
     <div class="cards-container">
       <div class="card" data-aos="fade-up" data-aos-delay="200">
         <img src="/images/tienda-online/img13.png" alt="Tienda Online" />
@@ -102,7 +101,7 @@ function prevImage() {
 }
 
 onMounted(() => {
-  interval = setInterval(nextImage, 4000) // autoplay suave
+  interval = setInterval(nextImage, 4000)
 })
 
 onUnmounted(() => clearInterval(interval))
@@ -142,6 +141,19 @@ h2{
   overflow: hidden;
   border-radius: 16px;
 }
+.scroll-up-enter-active, .scroll-up-leave-active {
+  transition: all 0.8s ease;
+}
+
+.scroll-up-enter-from {
+  opacity: 0;
+  transform: translateY(90px);
+}
+
+.scroll-up-leave-to {
+  opacity: 0;
+  transform: translateY(-70px);
+}
 
 .carousel-image {
   width: 100%;
@@ -170,7 +182,7 @@ h2{
   transform: scale(1.1);
 }
 
-/* ✨ Cards */
+
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -202,7 +214,7 @@ h2{
 }
 
 .card h3 {
-  color: #888888;
+  color: darkcyan;
    
    font-size: 1rem;
   margin-bottom: 0.5rem;
@@ -216,7 +228,7 @@ h2{
   
 }
 
-/* Animación fade */
+
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.6s ease;
 }

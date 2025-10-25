@@ -8,14 +8,14 @@
 </div>
 
 
-    <!-- BOTÓN HAMBURGUESA -->
+   
     <div class="hamburger" @click="toggleMenu">
       <div :class="{ bar: true, open: isOpen }"></div>
       <div :class="{ bar: true, open: isOpen }"></div>
       <div :class="{ bar: true, open: isOpen }"></div>
     </div>
 
-    <!-- ENLACES -->
+    
     <div :class="['nav-links', { open: isOpen }]">
       <router-link to="/" class="nav-item" @click="closeMenu">Inicio</router-link>
       <router-link to="/services" class="nav-item" @click="closeMenu">Servicios</router-link>
@@ -24,7 +24,7 @@
       <router-link to="/pricing" class="nav-item" @click="closeMenu">Precios</router-link>
     </div>
 
-    <!-- SELECTOR DE IDIOMA -->
+   
     <select v-model="selectedLang" @change="changeLang" class="lang-switch">
       <option value="es">ES</option>
       <option value="ca">CA</option>
@@ -255,88 +255,79 @@ function switchLang() {
   }
 }
 
-@media (max-width: 768px)
- {
-    .navbar {
-    gap: 3rem; height: 60px;
+@media (max-width: 768px) {
+  .navbar {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
   }
+
+  
+  .navbar-home {
+    background-color: #000;
+    color: #fff;
+    
+    margin-right: 30px;
+  }
+
   .hamburger {
     display: flex;
     top: 15px;
-    right: 150px;
-     
+    right: 30px;
   }
+
   .bar {
-  width: 25px;
-  height: 3px;
-  background-color: #889191;
-  transition: all 0.3s ease;
-  margin-right: 3rem;
-}
+    width: 25px;
+    height: 3px;
+    background-color: #fff; 
+    transition: all 0.3s ease;
+    margin: 1px 0;
+  }
 
   .nav-links {
     position: absolute;
-    background-color: rgba(229, 230, 236, 0.753);
-    color: #292b2b;
     top: 60px;
     right: 0;
+    background-color: rgba(255, 255, 255, 0.95);
     flex-direction: column;
-    align-items: center;
-    font-size: 1rem;
+    align-items: right;
     width: 30%;
-    padding: 0.5rem 0.1rem;
-    gap: 0.5rem;
+    padding: 1rem 0;
+    gap: 1rem;
     display: none;
     opacity: 0;
     transform: translateY(-10px);
     transition: all 0.3s ease;
-     backdrop-filter: blur(18px);
-  }
-.nav-item-home {
-    position: absolute;
-    background-color: #181717;
-    top: 40px;
-    right: 0;
-    flex-direction: column;
-    align-items: center;
-    width: 30%;
-    padding: 0.5rem 0.1rem;
-    gap: 0.1rem;
-    display: none;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-    color: #f9fafa;backdrop-filter: blur(18px);
+    backdrop-filter: blur(20px);
   }
 
+  
   .nav-links.open {
-    margin-top: 30px;
     display: flex;
     opacity: 1;
-    transform: translateY(0-1);
-   color: #303131;
-   backdrop-filter: blur(15px);
+    transform: translateY(0);
+  }
+
+  
+  .navbar-home .nav-links.open {
+    background-color: rgba(0, 0, 0, 0.95);
   }
 
   .nav-item {
-    color:#373a3a;
-    margin: 1rem 0;
-    font-size: 1.2rem;
-    text-align: left;
-   
+    color: inherit;
+    font-size: 1.1rem;
+    text-align: center;
   }
-  .nav-item-home {
-    color:#ecf3f3;
-    margin: 1rem 0;
-    font-size: 1.2rem;
-    text-align: left;
-   
-  }
+
   .lang-switch {
     position: absolute;
-    top: 25px;
-    right: 220px;
+    top: 15px;
+    right: 200px;
   }
-  }
+}
+
 </style>
