@@ -111,8 +111,8 @@ onUnmounted(() => clearInterval(interval))
 <style scoped>
 h2{
    font-size: 1.9rem;
-  margin-bottom: 1rem;
-  color: #e0e6e6;
+  margin-top: 4rem;
+  color: darkcyan;
    text-shadow: 2px 2px 8px rgba(0, 0, 0);
    font-size: 2rem;
 }

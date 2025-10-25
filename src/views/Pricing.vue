@@ -3,7 +3,7 @@
     <div class="intro">
       <h1>Diseño y desarrollo web personalizado — claridad y precio justo</h1>
       <p>
-        Creo sitios profesionales, accesibles y económicos para autónomos y pequeños negocios en Lleida, Catalunya y toda España. 
+        Sitios profesionales, accesibles y económicos para autónomos , pequeños Y grandes negocios en Lleida,empresas,,asociaciones,eventos, Catalunya y toda España. 
         Muestra tu negocio online destacando con una web personalizada, funcional y fácil de mantener.
       </p>
       <div class="cta-row">
@@ -94,10 +94,10 @@ AOS.init({ duration: 800, once: true })
 
 <style scoped>
 .pricing {
-  padding: 3rem 2rem;
+  padding: 3rem 4rem;
   max-width: 1200px;
   margin: auto;
-   color: #003333;
+   color: #0e6666;
 }
 .intro {
   text-align: center;
@@ -105,8 +105,8 @@ AOS.init({ duration: 800, once: true })
 }
 h1 {
   font-size: 1.9rem;
-  margin-bottom: 1rem;
-  color: #107e7e;
+  margin-top: 6rem;
+  color: #17a5a5;
    text-shadow: 2px 2px 8px rgba(0, 0, 0,6);
    font-size: 2rem;
 }
@@ -121,9 +121,11 @@ p {
   gap: 1rem;
 }
 .btn-primary {
-  background-color: #008b8b;
-  color: white;
-  padding: .7rem 1.4rem;
+  background-color: #f3f7f7;
+  color: darkcyan;
+   border: 2px solid #008b8b;
+   box-shadow: 2px 2px 2px rgba(7, 107, 179, 0.986);
+  padding: 0.7rem 1.4rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
@@ -131,6 +133,7 @@ p {
 .btn-ghost {
   border: 2px solid #008b8b;
   color: #008b8b;
+  box-shadow: 2px 2px 2px rgba(7, 107, 179, 0.986);
   padding: .7rem 1.4rem;
   border-radius: 8px;
   text-decoration: none;

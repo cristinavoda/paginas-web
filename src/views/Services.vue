@@ -53,7 +53,7 @@ onMounted(() => {
 
 .services h1 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-top: 3rem;
    text-shadow: 2px 2px 8px rgba(1, 0, 0,6);
 }
 

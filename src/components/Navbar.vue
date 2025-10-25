@@ -85,7 +85,7 @@ function switchLang() {
   box-shadow: none;
 }
 
-/* Enlaces */
+
 .nav-item {
   margin: 0 1rem;
   text-decoration: none;
@@ -95,7 +95,7 @@ function switchLang() {
   gap: 1rem;
 }
 
-/* Enlaces por defecto (blanco o negro según fondo) */
+
 .navbar-home .nav-item {
   color: white;
 }
@@ -143,6 +143,7 @@ function switchLang() {
 .hamburger {
   display: none;
   flex-direction: column;
+  margin-right: 2rem;
   gap: 5px;
   cursor: pointer;
 }
@@ -225,10 +226,9 @@ function switchLang() {
   height: 3px;
   background-color: #889191;
   transition: all 0.3s ease;
-  
+  margin-right: 3rem;
 }
 
-/* Efecto al abrir */
 .bar.open:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -247,27 +247,43 @@ function switchLang() {
   opacity: 0;
   transform: translateY(-15px);
 }
+
+
 @media (min-width: 1200px) {
   .navbar {
     gap: 3rem; 
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px)
+ {
+    .navbar {
+    gap: 3rem; height: 60px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
   .hamburger {
     display: flex;
     top: 15px;
-    right: 100px;
+    right: 150px;
      
   }
+  .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #889191;
+  transition: all 0.3s ease;
+  margin-right: 3rem;
+}
 
   .nav-links {
     position: absolute;
-    background-color: #2c2f30;
-    top: 40px;
+    background-color: rgba(229, 230, 236, 0.753);
+    color: #292b2b;
+    top: 60px;
     right: 0;
     flex-direction: column;
     align-items: center;
+    font-size: 1rem;
     width: 30%;
     padding: 0.5rem 0.1rem;
     gap: 0.5rem;
@@ -275,11 +291,11 @@ function switchLang() {
     opacity: 0;
     transform: translateY(-10px);
     transition: all 0.3s ease;
-    
+     backdrop-filter: blur(18px);
   }
-.nav-links-home {
+.nav-item-home {
     position: absolute;
-    background-color: #141414;
+    background-color: #181717;
     top: 40px;
     right: 0;
     flex-direction: column;
@@ -291,18 +307,20 @@ function switchLang() {
     opacity: 0;
     transform: translateY(-10px);
     transition: all 0.3s ease;
-    color: #f9fafa;
+    color: #f9fafa;backdrop-filter: blur(18px);
   }
 
   .nav-links.open {
+    margin-top: 30px;
     display: flex;
     opacity: 1;
-    transform: translateY(0);
-   
+    transform: translateY(0-1);
+   color: #303131;
+   backdrop-filter: blur(15px);
   }
 
   .nav-item {
-    color:#ecf3f3;
+    color:#373a3a;
     margin: 1rem 0;
     font-size: 1.2rem;
     text-align: left;
@@ -317,8 +335,8 @@ function switchLang() {
   }
   .lang-switch {
     position: absolute;
-    top: 15px;
-    right: 130px;
+    top: 25px;
+    right: 220px;
   }
   }
 </style>

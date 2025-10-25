@@ -5,7 +5,7 @@
       ¿Quieres una página web elegante y personalizada? ¡Hablemos!
     </p>
 <div class="contact-cards">
-  <!-- Tarjeta de contacto directo WhatsApp -->
+  
  
      <a href="https://wa.me/34634688218"
             target="_blank"
@@ -19,7 +19,7 @@
           </a>
   
 
-  <!-- Tarjeta de contacto directo Email -->
+ 
   <a href="mailto: cristinavoda483@gmail.com" class="card" data-aos="fade-left" data-aos-delay="400">
     <h2>✉️ Email</h2>
     <p>cristinavoda483@gmail.com</p>
@@ -34,7 +34,7 @@
      
     
 
-    <!-- Formulario -->
+    
     <div class="form-card" data-aos="fade-up" data-aos-delay="600">
       <h2>Envíanos un mensaje</h2>
       <form @submit.prevent="submitForm">
@@ -78,8 +78,8 @@ onMounted(() => {
 
 .contact h1 {
      font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: rgb(181, 190, 190);
+  margin-top: 3rem;
+  color: darkcyan;
    text-shadow: 2px 2px 8px rgba(1, 0, 0,6);
   
   
