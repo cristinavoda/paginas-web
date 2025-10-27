@@ -106,8 +106,8 @@ AOS.init({ duration: 800, once: true })
 h1 {
   font-size: 1.9rem;
   margin-top: 6rem;
-  color: #17a5a5;
-   text-shadow: 2px 2px 8px rgba(0, 0, 0,6);
+  color: #128d8d;
+   
    font-size: 2rem;
 }
 p {
@@ -123,21 +123,30 @@ p {
 .btn-primary {
   background-color: #f3f7f7;
   color: darkcyan;
-   border: 2px solid #008b8b;
-   box-shadow: 2px 2px 2px rgba(7, 107, 179, 0.986);
+   border: 0px solid #5bb8b8;
+   box-shadow: 2px 2px 2px rgba(60, 110, 139, 0.986);
   padding: 0.7rem 1.4rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
 }
+.btn-primary:hover {
+  background-color: rgb(219, 245, 245);
+  transform: scale(1.05);
+}
 .btn-ghost {
-  border: 2px solid #008b8b;
+  border: 0px solid  #5bb8b8;
   color: #008b8b;
-  box-shadow: 2px 2px 2px rgba(7, 107, 179, 0.986);
+  box-shadow: 2px 2px 2px rgba(60, 110, 139, 0.986);
   padding: .7rem 1.4rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
+   transition: transform .3s ease, box-shadow .3s ease;
+}
+.btn-ghost:hover {
+  background-color: rgb(219, 245, 245);
+  transform: scale(1.05);
 }
 .info-box {
   background: linear-gradient(180deg, #ffffff, #f2fbfb);

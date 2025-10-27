@@ -10,6 +10,23 @@ const routes = [
   { path: '/muestras', name: 'Muestras', component: Muestras },
   { path: '/contact', name: 'Contact', component: Contact },
    { path: '/pricing', component: Pricing } ,
+   {
+  path: '/informacion/diseno-web',
+  component: () => import('../views/Informacion/DiseñoWeb.vue')
+},
+{
+  path: '/informacion/desarrollo-frontend',
+  component: () => import('../views/Informacion/DesarrolloFrontend.vue')
+},
+{
+  path: '/informacion/seo',
+  component: () => import('../views/Informacion/Seo.vue')
+},
+{
+  path: '/informacion/mantenimiento',
+  component: () => import('../views/Informacion/Mantenimiento.vue')
+}
+
 ]
 
 const router = createRouter({

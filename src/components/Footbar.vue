@@ -69,7 +69,7 @@
 .footer {
   background-color: #f8fafa;
   backdrop-filter: blur(29px);
-  color: #adb3b5;
+  color: #818586;
   
   padding: 3rem 2rem 1rem;
   display: flex;
@@ -103,9 +103,10 @@
 }
 
 .footer-links a {
-  color: #9a9090;
+  color: #77797a;
+ 
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 1rem;
   transition: color 0.3s;
 }
 
@@ -138,6 +139,6 @@
   padding-top: 1rem;
   text-align: center;
   font-size: 0.85rem;
-  color: #a9a6a6;
+  color: #7a7b7c;
 }
 </style>

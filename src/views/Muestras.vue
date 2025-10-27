@@ -7,7 +7,7 @@
         <button @click="prevImage" class="nav-btn glass-btn">‹</button>
 
         <div class="carousel-window">
-         <transition name="scroll-up" mode="out-in">
+         <transition name="slide" mode="out-in">
             <img :src="currentImage" :key="currentImage" alt="" class="carousel-image" />
           </transition>
         </div>
@@ -66,10 +66,8 @@ const images = [
   '/images/landings/img8.png',
   '/images/landings/img-9.png',
   '/images/landings/img12.png',
-  '/images/landings/img24.png',
-   '/images/web-corporativo/img14.png',
-   '/images/landings/img20.png',
-    '/images/landings/img21.png',
+  '/images/web-corporativo/img14.png',
+   '/images/landings/img21.png',
     '/images/landings/img23.png',
     '/images/web-corporativo/img25.png',
      '/images/web-corporativo/img28.png',
@@ -140,34 +138,34 @@ h2{
   overflow: hidden;
   border-radius: 16px;
 }
-.scroll-up-enter-active, .scroll-up-leave-active {
-  transition: all 0.8s ease;
+.slide-enter-active, .slide-leave-active {
+  transition: all 0.9s ease-in-out;
+}
+.slide-enter-from {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.slide-leave-to {
+  transform: translateX(-100%);
+  opacity: 0;
 }
 
-.scroll-up-enter-from {
-  opacity: 0;
-  transform: translateY(90px);
-}
 
-.scroll-up-leave-to {
-  opacity: 0;
-  transform: translateY(-70px);
-}
 
 .carousel-image {
   width: 100%;
   height: 450px;
   object-fit: cover;
   border-radius: 16px;
-  box-shadow: 8px 4px 10px rgba(59, 169, 233, 0.959);
+  box-shadow: 8px 8px 10px rgba(120, 127, 129, 0.959);
   transition: transform 0.9s ease;
 }
 
 .glass-btn {
-  background: rgba(255, 255, 255, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgb(250, 252, 252);
+  border: 1px solid rgba(193, 220, 238, 0.4);
   backdrop-filter: blur(8px);
-  color: #dfe2e2;
+  color: darkcyan;
   font-size: 2rem;
   padding: 0.4rem 0.8rem;
   border-radius: 12px;
@@ -193,7 +191,7 @@ h2{
 .card {
   background: white;
   border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 18px rgba(119, 115, 115, 0.1);
   padding: 1rem;
   text-align: center;
   transition: transform 0.4s ease, box-shadow 0.4s ease;

@@ -17,11 +17,11 @@
 
     
     <div :class="['nav-links', { open: isOpen }]">
-      <router-link to="/" class="nav-item" @click="closeMenu">Inicio</router-link>
-      <router-link to="/services" class="nav-item" @click="closeMenu">Servicios</router-link>
-      <router-link to="/muestras" class="nav-item" @click="closeMenu">Muestras</router-link>
-      <router-link to="/contact" class="nav-item" @click="closeMenu">Contacto</router-link>
-      <router-link to="/pricing" class="nav-item" @click="closeMenu">Precios</router-link>
+      <router-link to="/" class="nav-item" @click="closeMenu">HOME</router-link>
+      <router-link to="/services" class="nav-item" @click="closeMenu">SERVICIOS</router-link>
+      <router-link to="/muestras" class="nav-item" @click="closeMenu">MUESTRAS</router-link>
+      <router-link to="/pricing" class="nav-item" @click="closeMenu">PRECIOS</router-link>
+      <router-link to="/contact" class="nav-item" @click="closeMenu">CONTACTO</router-link>
     </div>
 
    
@@ -64,11 +64,11 @@ function switchLang() {
  display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(251, 252, 252, 0.8);
   color: #889191;
   backdrop-filter: blur(18px);
   padding: 1.5rem 2rem;
-  gap: 1rem;
+  gap: 2rem;
   position: fixed;
   width: 100%;
   top: 0;
@@ -90,9 +90,11 @@ function switchLang() {
   margin: 0 1rem;
   text-decoration: none;
   font-weight: 500;
+  font-size: 1rem;
   transition: color 0.3s ease;
   color: #1d1f1f;
-  gap: 1rem;
+padding: 1.5rem 0.8rem;
+  
 }
 
 
@@ -116,7 +118,7 @@ function switchLang() {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 1rem;
+  padding-left: 0rem;
   
 }
 
@@ -155,19 +157,6 @@ function switchLang() {
   border-radius: 2px;
   color: #889191;
 }
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: rgba(10, 10, 10, 0.082);
-  display: flex;
- justify-content: flex-start;
-  padding: 1rem 1rem;
-  z-index: 100;
-  box-shadow: 5px 2px 10px rgba(40, 141, 172, 0.3);
-  gap: 1.1rem;
-  color:#1d1f1f;
-}
 
 .logo a {
  color: #5c5959;
@@ -186,18 +175,25 @@ function switchLang() {
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
-  font-size: 2rem;
- 
-   margin-left: 0px;
+  font-size: 1.3rem;
+  margin-left: 0px;
+  gap:2rem;
 }
 
-.nav-links:hover {
-  color: #f9fafa;
+.nav-item:hover {
+  color: darkcyan;
   transform: scale(1.1);
+  border-bottom: 2px solid darkcyan;
+  
 }
-
+.nav-item-home:hover {
+  color: darkcyan;
+  transform: scale(1.1);
+  border-bottom: 2px solid darkcyan;
+  
+}
 .lang-switch {
-  margin-left: 1rem;
+  margin-left: 0rem;
   padding: 0.3rem 0.6rem;
   border-radius: 6px;
   border: 1px solid #292b2b;

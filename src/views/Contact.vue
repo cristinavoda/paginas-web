@@ -76,7 +76,7 @@ onMounted(() => {
      font-size: 2.5rem;
   margin-top: 3rem;
   color: darkcyan;
-   text-shadow: 2px 2px 8px rgba(1, 0, 0,6);
+  
   
   
 }
@@ -87,7 +87,7 @@ onMounted(() => {
   background: linear-gradient(45deg, #1e271e, #b4b0b0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .contact-cards {
@@ -120,7 +120,7 @@ onMounted(() => {
 
 .card p {
   font-size: 1rem;
-  color: #555;
+  color: darkcyan;
 }
 
 
@@ -136,8 +136,8 @@ onMounted(() => {
 .form-card h2 {
   margin-bottom: 1rem;
    margin-bottom: 1rem;
-  color: rgb(181, 190, 190);
-   text-shadow: 2px 2px 8px rgba(1, 0, 0,6);
+  color: darkcyan;
+   
   
 }
 
@@ -149,7 +149,7 @@ onMounted(() => {
   margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 0.8rem;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 1px 2px darkcyan;
  
   font-size: 1rem;
 }
@@ -160,13 +160,14 @@ onMounted(() => {
 }
 
 .btn {
-  background-color: rgb(235, 241, 241);
-   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  background-color: rgb(248, 250, 250);
+   box-shadow: 0 1px 2px darkcyan;
   color: rgb(56, 54, 54);
   border: none;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   cursor: pointer;
+  font-size: 1rem;
   font-weight: 600;
   transition: all 0.3s ease;
 }
@@ -203,7 +204,7 @@ onMounted(() => {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1rem;
+    
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     transition: background-color 0.3s ease;
   }
