@@ -23,7 +23,7 @@
       </ul>
     </aside>
 
-    <h2 class="section-title" data-aos="fade-up">Paquetes</h2>
+    <h2 class="section-title" data-aos="fade-up"></h2>
     <div class="cards">
       <article class="card" data-aos="zoom-in">
         <div class="card-header">

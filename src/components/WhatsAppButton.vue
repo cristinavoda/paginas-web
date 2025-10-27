@@ -12,7 +12,7 @@
 
 <script setup>
 import { onMounted } from 'vue'
-const phoneNumber = "34600000000" // <-- tu número
+const phoneNumber = "34634688218" 
 const message = "Hola, me gustaría información sobre el desarrollo de páginas web personalizadas."
 const whatsAppLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
 

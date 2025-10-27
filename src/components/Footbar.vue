@@ -70,7 +70,7 @@
   background-color: #f8fafa;
   backdrop-filter: blur(29px);
   color: #adb3b5;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  
   padding: 3rem 2rem 1rem;
   display: flex;
   flex-direction: column;
@@ -119,6 +119,7 @@
    color: #575353;
   gap: 1.5rem;
   font-size: 1.6rem;
+   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .social-icons a {

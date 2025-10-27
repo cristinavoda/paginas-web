@@ -1,6 +1,6 @@
 <template>
   <nav :class="['navbar', { open: isOpen, 'navbar-home': isHome }]" >
-    <!-- LOGO -->
+    
     <div class="logo">
   <router-link to="/" class="logo-link">
     <img src="/logo.png" alt="Logo CV Páginas Web" class="logo-img" />
@@ -65,6 +65,7 @@ function switchLang() {
   align-items: center;
   justify-content: space-between;
   background: rgba(255, 255, 255, 0.8);
+  color: #889191;
   backdrop-filter: blur(18px);
   padding: 1.5rem 2rem;
   gap: 1rem;
@@ -74,14 +75,13 @@ function switchLang() {
   z-index: 1000;
   transition: background 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  background-color: rgb(134, 136, 138);
   color: black;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .navbar-home {
   background-color: rgb(12, 12, 12);
-  color: white;
+  color:  #f4f7f7;
   box-shadow: none;
 }
 
@@ -146,12 +146,14 @@ function switchLang() {
   margin-right: 2rem;
   gap: 5px;
   cursor: pointer;
+  color: #889191;
 }
 .hamburger span {
   width: 25px;
   height: 3px;
   background-color: currentColor;
   border-radius: 2px;
+  color: #889191;
 }
 .navbar {
   position: fixed;
@@ -185,7 +187,7 @@ function switchLang() {
   font-weight: 500;
   transition: all 0.3s ease;
   font-size: 2rem;
-  text-shadow: 2px 2px 8px rgb(37, 74, 95);
+ 
    margin-left: 0px;
 }
 
@@ -223,7 +225,7 @@ function switchLang() {
 
 .bar {
   width: 25px;
-  height: 3px;
+  color: #646868;
   background-color: #889191;
   transition: all 0.3s ease;
   margin-right: 3rem;
@@ -264,6 +266,7 @@ function switchLang() {
     padding: 0 1rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     transition: background-color 0.3s ease;
+    color: #6b6e6e;
   }
 
   
@@ -283,7 +286,7 @@ function switchLang() {
   .bar {
     width: 25px;
     height: 3px;
-    background-color: #fff; 
+    background-color: #797373; 
     transition: all 0.3s ease;
     margin: 1px 0;
   }

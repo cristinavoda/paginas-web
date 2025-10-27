@@ -20,11 +20,7 @@
   
 
  
-  <a href="mailto: cristinavoda483@gmail.com" class="card" data-aos="fade-left" data-aos-delay="400">
-    <h2>✉️ Email</h2>
-    <p>cristinavoda483@gmail.com</p>
-  </a>
-  
+          
       <div class="card" data-aos="fade-right" data-aos-delay="500">
         <h2> 🌐Ubicación</h2>
         <p>Lleida, Catalunya, España</p>
@@ -127,7 +123,7 @@ onMounted(() => {
   color: #555;
 }
 
-/* Formulario elegante */
+
 .form-card {
   background-color: #fff;
   padding: 2rem;
@@ -193,4 +189,77 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   font-size: 2rem;}
+
+
+
+  .nav-item {
+    color: inherit;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+@media (max-width: 768px) {
+  .navbar {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+  }
+
+  
+
+  .hamburger {
+    display: flex;
+    top: 15px;
+    right: 30px;
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff; 
+    transition: all 0.3s ease;
+    margin: 1px 0;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    flex-direction: column;
+    align-items: right;
+    width: 30%;
+    padding: 1rem 0;
+    gap: 1rem;
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(20px);
+  }
+
+  
+  .nav-links.open {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  
+  
+  .nav-item {
+    color: inherit;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .lang-switch {
+    position: absolute;
+    top: 15px;
+    right: 200px;
+  }
+}
 </style>

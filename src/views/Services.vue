@@ -54,7 +54,8 @@ onMounted(() => {
 .services h1 {
   font-size: 2.5rem;
   margin-top: 3rem;
-   text-shadow: 2px 2px 8px rgba(1, 0, 0,6);
+   
+   color: #17a5a5;
 }
 
 .services p {
@@ -90,6 +91,7 @@ onMounted(() => {
 .card h2 {
   margin-bottom: 1rem;
   font-size: 1.3rem;
+ 
   text-shadow: 2px 2px 8px rgba(0,1, 0, 0,0);
 }
 

@@ -112,7 +112,6 @@ h2{
    font-size: 1.9rem;
   margin-top: 4rem;
   color: darkcyan;
-   text-shadow: 2px 2px 8px rgba(0, 0, 0);
    font-size: 2rem;
 }
 .muestras {
@@ -160,8 +159,8 @@ h2{
   height: 450px;
   object-fit: cover;
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.8s ease;
+  box-shadow: 8px 4px 10px rgba(59, 169, 233, 0.959);
+  transition: transform 0.9s ease;
 }
 
 .glass-btn {
@@ -230,7 +229,7 @@ h2{
 
 
 .fade-enter-active, .fade-leave-active {
-  transition: opacity 0.6s ease;
+  transition: opacity 3.8s ease;
 }
 .fade-enter-from, .fade-leave-to {
   opacity: 0;
