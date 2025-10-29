@@ -10,12 +10,12 @@
           Utilizamos técnicas de optimización modernas adaptadas a los nuevos algoritmos de Google.
         </p>
 
-        <ul>
+        
           <li> Optimización del contenido y palabras clave</li>
           <li> Mejora de rendimiento y tiempos de carga</li>
           <li> Estrategia de posicionamiento orgánico</li>
           <li>Análisis y seguimiento de resultados</li>
-        </ul>
+        
 
         <router-link to="/services" class="btn">← Volver </router-link>
       </div>

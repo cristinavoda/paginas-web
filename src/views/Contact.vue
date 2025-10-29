@@ -59,14 +59,14 @@ onMounted(() => {
    background-size: cover;       
   background-position: center;  
   background-repeat: no-repeat; 
-  color: #232525;
-  color: #232525;
+  color: #f3f8f8;
+  color: #eef3f3;
 }
 
  p {
      font-size: 1rem;
   margin-top: 3rem;
-  color: rgb(43, 46, 46);
+  color: rgb(249, 253, 253);
   }
 .contact::before {
   content: "";
@@ -77,6 +77,7 @@ onMounted(() => {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3); 
   z-index: 1;
+  color: #fff;
 }
 h2 {
   font-size: 2rem;
@@ -115,32 +116,34 @@ h2 {
    color: #fcf9f9;
 
 }
-.contact-form input {
-  color: white;          
-  background-color: #333; 
-  border: 1px solid #fff; 
-  padding: 8px;
-  border-radius: 4px;
-}
+
+
 
 .contact-form input,
 .contact-form textarea {
-  width: 90%;
-  padding: 0.8rem 0;
-  margin-bottom: 1.5rem;
-  border: none;
-  border-bottom:  2px solid rgba(39, 44, 43, 0.6);
-  background-color: transparent;
-  color: #fcf9f9;
-  font-size: 1rem;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1); 
+  padding: 0.8rem;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7); 
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
   outline: none;
-  transition: border-color 0.3s ease, transform 0.2s ease;
+  border-color: darkcyan; 
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-bottom-color: rgb(59, 68, 68);
+  border-bottom-color: rgb(232, 240, 240);
   transform: scaleX(1.02);
 }
 
@@ -154,7 +157,7 @@ h2 {
 
 .btn {
   background-color: transparent;
-   box-shadow: 0 1px 2px rgb(57, 61, 61);
+   box-shadow: 0 1px 2px rgb(82, 85, 85);
   color: rgba(214, 219, 223, 0.938);
   width: fit-content;
   border: none;
@@ -167,8 +170,9 @@ h2 {
 }
 
 .btn:hover {
-  background-color: rgb(196, 199, 199);
+  background-color: rgb(95, 110, 110);
   transform: scale(1.05);
+  color:#f3f8f8
 }
 .whatsapp-button {
   position: fixed;
@@ -365,7 +369,7 @@ background-position: center;
 @media (max-width: 768px) {
   .contact {
     padding: 1rem;
-    background-size: cover; /* asegura que siga cubriendo */
+    background-size: cover; 
   }
 
   .contact-form {

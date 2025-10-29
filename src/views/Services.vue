@@ -60,7 +60,7 @@ h2 {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas fijas */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 2rem;
   padding: 2rem;
 }
@@ -106,5 +106,6 @@ h2 {
   .cards {
     grid-template-columns: 1fr;
   }
+
 }
 </style>

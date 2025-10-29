@@ -12,12 +12,12 @@
           Te ofrecemos soporte técnico continuo y actualizaciones sin interrupciones.
         </p>
 
-        <ul>
+        
           <li>Actualizaciones periódicas</li>
           <li> Copias de seguridad automáticas</li>
           <li> Seguridad reforzada y monitorización</li>
           <li> Soporte rápido y personalizado</li>
-        </ul>
+        
 
         <router-link to="/services" class="btn">← Volver </router-link>
       </div>

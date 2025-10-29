@@ -12,12 +12,12 @@
         Nos aseguramos de que tu web sea:
       </p>
 
-      <ul>
+      
         <li>Responsive: se ve perfecta en cualquier dispositivo.</li>
         <li>Rápida: optimizada para tiempos de carga mínimos.</li>
         <li>Interactiva: con animaciones y elementos modernos que mejoran la UX.</li>
         <li>Mantenible: código limpio y documentado para futuras actualizaciones.</li>
-      </ul>
+      
 
       <p>
         Nuestro objetivo es que tu web no solo funcione bien, sino que también impacte a tus visitantes y los convierta en clientes.
