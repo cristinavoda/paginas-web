@@ -1,0 +1,29 @@
+.detalle-servicio {
+  text-align: center;
+  padding: 3rem 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.detalle-img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 8px 4px 12px rgba(0,0,0,0.2);
+}
+
+.btn-volver {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: .5rem 1.5rem;
+  background: rgb(252, 251, 251);
+  color: darkcyan;
+  border-radius: .5rem;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-volver:hover {
+  background: darkcyan;
+}

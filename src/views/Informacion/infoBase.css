@@ -1,0 +1,21 @@
+/
+h2 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+a {
+  color: var(--link-color, #007bff);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

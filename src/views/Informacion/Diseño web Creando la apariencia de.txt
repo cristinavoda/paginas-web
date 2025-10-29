@@ -1,7 +1,0 @@
-Diseño web: Creando la apariencia de su sitio web
-La simplicidad es una de las reglas de oro del diseño web. Su público debe tener una experiencia agradable y positiva al usar su sitio web. Ya sea que su objetivo sea leer contenido, ver un video o inscribirse en un curso, cada acción debe ser clara y concisa en todo el sitio web. Nuestro enfoque es crear un sitio web que fortalezca la marca de su empresa, garantizando a la vez facilidad de uso y simplicidad para su público.
-
-Desarrollo web: Creación de su sitio web
-Una vez finalizado el diseño, puede comenzar la creación del tema personalizado . El proceso de desarrollo web comienza tomando los elementos gráficos (colores, fuentes, diseño, imágenes) definidos en el proceso de diseño y codificándolos utilizando los estándares de la industria web (PHP, HTML5, CSS3, JS, jQuery). Esto generalmente se realiza codificando primero la página de inicio, seguida de las plantillas para las páginas interiores. Cuando el sitio web esté listo para su revisión, se le proporcionarán los datos de inicio de sesión para verlo antes de su lanzamiento al público. También se le proporcionarán instrucciones sobre cómo actualizar su sitio web.
-
-Todos los sitios web que creamos se han construido utilizando programas como HTML ,JS,PYTHON,SQL personalizados y hechos a medida que se han codificado desde cero.

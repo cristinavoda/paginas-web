@@ -102,14 +102,14 @@ padding: 1.5rem 0.8rem;
   color: white;
 }
 .navbar-home .nav-item:hover {
-  color: #00b8b8;
+  color: #5f6969;
 }
 
 .nav-item {
   color: black;
 }
 .nav-item:hover {
-  color: #00b8b8;
+  color: #697272;
 }
 .navbar-home .nav-item {
   color: rgb(245, 241, 241);

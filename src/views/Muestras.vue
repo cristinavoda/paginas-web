@@ -107,11 +107,16 @@ onUnmounted(() => clearInterval(interval))
 
 <style scoped>
 h2{
-   font-size: 1.9rem;
+   font-size: 2.1rem;
   margin-top: 4rem;
-  color: darkcyan;
-   font-size: 2rem;
+   background: linear-gradient(45deg, #1a1b1a, #f8f5f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.5s ease;
 }
+  
+
+
 .muestras {
   padding: 4rem 2rem;
   display: flex;
@@ -137,17 +142,19 @@ h2{
   width: 100%;
   overflow: hidden;
   border-radius: 16px;
+  
 }
 .slide-enter-active, .slide-leave-active {
-  transition: all 0.9s ease-in-out;
+  transition: all 1.1s ease-in-out;
+  
 }
 .slide-enter-from {
   transform: translateX(100%);
-  opacity: 0;
+  opacity: 0.9s ease-in-out;
 }
 .slide-leave-to {
   transform: translateX(-100%);
-  opacity: 0;
+  opacity: 0.8s ease-in-out;
 }
 
 
@@ -157,7 +164,7 @@ h2{
   height: 450px;
   object-fit: cover;
   border-radius: 16px;
-  box-shadow: 8px 8px 10px rgba(120, 127, 129, 0.959);
+  box-shadow: 9px 18px 18px rgba(107, 113, 114, 0.959);
   transition: transform 0.9s ease;
 }
 

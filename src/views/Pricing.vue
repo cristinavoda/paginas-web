@@ -106,7 +106,12 @@ AOS.init({ duration: 800, once: true })
 h1 {
   font-size: 1.9rem;
   margin-top: 6rem;
-  color: #128d8d;
+  font-size: 2.1rem;
+  margin-top: 4rem;
+   background: linear-gradient(45deg, #1a1b1a, #bdb8b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.5s ease;
    
    font-size: 2rem;
 }
@@ -122,9 +127,9 @@ p {
 }
 .btn-primary {
   background-color: #f3f7f7;
-  color: darkcyan;
-   border: 0px solid #5bb8b8;
-   box-shadow: 2px 2px 2px rgba(60, 110, 139, 0.986);
+  color: rgb(87, 90, 90);
+   border: 0px solid #5e6868;
+   box-shadow: 2px 2px 2px rgba(79, 86, 90, 0.986);
   padding: 0.7rem 1.4rem;
   border-radius: 8px;
   text-decoration: none;
@@ -135,9 +140,10 @@ p {
   transform: scale(1.05);
 }
 .btn-ghost {
-  border: 0px solid  #5bb8b8;
-  color: #008b8b;
-  box-shadow: 2px 2px 2px rgba(60, 110, 139, 0.986);
+   background-color: #f3f5f7;
+  border: 0px solid  #6a6e6e;
+  color: #595c5c;
+  box-shadow: 2px 2px 2px rgba(123, 125, 126, 0.986);
   padding: .7rem 1.4rem;
   border-radius: 8px;
   text-decoration: none;
@@ -158,7 +164,7 @@ p {
 }
 .info-box ul {
   padding-left: 1.2rem;
-  color: #555;
+  color: #464444;
 }
 .cards {
   display: grid;
@@ -169,7 +175,7 @@ p {
   background: white;
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 8px 8px 24px rgba(0,0,0,.08);
+  box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -200,6 +206,11 @@ p {
   justify-content: flex-start;
   gap: .5rem;
   margin-top: 1rem;
+}
+ul{
+  color:#464444;}
+li{
+  color:#464444
 }
 .section-title {
   text-align: center;
