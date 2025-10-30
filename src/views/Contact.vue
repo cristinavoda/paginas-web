@@ -73,9 +73,8 @@ onMounted(() => {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 190%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3); 
   z-index: 1;
   color: #fff;
 }
@@ -89,16 +88,6 @@ h2 {
 }
 
 
-
-.form-card {
-  background-color: transparent;
-  padding: 2rem;
-  border: none;
-  max-width: 500px;
-  margin-top: 150px;
-  box-shadow: 4px 8px 20px rgba(245, 243, 243, 0.959);
-  color: #fff;
-}
 
 .form-card h2 {
   margin-bottom: 1rem;
@@ -114,7 +103,7 @@ h2 {
   background: transparent;
   padding: 2rem;
    color: #fcf9f9;
-
+width: 90%;
 }
 
 
@@ -122,10 +111,10 @@ h2 {
 .contact-form input,
 .contact-form textarea {
   color: #fff;
-  background-color: rgba(255, 255, 255, 0.1); 
+  background-color: transparent; 
   padding: 0.8rem;
   border-radius: 8px;
-  width: 100%;
+  width: 80%;
 }
 
 .contact-form input::placeholder,
@@ -199,10 +188,10 @@ h2 {
 @media (max-width: 768px) {
   .navbar {
     height: 60px;
+      
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     transition: background-color 0.3s ease;
   }
@@ -302,7 +291,6 @@ background-position: center;
   
   position: relative;
   color: rgb(234, 237, 240);
-  
   font-weight: 600;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -318,12 +306,10 @@ background-position: center;
   display: grid;
   grid-template-rows: repeat(6, auto);
   gap: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.062); 
-  padding: 2rem;
+  background-color: transparent; 
+   padding: 15px;
   border-radius: 12px;
-  backdrop-filter: blur(19px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: #fff;
+ color: #fff;
 }
 
 .contact-form input,
@@ -334,10 +320,13 @@ background-position: center;
   border-bottom: 1px solid #ccc;
   background: transparent;
   font-size: 1.5rem;
-  color: #fcfafaf5;
+  color: #fff;
   text-shadow: 2px #031a08;
 }
-
+input, textarea {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
 .contact-form button {
   grid-row: 6;
   justify-self: end;
@@ -347,7 +336,7 @@ background-position: center;
   font-weight: bold;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 8px;
-  color: #000;
+  color: #f5efef;
   
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px black;

@@ -6,6 +6,7 @@
   <router-view />
   <Footer />
   <WhatsAppButton />
+  <PhoneButton />
 </div>
 </template>
 
@@ -17,7 +18,7 @@
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footbar.vue'
 import WhatsAppButton from './components/WhatsAppButton.vue'
-
+import PhoneButton from "./components/PhoneButton.vue";
 
 </script>
 
