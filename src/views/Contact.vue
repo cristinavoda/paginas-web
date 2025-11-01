@@ -252,7 +252,7 @@ width: 90%;
 .contact-bg
  {
 
-  background-image: url('/background-galeria.png'); 
+  background-image: url('/background-presentacion.png'); 
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
