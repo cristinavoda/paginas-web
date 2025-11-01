@@ -149,7 +149,7 @@ h2{
   
 }
 .slide-enter-active, .slide-leave-active {
-  transition: all 1.1s ease-in-out;
+  transition: all 1.2s ease-in-out;
   
 }
 .slide-enter-from {
@@ -169,7 +169,7 @@ h2{
   object-fit: cover;
   border-radius: 16px;
   box-shadow: 9px 18px 18px rgba(107, 113, 114, 0.959);
-  transition: transform 0.9s ease;
+  
 }
 
 .glass-btn {

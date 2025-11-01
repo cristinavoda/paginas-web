@@ -259,7 +259,7 @@ padding: 1.5rem 0.8rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1rem;
+    padding: 1rem0 1rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     transition: background-color 0.3s ease;
     color: #6b6e6e;
@@ -276,7 +276,7 @@ padding: 1.5rem 0.8rem;
   .hamburger {
     display: flex;
     top: 15px;
-    right: 30px;
+    right: 40px;
   }
 
   .bar {
@@ -290,7 +290,7 @@ padding: 1.5rem 0.8rem;
   .nav-links {
     position: absolute;
     top: 60px;
-    right: 0;
+    right: 50px;
     background-color: rgba(255, 255, 255, 0.95);
     flex-direction: column;
     align-items: right;

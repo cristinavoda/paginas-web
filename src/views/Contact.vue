@@ -214,7 +214,7 @@ width: 90%;
   .nav-links {
     position: absolute;
     top: 60px;
-    right: 0;
+    right: 40px;
     background-color: rgba(255, 255, 255, 0.95);
     flex-direction: column;
     align-items: right;
