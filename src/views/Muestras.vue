@@ -56,29 +56,33 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const images = [
-  '/images/landings/img-1.png',
- '/images/landings/img-3.png',
+  '/images/landings/img20.png',
+  
+ '/images/landings/img20.png',
  '/images/landings/img3.png',
   '/images/landings/img-4.png',
-  '/images/landings/img-5.png',
-  '/images/landings/img6.png',
+ 
+  
   '/images/landings/img7.png',
-  '/images/landings/img8.png',
-  '/images/landings/img-9.png',
+  
+ 
   '/images/landings/img12.png',
   '/images/web-corporativo/img14.png',
+  
    '/images/landings/img21.png',
-    '/images/landings/img23.png',
-    '/images/web-corporativo/img25.png',
+
+    
+    
      '/images/web-corporativo/img28.png',
+
       '/images/blogs/img22.png',
-      '/images/blogs/img24.png',
-      '/images/blogs/img27.png',
-      '/images/web-corporativo/img29.png',
-      '/images/tienda-online/img16.png',
-      '/images/tienda-online/img17.png',
-      '/images/tienda-online/img18.png',
-      '/images/tienda-online/img19.png',
+      
+      
+     
+      
+      
+      
+      
       '/images/tienda-online/img10.png'
 
 

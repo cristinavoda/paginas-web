@@ -47,7 +47,7 @@
           </a>
 
           <a
-            href="mailto:info@paginasweb-cristinavoda.com"
+            href="mailto:paginaswebpersonalizadas.es@gmail.com"
             aria-label="Email"
           >
             <i class="fas fa-envelope"></i>

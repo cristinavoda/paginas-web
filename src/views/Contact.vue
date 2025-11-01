@@ -7,7 +7,7 @@
       
       <div class="contact-info">
         <h2 data-aos="fade-down">Contacto</h2>
-        <a href="mailto:cristinavoda483@gmail.com" class="btn email-btn" title="Enviar email"> cristnavoda483@gmail.com </a>
+        <a href="mailto: paginaswebpersonalizadas.es@gmail.com" class="btn email-btn" title="Enviar email">paginaswebpersonalizadas.es </a>
         
         <p><strong></strong> </p>
       </div>
@@ -48,9 +48,8 @@ onMounted(() => {
 })
 </script>
 
+
 <style scoped>
-
-
 .contact{
   min-height: 100vh;
   padding: 2rem 1rem;
@@ -253,7 +252,7 @@ width: 90%;
 .contact-bg
  {
 
-  background-image: url('/background.png'); 
+  background-image: url('/background-galeria.png'); 
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -268,7 +267,8 @@ background-position: center;
   gap: 1rem;
    max-width: 600px;
   margin: 1 auto;
-  background-color: rgba(240, 234, 234, 0.062); 
+  background-color: rgba(240, 234, 234, 0.062);
+   backdrop-filter: blur(20px); 
   padding: 2rem;
   border-radius: 12px;
   backdrop-filter: blur(19px);
@@ -306,7 +306,8 @@ background-position: center;
   display: grid;
   grid-template-rows: repeat(6, auto);
   gap: 0.5rem;
-  background-color: transparent; 
+  background-color: transparent;
+   
    padding: 15px;
   border-radius: 12px;
  color: #fff;
