@@ -45,28 +45,7 @@ const servicios = [
   }
 ]
 
-
-const metaData = {
-  title: "Servicios | Páginas Web Personalizadas",
-  description: "Ofrecemos servicios de diseño web, desarrollo frontend, SEO y mantenimiento web para todo tipo de empresas."
-}
-
-onMounted(() => {
-  document.title = metaData.title
-
-  const descriptionTag = document.querySelector('meta[name="description"]')
-  if(descriptionTag) {
-    descriptionTag.setAttribute('content', metaData.description)
-  } else {
-    const meta = document.createElement('meta')
-    meta.name = 'description'
-    meta.content = metaData.description
-    document.head.appendChild(meta)
-  }
-})
 </script>
-
-
 
 <style scoped>
 h1 {

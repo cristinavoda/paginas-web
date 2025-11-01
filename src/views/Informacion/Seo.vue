@@ -11,10 +11,10 @@
         </p>
 
         
-          <li> Optimización del contenido y palabras clave</li>
-          <li> Mejora de rendimiento y tiempos de carga</li>
-          <li> Estrategia de posicionamiento orgánico</li>
-          <li>Análisis y seguimiento de resultados</li>
+          <p> Optimización del contenido y palabras clave</p>
+          <p> Mejora de rendimiento y tiempos de carga</p>
+          <p> Estrategia de posicionamiento orgánico</p>
+          <p>Análisis y seguimiento de resultados</p>
         
 
         <router-link to="/services" class="btn">← Volver </router-link>

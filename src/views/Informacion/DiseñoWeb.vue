@@ -13,10 +13,10 @@
       </p>
 
       
-        <li>Responsive: se ve perfecta en cualquier dispositivo.</li>
-        <li>Rápida: optimizada para tiempos de carga mínimos.</li>
-        <li>Interactiva: con animaciones y elementos modernos que mejoran la UX.</li>
-        <li>Mantenible: código limpio y documentado para futuras actualizaciones.</li>
+        <p>Responsive: se ve perfecta en cualquier dispositivo.</p>
+        <p>Rápida: optimizada para tiempos de carga mínimos.</p>
+        <p>Interactiva: con animaciones y elementos modernos que mejoran la UX.</p>
+        <p>Mantenible: código limpio y documentado para futuras actualizaciones.</p>
       
 
       <p>
