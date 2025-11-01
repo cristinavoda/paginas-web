@@ -80,7 +80,7 @@ function switchLang() {
 }
 
 .navbar-home {
-  background-color: rgb(12, 12, 12);
+  background-color: transparent;
   color:  #f4f7f7;
   box-shadow: none;
 }
@@ -267,7 +267,7 @@ padding: 1.5rem 0.8rem;
 
   
   .navbar-home {
-    background-color: #000;
+    background-color:transparent;
     color: #fff;
     
     margin-right: 30px;
