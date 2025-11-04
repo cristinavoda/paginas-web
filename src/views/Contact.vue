@@ -54,6 +54,21 @@ onMounted(() => {
 
 
 <style scoped>
+.navbar {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    box-shadow: 0 2px 8px rgba(251, 253, 253, 0.938);
+    transition: background-color 0.3s ease;
+  }
+
+  .nav-item {
+    color: inherit;
+    font-size: 1.1rem;
+    text-align: center;
+  }
 .contact{
   min-height: 100vh;
   padding: 2rem 1rem;
@@ -207,19 +222,15 @@ width: 90%;
 
 
 
-  .nav-item {
-    color: inherit;
-    font-size: 1.1rem;
-    text-align: center;
-  }
+ 
 @media (max-width: 768px) {
   .navbar {
     height: 60px;
-      
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background-color: #1d1561;
+    box-shadow: 0 2px 8px rgba(251, 253, 253, 0.938);
     transition: background-color 0.3s ease;
   }
 
@@ -234,7 +245,7 @@ width: 90%;
   .bar {
     width: 25px;
     height: 3px;
-    background-color: #fff; 
+    background-color: #1d0c79; 
     transition: all 0.3s ease;
     margin: 1px 0;
   }
@@ -243,7 +254,7 @@ width: 90%;
     position: absolute;
     top: 60px;
     right: 40px;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(20, 7, 131, 0.95);
     flex-direction: column;
     align-items: right;
     width: 30%;
@@ -383,8 +394,7 @@ input, textarea {
     width: 90%;
     padding: 0,5rem;
   }
-}
-@media (max-width: 768px) {
+
   .contact {
     padding: 1rem;
     background-size: cover; 

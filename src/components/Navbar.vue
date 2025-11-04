@@ -1,5 +1,13 @@
 <template>
-  <nav :class="['navbar', { open: isOpen, 'navbar-home': isHome }]" >
+  <nav :class="[
+  'navbar',
+  { 
+    open: isOpen, 
+    'navbar-home': isHome,
+    'navbar-contact': $route.path === '/contact'
+  }
+]">
+
     
     <div class="logo">
   <router-link to="/" class="logo-link">
@@ -81,7 +89,14 @@ function switchLang() {
   color:  #929696;
   box-shadow: none;
 }
+.navbar-contact {
+  background: transparent !important;
+  box-shadow: none !important;
+}
 
+.navbar-contact .nav-item {
+  color: #eef3f3 !important;
+}
 
 .nav-item {
   margin-left: 50 px ;
@@ -236,7 +251,7 @@ function switchLang() {
     align-items: center;
     justify-content: space-between;
     padding: 1rem0 1rem;
-    background-color: #220c85;
+    background-color: #f7f6fa;
     box-shadow: 0 2px 8px rgba(77, 77, 78, 0.1);
     transition: background-color 0.3s ease;
     color: #6b6e6e;
@@ -247,6 +262,25 @@ function switchLang() {
     background-color:transparent;
     color: #fff;
     margin-left: 30px;
+  }
+.navbar-contact {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.navbar-contact .nav-item {
+  color: #eef3f3 !important;
+}
+ .navbar-contact .nav-links.open {
+    background-color: rgba(61, 81, 100, 0.603) ;
+     backdrop-filter: blur(20px);
+    transition: background-color 0.3s ease;
+  }
+
+  .nav-item {
+    color: inherit;
+    font-size: 1.1rem;
+    text-align: center;
   }
 
   .hamburger {
