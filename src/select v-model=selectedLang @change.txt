@@ -1,0 +1,4 @@
+<select v-model="selectedLang" @change="changeLang" class="lang-switch">
+      <option value="es">ES</option>
+      <option value="ca">CA</option>
+    </select>

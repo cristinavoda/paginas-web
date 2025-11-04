@@ -113,7 +113,7 @@ onUnmounted(() => clearInterval(interval))
 h2{
    font-size: 2.1rem;
   margin-top: 4rem;
-   background: linear-gradient(45deg, #1a1b1a, #f8f5f5);
+   background: linear-gradient(45deg, darkcyan, #0596a0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.5s ease;

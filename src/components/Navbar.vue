@@ -25,10 +25,7 @@
     </div>
 
    
-    <select v-model="selectedLang" @change="changeLang" class="lang-switch">
-      <option value="es">ES</option>
-      <option value="ca">CA</option>
-    </select>
+   
   </nav>
 </template>
 
@@ -62,13 +59,13 @@ function switchLang() {
 <style scoped>
 .navbar {
  display: flex;
-  align-items: center;
-  justify-content: space-between;
+ align-items:flex-start;
+  justify-content: flex-start;
   background: rgba(251, 252, 252, 0.8);
   color: #889191;
   backdrop-filter: blur(18px);
-  padding: 1.5rem 2rem;
-  gap: 2rem;
+  padding: 1rem 2rem;
+  gap: 3rem;
   position: fixed;
   width: 100%;
   top: 0;
@@ -81,50 +78,53 @@ function switchLang() {
 
 .navbar-home {
   background-color: transparent;
-  color:  #f4f7f7;
+  color:  #929696;
   box-shadow: none;
 }
 
 
 .nav-item {
-  margin: 0 1rem;
+  margin-left: 50 px ;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.5rem;
   transition: color 0.3s ease;
-  color: #1d1f1f;
-padding: 1.5rem 0.8rem;
+  color: #666b6b;
+  padding: 1.5rem 0.8rem;
+  
+}
+.nav-item:hover {
+  color: darkcyan;
+  transform: scale(1.1);
+  border-bottom: 2px solid darkcyan;
+  
+}
+
+.navbar-home .nav-item {
+  color: rgb(201, 196, 196);
+}
+.navbar-home .nav-item:hover {
+  color: #0b8a8a;
+}
+.nav-item-home:hover {
+  color: darkcyan;
+  transform: scale(1.1);
+  border-bottom: 2px solid darkcyan;
   
 }
 
 
-.navbar-home .nav-item {
-  color: white;
-}
-.navbar-home .nav-item:hover {
-  color: #5f6969;
-}
-
-.nav-item {
-  color: black;
-}
-.nav-item:hover {
-  color: #697272;
-}
-.navbar-home .nav-item {
-  color: rgb(245, 241, 241);
-}
 .logo {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 0rem;
+  margin-left: -30px;
   
 }
 
 .logo-link {
   display: flex;
-  align-items: center;
+  
   text-decoration: none;
 }
 
@@ -133,8 +133,8 @@ padding: 1.5rem 0.8rem;
   height: 48px;
   object-fit: contain;
   border-radius: 50%; 
- 
   transition: transform 0.3s ease;
+  margin-left: 1px;
 }
 
 .logo-img:hover {
@@ -164,34 +164,10 @@ padding: 1.5rem 0.8rem;
   font-size: 2rem;
   font-weight: 500;
   text-decoration: none;
-   text-shadow: 2px 2px 8px rgb(37, 74, 95);
+  
  
 }
 
-
-
-.nav-item {
-  color: #5c5959;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  font-size: 1.3rem;
-  margin-left: 0px;
-  gap:2rem;
-}
-
-.nav-item:hover {
-  color: darkcyan;
-  transform: scale(1.1);
-  border-bottom: 2px solid darkcyan;
-  
-}
-.nav-item-home:hover {
-  color: darkcyan;
-  transform: scale(1.1);
-  border-bottom: 2px solid darkcyan;
-  
-}
 .lang-switch {
   margin-left: 0rem;
   padding: 0.3rem 0.6rem;
@@ -260,7 +236,8 @@ padding: 1.5rem 0.8rem;
     align-items: center;
     justify-content: space-between;
     padding: 1rem0 1rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background-color: #220c85;
+    box-shadow: 0 2px 8px rgba(77, 77, 78, 0.1);
     transition: background-color 0.3s ease;
     color: #6b6e6e;
   }
@@ -269,29 +246,30 @@ padding: 1.5rem 0.8rem;
   .navbar-home {
     background-color:transparent;
     color: #fff;
-    
-    margin-right: 30px;
+    margin-left: 30px;
   }
 
   .hamburger {
     display: flex;
     top: 15px;
-    right: 40px;
+    right: 70px;
   }
 
   .bar {
     width: 25px;
     height: 3px;
+    right:80px;
     background-color: #797373; 
     transition: all 0.3s ease;
-    margin: 1px 0;
+  
   }
 
   .nav-links {
     position: absolute;
     top: 60px;
-    right: 50px;
+    right: 70px;
     background-color: rgba(255, 255, 255, 0.95);
+    color: #636969;
     flex-direction: column;
     align-items: right;
     width: 30%;
@@ -313,7 +291,9 @@ padding: 1.5rem 0.8rem;
 
   
   .navbar-home .nav-links.open {
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(42, 75, 107, 0.952) ;
+     backdrop-filter: blur(20px);
+    transition: background-color 0.3s ease;
   }
 
   .nav-item {

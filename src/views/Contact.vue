@@ -7,7 +7,11 @@
       
       <div class="contact-info">
         <h2 data-aos="fade-down">Contacto</h2>
-        <a href="mailto: paginaswebpersonalizadas.es@gmail.com" class="btn email-btn" title="Enviar email">paginaswebpersonalizadas.es </a>
+       <a href="mailto:paginaswebpersonalizadas.es@gmail.com" class="btn email-btn" title="paginasweb">
+    <span class="btn-text">paginasweb</span>
+  <img src="/icons/email-icon.png" alt="Email" class="btn-icon" />
+</a>
+
         
         <p><strong></strong> </p>
       </div>
@@ -86,6 +90,29 @@ h2 {
   transition: all 0.5s ease;
 }
 
+.btn-text {
+  display: inline-flex;         
+  align-items: center;          
+  gap: 0.5rem;                  
+  padding: 0.1rem 0.5rem;
+  background-color: transparent;
+  border: #e5f3ee;
+  
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background 0.3s;
+}
+
+.email-btn:hover {
+  background-color: #3f4241;
+   border-bottom: #e5f3ee;
+}
+
+.btn-icon {
+  width: 20px;                  
+  height: 20px;
+}
 
 
 .form-card h2 {
@@ -145,11 +172,11 @@ width: 90%;
 
 .btn {
   background-color: transparent;
-   box-shadow: 0 1px 2px rgb(82, 85, 85);
-  color: rgba(214, 219, 223, 0.938);
+   box-shadow: 0 1px 2px rgb(191, 197, 197);
+  color: rgba(118, 120, 122, 0.938);
   width: fit-content;
   border: none;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   cursor: pointer;
   font-size: 1rem;
@@ -158,7 +185,8 @@ width: 90%;
 }
 
 .btn:hover {
-  background-color: rgb(95, 110, 110);
+  background-color: rgb(222, 230, 230);
+  border-bottom: #e5f3ee;
   transform: scale(1.05);
   color:#f3f8f8
 }
@@ -332,7 +360,7 @@ input, textarea {
   grid-row: 6;
   justify-self: end;
   padding: 0.7rem 1rem;
-  background-color: rgba(151, 144, 144, 0.918);
+  background-color: transparent;
   border: none;
   font-weight: bold;
   border: 1px solid rgba(255, 255, 255, 0.5);

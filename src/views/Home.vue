@@ -1,11 +1,13 @@
 <template>
   <section class="home">
     
-    <video autoplay muted loop class="background-video">
+    
+    
+    <video autoplay muted loop playsinline  class="background-video">
       <source src="/videos/online-store.mp4" type="video/mp4" />
       Tu navegador no soporta videos HTML5.
     </video>
-
+ <div class="color-overlay"></div>
     
     <div class="hero-content" data-aos="fade-up"> 
   <div class="hero-title">
@@ -70,9 +72,52 @@ const video = document.querySelector('.background-video')
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  filter: brightness(1.1);
+  filter: brightness(1.3);
    animation: zoomVideo 20s ease-in-out infinite alternate; 
 }
+.color-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+ 
+    rgba(28, 32, 31, 0.25),  
+    rgb(0, 128, 255)   
+  );
+  mix-blend-mode: soft-light;
+  animation: colorShift 10s ease-in-out infinite alternate;
+  pointer-events: none;
+   z-index: 0;
+}
+
+
+@keyframes colorShift {
+  0% {
+    background: linear-gradient(
+      45deg,
+      rgba(0, 139, 139, 0.45),
+      rgba(0, 128, 255, 0.35)
+    );
+  }
+  50% {
+    background: linear-gradient(
+      45deg,
+      rgba(0, 180, 180, 0.45),
+      rgba(0, 255, 255, 0.35)
+    );
+  }
+  100% {
+    background: linear-gradient(
+      45deg,
+      rgba(0, 128, 255, 0.966),
+      rgba(0, 139, 139, 0.932)
+    );
+  }
+}
+
 @keyframes zoomVideo {
   0% {
     transform: scale(1);

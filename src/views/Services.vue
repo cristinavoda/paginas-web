@@ -49,13 +49,15 @@ const servicios = [
 
 <style scoped>
 h1 {
-  color: rgb(121, 126, 126);
+   background: linear-gradient(45deg, #052a3be3, #63f3ecee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   text-align: center;
   margin-top: 8rem;
 }
 
 h2 {
-  color: rgb(96, 100, 100);
+  color: darkcyan;
   margin-top: 1rem;
 }
 
