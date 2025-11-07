@@ -1,22 +1,41 @@
 {
-  "name": "Páginas Web Personalizadas",
+  "name": "Páginas Web Personalizadas | Diseño y Desarrollo",
   "short_name": "WebPersonalizadas",
-  "description": "Diseños modernos y responsive para cualquier dispositivo.",
-  "start_url": "/",
+  "description": "Diseñamos y desarrollamos páginas web personalizadas, modernas y responsive adaptadas a tu negocio.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#ffffff",
   "theme_color": "#0d8067",
+  "prefer_related_applications": false,
   "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
     {
       "src": "/icons/icon-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/icons/icon-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
-

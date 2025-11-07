@@ -1,67 +1,144 @@
 <template>
   <section class="home">
-    
-    
-    
-    <video autoplay muted loop playsinline  class="background-video">
+    <video autoplay muted loop playsinline class="background-video">
       <source src="/videos/online-store.mp4" type="video/mp4" />
       Tu navegador no soporta videos HTML5.
     </video>
- <div class="color-overlay"></div>
-    
-    <div class="hero-content" data-aos="fade-up"> 
-  <div class="hero-title">
-    <div class="logo">
-      <router-link to="/" class="logo-link">
-        <img src="/logo.png" alt="Logo CV Páginas Web" class="logo-img" />
-      </router-link>
+
+    <div class="color-overlay"></div>
+
+    <div class="hero-content" data-aos="fade-up">
+      <div class="typewriter">
+        <p id="message"></p>
+      </div>
+
+      <button @click="goToServices" class="btn" data-aos="zoom-in">
+        Descubre mis servicios
+      </button>
+      
     </div>
-    <h1> Páginas Web</h1>
+  </section>
+<div class="line-separator" data-aos="fade-up"></div>
+
+ 
+  <section class="process-section" data-aos="fade-up">
+    <h2>Cómo trabajamos</h2>
+
+
+<div class="process-cards">
+    <div class="card">
+      <span class="step-number">01</span>
+      <h3>Consulta Inicial</h3>
+      <p>Analizamos tu negocio y objetivos para crear una estrategia web enfocada en resultados y preparada para convertir.</p>
+    </div>
+
+    <div class="card">
+      <span class="step-number">02</span>
+      <h3>Diseño & Prototipo</h3>
+      <p>Creamos un diseño moderno y funcional que refleje tu marca y potencie la conversión desde el primer clic.</p>
+    </div>
+
+    <div class="card">
+      <span class="step-number">03</span>
+      <h3>Desarrollo</h3>
+      <p>Construimos tu sitio con tecnologías actuales (HTML, JS, Tailwind) priorizando velocidad, SEO y seguridad.</p>
+    </div>
+
+    <div class="card">
+      <span class="step-number">04</span>
+      <h3>Lanzamiento</h3>
+      <p>Optimizamos cada detalle, realizamos pruebas y lanzamos tu web lista para atraer clientes desde el primer día. No pagas hasta que la web esté funcionando.</p>
+    </div>
   </div>
-
-  <p>Creamos páginas web elegantes, interactivas y personalizadas para tu negocio.</p>
-  <button @click="goToServices" class="btn" data-aos="zoom-in">
-    Descubre mis servicios
-  </button>
-</div>
-
+    </section>
+   <hr class="section-divider" /> 
+ <section class="features-section" data-aos="fade-up">
+    <div class="feature">
+      <h3>Performance</h3>
+      <p>Sitios web ultra rápidos que mejoran la experiencia del usuario.</p>
+      <ul>
+        <li>Core Web Vitals</li>
+        <li>CDN Integration</li>
+        <li>Image Optimization</li>
+        <li>Caching</li>
+      </ul>
+    </div>
+ <hr class="section-divider" />
+    <div class="feature">
+      <h3>Diseño UI/UX</h3>
+      <p>Interfaces elegantes y intuitivas que convierten visitantes en clientes.</p>
+      <ul>
+        <li>Diseño Personalizado</li>
+        <li>Experiencia de Usuario</li>
+        <li>Branding</li>
+        <li>Prototipado</li>
+      </ul>
+    </div>
+    <hr class="section-divider" />
   </section>
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
-import { useRouter } from 'vue-router'
+import { onMounted } from "vue";
+import { useRouter } from "vue-router";
 import AOS from 'aos'
-
-const router = useRouter()
-
-function goToServices() {
-  router.push('/services')
-}
+import 'aos/dist/aos.css'
 
 onMounted(() => {
-  AOS.refresh()
-
-const video = document.querySelector('.background-video')
-
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY
-    
-    video.style.transform = `scale(1.1) translateY(${scrollY * 0.2}px)`
-  })
+  AOS.init({ duration: 1000, once: true })
 })
+
+const router = useRouter();
+function goToServices() {
+  router.push("/services");
+}
+
+const lines = [
+  "Tu página web es tu carta",
+  "es más que un espacio digital",
+  "de presentación hacia el mundo.",
+  "Puede ser simple y convincente,",
+  "O dinámica y diferente,",
+  "Puede ser como tú quieras.",
+  "Una web con estilo no solo se ve bien", 
+  "habla por ti incluso cuando tú no estás",
+   "Nosotros podemos crearla para ti."
+];
+
+onMounted(() => {
+  const messageElement = document.getElementById("message");
+  let lineIndex = 0;
+  let charIndex = 0;
+
+  function typeEffect() {
+    if (lineIndex < lines.length) {
+      if (charIndex < lines[lineIndex].length) {
+        messageElement.innerHTML += lines[lineIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(typeEffect, 55);
+      } else {
+        messageElement.innerHTML += "<br>";
+        lineIndex++;
+        charIndex = 0;
+        setTimeout(typeEffect, 400);
+      }
+    }
+  }
+
+  typeEffect();
+});
 </script>
 
 <style scoped>
 .home {
   position: relative;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
+  height: 100vh;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 6rem;
+  color: #eaf7f7;
 }
 
 .background-video {
@@ -71,10 +148,9 @@ const video = document.querySelector('.background-video')
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
-  filter: brightness(1.3);
-   animation: zoomVideo 20s ease-in-out infinite alternate; 
+  z-index: -2;
 }
+
 .color-overlay {
   position: absolute;
   top: 0;
@@ -83,22 +159,17 @@ const video = document.querySelector('.background-video')
   height: 100%;
   background: linear-gradient(
     45deg,
- 
-    rgba(28, 32, 31, 0.25),  
-    rgb(0, 128, 255)   
+    rgba(5, 248, 248, 0.25),
+    rgba(0, 183, 255, 0.555)
   );
   mix-blend-mode: soft-light;
-  animation: colorShift 10s ease-in-out infinite alternate;
-  pointer-events: none;
-   z-index: 0;
+  z-index: -1;
 }
-
-
 @keyframes colorShift {
   0% {
     background: linear-gradient(
       45deg,
-      rgba(0, 139, 139, 0.45),
+      rgba(56, 226, 226, 0.918),
       rgba(0, 128, 255, 0.35)
     );
   }
@@ -112,8 +183,8 @@ const video = document.querySelector('.background-video')
   100% {
     background: linear-gradient(
       45deg,
-      rgba(0, 128, 255, 0.966),
-      rgba(0, 139, 139, 0.932)
+      rgba(5, 162, 235, 0.966),
+      rgba(5, 126, 238, 0.932)
     );
   }
 }
@@ -126,77 +197,24 @@ const video = document.querySelector('.background-video')
     transform: scale(1.1); 
   }
 }
-.hero-title {
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-  gap: 12px; 
-}
-
-.logo-img {
-  width: 60px; 
-  height: auto;
-  gap: 3rem;
-}
 
 .hero-content {
   position: relative;
-  z-index: 1;
-  max-width: 800px;
-  padding: 0 1rem;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-  gap: 3rem;
+  max-width: 600px;
 }
 
-.hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: #ffffff;
-   background: linear-gradient(45deg, #ffffff, #f0f3f3);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease;
-  text-shadow: 2px 2px 8px rgba(79, 82, 83, 0.781);
-  gap: 3rem; 
-}
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-left: 10rem 20rem;
-  gap: 5rem;
-}
-
-.logo-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  gap: 5rem;
-}
-
-.logo-img {
-  width: 58px; 
-  height: 58px;
-  object-fit: contain;
-  border-radius: 50%; 
- 
-  transition: transform 0.3s ease;
-  gap: 3rem;
-}
-
-.logo-img:hover {
-  transform: scale(1.1);
-}
-
-
-.hero-content p {
-  font-size: 1.5rem;
+.typewriter p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  font-weight: 400;
+  white-space: pre-line;
+  text-align: left;
+   max-width: 800px;
+   margin-top: 8rem;;
   margin-bottom: 2rem;
-  background: linear-gradient(45deg, #ffffff, #f6f7f8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease;
- 
+  border-right: 3px solid darkcyan;
+  animation: blink 0.8s step-end infinite;
+  text-shadow: 0 2px 8px rgba(46, 44, 51, 0.4);
 }
 
 .btn {
@@ -220,6 +238,206 @@ const video = document.querySelector('.background-video')
   
    transform: scale(1.1);
 }
+.line-separator {
+  width: 0;
+  height: 4px;
+  margin: 4rem auto;
+  background: linear-gradient(270deg, #00ffff, rgb(220, 218, 245), #00c3ff, cyan);
+  border-radius: 5px;
+  animation: drawFlow 2s ease-out forwards, gradientFlow 3s linear infinite;
+  opacity: 0;
+}
+
+@keyframes drawFlow {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 80%;
+    opacity: 1;
+  }
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.line-separator {
+  background-size: 200% 200%; /* importante para que la animación fluya */
+}
+
+
+@keyframes drawLine {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 80%;
+    opacity: 1;
+  }
+}
+
+.process-section, .features-section {
+  background-color: white;
+  padding: 4rem 2rem;
+  text-align: left;
+}
+
+.process-section {
+  background-color: #fff;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.process-section h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #0d8067;
+}
+ .process-section-h2-hover {
+  border-bottom: #0b628a;
+ }
+.process-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #f9f9f9;
+  border-left: 4px solid darkcyan;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 2rem;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.step-number {
+  font-weight: bold;
+  color: darkcyan;
+  font-size: 1.2rem;
+  margin-left: 80px;
+  text-shadow: 1px 2px 2px#6ec1cf;
+   
+}
+.features-section {
+  background: #ffffff;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 2rem;
+  color: #0d8067;
+  margin-bottom: 3rem;
+}
+
+.feature {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  text-align: left;
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  color: darkcyan;
+}
+
+.feature p {
+  margin-top: 0.5rem;
+  color: #333;
+  font-size: 1rem;
+}
+
+.feature hr {
+  border: none;
+  border-top: 1px solid #d9e0dd;
+  margin: 1rem 0;
+}
+
+.feature ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature li {
+  padding: 0.3rem 0;
+  color: #555;
+}
+.section-divider {
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, darkcyan, transparent);
+  border: none;
+  margin: 4rem auto;
+  opacity: 0.6;
+}
+
+
+.section-divider::before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 2px;
+  background: darkcyan;
+  animation: moveLine 4s infinite alternate ease-in-out;
+}
+
+@keyframes moveLine {
+  0% { transform: translateX(-10%); opacity: 0.8; }
+  100% { transform: translateX(110%); opacity: 0.5; }
+}
+
+/* Features */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 3rem 2rem;
+  background-color: #ffffff;
+  color: #333;
+  text-align: center;
+}
+
+.features h3 {
+  color: darkcyan;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.features p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features li {
+  margin: 0.3rem 0;
+  font-weight: 500;
+  color: #444;
+}
+
 
 /* Home responsive */
 @media (max-width: 1024px) {
@@ -260,5 +478,6 @@ const video = document.querySelector('.background-video')
     font-size: 0.9rem;
   }
 }
+
 
 </style>

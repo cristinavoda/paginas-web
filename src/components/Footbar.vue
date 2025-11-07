@@ -99,19 +99,22 @@
 
 .footer-links ul {
   list-style: none;
-  padding: 0;
+  padding: 0 ;
 }
 
 .footer-links a {
   color: #77797a;
- 
-  text-decoration: none;
+ text-decoration: none;
+ padding: 1;
   font-size: 1rem;
   transition: color 0.3s;
+  transition: color 0.3s, border-bottom 0.3s;
+border-bottom: 2px solid transparent; 
 }
 
 .footer-links a:hover {
-  color: #00cccc;
+  color: darkcyan;
+  border-bottom: 2px solid #00cccc;
 }
 
 .social-icons {
