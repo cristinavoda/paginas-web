@@ -52,8 +52,9 @@
   </div>
     </section>
    <hr class="section-divider" /> 
+
  <section class="features-section" data-aos="fade-up">
-    <div class="feature">
+<div class="feature">
       <h3>Performance</h3>
       <p>Sitios web ultra rápidos que mejoran la experiencia del usuario.</p>
       <ul>
@@ -62,7 +63,9 @@
         <li>Image Optimization</li>
         <li>Caching</li>
       </ul>
+      <img src="/images/performance.jpg" alt="Blog Profesional" />
     </div>
+
  <hr class="section-divider" />
     <div class="feature">
       <h3>Diseño UI/UX</h3>
@@ -73,6 +76,7 @@
         <li>Branding</li>
         <li>Prototipado</li>
       </ul>
+       <img src="/images/ui-ux.jpg" alt="Blog Profesional" />
     </div>
     <hr class="section-divider" />
   </section>
@@ -95,8 +99,8 @@ function goToServices() {
 
 const lines = [
   "Tu página web es tu carta",
-  "es más que un espacio digital",
   "de presentación hacia el mundo.",
+  "es más que un espacio digital",
   "Puede ser simple y convincente,",
   "O dinámica y diferente,",
   "Puede ser como tú quieras.",
@@ -272,8 +276,7 @@ onMounted(() => {
 }
 
 .line-separator {
-  background-size: 200% 200%; /* importante para que la animación fluya */
-}
+  background-size: 200% 200%; }
 
 
 @keyframes drawLine {
@@ -362,7 +365,7 @@ onMounted(() => {
 .feature p {
   margin-top: 0.5rem;
   color: #333;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .feature hr {
@@ -380,6 +383,13 @@ onMounted(() => {
 .feature li {
   padding: 0.3rem 0;
   color: #555;
+}
+.feature img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
 }
 .section-divider {
   width: 60%;
@@ -404,17 +414,34 @@ onMounted(() => {
   0% { transform: translateX(-10%); opacity: 0.8; }
   100% { transform: translateX(110%); opacity: 0.5; }
 }
-
-/* Features */
-.features {
+.feature {
   display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  padding: 3rem 2rem;
-  background-color: #ffffff;
-  color: #333;
-  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap; 
+  margin-bottom: 2rem;
 }
+
+.feature ul {
+  list-style: none;
+  padding: 0;
+}
+
+.feature li {
+  margin-bottom: 0.5rem;
+}
+
+.feature img {
+  width: 220px;
+  height: 220px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 10px 4px 10px rgba(7, 106, 136, 0.87);
+}
+
+
+
 
 .features h3 {
   color: darkcyan;
@@ -423,23 +450,10 @@ onMounted(() => {
 }
 
 .features p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.features ul {
-  list-style: none;
-  padding: 0;
-}
-
-.features li {
-  margin: 0.3rem 0;
-  font-weight: 500;
-  color: #444;
-}
-
-
-/* Home responsive */
 @media (max-width: 1024px) {
   .hero-content h1 {
     font-size: 2.5rem;
@@ -464,6 +478,16 @@ onMounted(() => {
     padding: 0.7rem 1.5rem;
     font-size: 0.95rem;
   }
+  .feature {
+flex-direction: column;
+text-align: center;
+}
+
+
+.feature img {
+margin: 1rem auto 0;
+width: 80%;
+}
 }
 
 @media (max-width: 480px) {

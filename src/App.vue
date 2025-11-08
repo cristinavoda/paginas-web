@@ -140,4 +140,13 @@ animation: float 1.5s ease-in-out infinite;
 0%, 100% { transform: translateY(0); }
 50% { transform: translateY(-5px); }
 }
+@media (max-width: 768px) {
+.scroll-up {
+width: 45px;
+height: 45px;
+font-size: 18px;
+bottom: 15px;
+right: 15px;
+}
+}
 </style>
