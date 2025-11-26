@@ -61,29 +61,13 @@ const images = [
  '/images/landings/img20.png',
  '/images/landings/img3.png',
   '/images/landings/img-4.png',
- 
-  
-  '/images/landings/img7.png',
-  
- 
+ '/images/landings/img7.png',
   '/images/landings/img12.png',
   '/images/web-corporativo/img14.png',
-  
-   '/images/landings/img21.png',
-
-    
-    
-     '/images/web-corporativo/img28.png',
-
-      '/images/blogs/img22.png',
-      
-      
-     
-      
-      
-      
-      
-      '/images/tienda-online/img10.png'
+  '/images/landings/img21.png',
+  '/images/web-corporativo/img28.png',
+   '/images/blogs/img22.png',
+    '/images/tienda-online/img10.png'
 
 
 ]

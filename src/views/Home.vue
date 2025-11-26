@@ -1,7 +1,7 @@
 <template>
   <section class="home">
     <video autoplay muted loop playsinline class="background-video">
-      <source src="/videos/online-store.mp4" type="video/mp4" />
+      <source src="/videos/world.mp4" type="video/mp4" />
       Tu navegador no soporta videos HTML5.
     </video>
 
@@ -246,7 +246,7 @@ onMounted(() => {
   width: 0;
   height: 4px;
   margin: 4rem auto;
-  background: linear-gradient(270deg, #00ffff, rgb(220, 218, 245), #00c3ff, cyan);
+  background: linear-gradient(270deg, #00ffff, rgb(250, 252, 253), #00c3ff, cyan);
   border-radius: 5px;
   animation: drawFlow 2s ease-out forwards, gradientFlow 3s linear infinite;
   opacity: 0;

@@ -2,12 +2,8 @@
   <section class="detalle-servicio" data-aos="fade-up">
     
     <h1>Desarrollo Frontend</h1>
-    <img src="/images/Services/frontend.jpg" alt="Desarrollo Frontend" class="detalle-img" />
-    <p>
-  Construimos interfaces interactivas con tecnologías modernas como Vue.js, HTML5, CSS3 y JavaScript. </p> 
- <p> Nuestras soluciones combinan rendimiento, accesibilidad y estética para ofrecer una experiencia fluida en cualquier dispositivo o navegador.
-</p>
-
+    <img src="/images/Services/frontend.jpg" alt="Desarrollo Frontend" class="detalle-img" />Gracias a los lenguajes mencionados anteriormente, especialmente CSS, personalizamos la experiencia de usuario para que el mismo sitio web se pueda consumir adecuadamente desde ordenadores, móviles, tablets e incluso relojes inteligentes.
+   <div class="line-separator"></div>
 <p>
   El <strong>responsive design</strong> garantiza que un sitio web se vea y funcione correctamente en todo momento.  </p>
   <p>Gracias a los lenguajes mencionados anteriormente, especialmente CSS, personalizamos la experiencia de usuario para que el mismo sitio web se pueda consumir adecuadamente desde ordenadores, móviles, tablets e incluso relojes inteligentes.

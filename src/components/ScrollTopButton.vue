@@ -54,14 +54,14 @@ onBeforeUnmount(() => {
 
 .scroll-top:hover {
   transform: scale(1.1);
-  background-color: #25d366; /* Verde suave al pasar el mouse */
+  background-color: #25d366; 
   color: #fff;
 }
 
 @media (max-width: 768px) {
   .scroll-top {
     right: 20px;
-    bottom: 90px; /* un poco más arriba para no tapar el botón de WhatsApp */
+    bottom: 90px; 
     width: 50px;
     height: 50px;
     font-size: 1.2rem;

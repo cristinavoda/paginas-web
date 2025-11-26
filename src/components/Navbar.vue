@@ -70,7 +70,7 @@ function switchLang() {
  align-items:flex-start;
   justify-content: flex-start;
   background: rgba(251, 252, 252, 0.8);
-  color: #889191;
+  color: #464949;
   backdrop-filter: blur(18px);
   padding: 1rem 2rem;
   gap: 3rem;
@@ -80,13 +80,12 @@ function switchLang() {
   z-index: 1000;
   transition: background 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  color: black;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .navbar-home {
   background-color: transparent;
-  color:  #929696;
+  color:  #424646;
   box-shadow: none;
 }
 .navbar-contact {
@@ -101,10 +100,10 @@ function switchLang() {
 .nav-item {
   margin-left: 50 px ;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.5rem;
   transition: color 0.3s ease;
-  color: #666b6b;
+  color: #555858;
   padding: 1.5rem 0.8rem;
   
 }
@@ -116,7 +115,7 @@ function switchLang() {
 }
 
 .navbar-home .nav-item {
-  color: rgb(201, 196, 196);
+  color: rgb(104, 100, 100);
 }
 .navbar-home .nav-item:hover {
   color: #0b8a8a;

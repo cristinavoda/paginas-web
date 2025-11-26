@@ -1,11 +1,11 @@
 <template>
   <section class="servicios">
     <h1>Servicios</h1>
-    <div class="cards">
+    <div class="servicios">
       <div
         v-for="servicio in servicios"
         :key="servicio.titulo"
-        class="card"
+        class="servicios"
         data-aos="fade-up"
       >
         <img :src="servicio.imagen" :alt="servicio.titulo" class="card-img" />
@@ -61,14 +61,14 @@ h2 {
   margin-top: 1rem;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
+.servicios {
+  display: flex;
+  
   gap: 2rem;
   padding: 2rem;
 }
 
-.card {
+.servicio {
   background: #fff;
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -104,7 +104,7 @@ h2 {
   color: #fff;
 }
 
-/* Responsive: 1 columna en pantallas pequeñas */
+
 @media (max-width: 768px) {
   .cards {
     grid-template-columns: 1fr;
