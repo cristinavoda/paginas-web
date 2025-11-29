@@ -365,4 +365,20 @@ function switchLang() {
   }
 }
 
+.nav-links.open .nav-item {
+  color: #4b4e4e !important;
+}
+
+.nav-links.open .nav-item:hover {
+  color: rgb(107, 110, 110) !important;
+  transform: scale(1.1);
+  border-bottom: 2px solid rgb(132, 134, 134);
+}
+
+
+.navbar-home .nav-links.open .nav-item,
+.navbar-contact .nav-links.open .nav-item {
+  color: #abb3b3 !important;
+}
+
 </style>

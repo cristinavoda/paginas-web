@@ -1,7 +1,7 @@
 <template>
   <section class="muestras">
 
-    <div class="carrusel-section" data-aos="fade-up">
+    <div class="carrusel-section" data-aos="fade-down">
       <h2>Web Pages</h2>
       <div class="carousel">
         <button @click="prevImage" class="nav-btn glass-btn">‹</button>
