@@ -35,7 +35,7 @@ onBeforeUnmount(() => {
   position: fixed;
   bottom: 25px;
   right: 95px;
-  background-color: #1e6f6f; /* DarkCyan elegante */
+  background-color: #1e6f6f; 
   color: white;
   border: none;
   border-radius: 50%;

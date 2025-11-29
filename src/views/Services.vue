@@ -49,54 +49,80 @@ const servicios = [
 
 <style scoped>
 h1 {
-   background: linear-gradient(45deg, #052a3be3, #63f3ecee);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  text-align: center;
-  margin-top: 8rem;
+   background: linear-gradient(50deg, #121313fd, #ecf0f0ee);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   text-align: center;
+   margin-top: 8rem;
 }
-
-h2 {
-  color: darkcyan;
-  margin-top: 1rem;
-}
-
 .servicios {
-  display: flex;
-  
-  gap: 2rem;
-  padding: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.servicio {
-  background: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  place-items: center;
+  gap: 3rem;
+}
+
+
+.card {
+  width: 100%;
+  max-width: 350px;
+  background: #ffffff;
+  border-radius: 1.25rem;
+  box-shadow: 0px 12px 45px rgba(0, 0, 0, 0.06);
+  padding: 2rem 1.5rem;
   text-align: center;
-  padding: 1rem;
-  transition: transform 0.3s ease;
+  transition: all 350ms ease;
+  border: 1px solid #e9e9e9;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.card-img:hover {
+  transform: scale(1.05);
+
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.08);
 }
+
 
 .card-img {
-  width: 100%;
+  width: 90%;
   height: 200px;
+  border-radius: 1rem;
   object-fit: cover;
-  border-radius: 0.75rem;
+  margin-bottom: 1.2rem;
 }
+
+
+ h2 {
+  font-size: 1.4rem;
+  color: #464949;
+  margin-bottom: 0.8rem;
+}
+
+
+.card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.55;
+  min-height: 70px;
+}
+
 
 .btn-info {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background: transparent;
-  color: rgb(112, 111, 108);
-  border-radius: 0.5rem;
+  margin-top: 1.2rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 0.75rem;
+  box-shadow: 2px 3px 4px#535555;
+  color: rgb(61, 63, 63);
+  font-weight: 600;
   text-decoration: none;
-  transition: background 0.3s, color 0.3s;
+  transition: 0.3s ease;
 }
 
 .btn-info:hover {
@@ -106,9 +132,35 @@ h2 {
 
 
 @media (max-width: 768px) {
-  .cards {
-    grid-template-columns: 1fr;
+  .servicios {
+    padding: 2rem 1rem;
   }
-
+  h1 {
+    margin-top: 6rem;
+    font-size: 2.4rem;
+  }
 }
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  .card-img {
+    width: 70%;
+    height: auto;
+    margin: 0 auto 1rem;
+    display: block;
+    border-radius: 0.85rem;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .card-img {
+    width: 65%;
+    height: auto;
+    margin: 0 auto 1.2rem;
+    display: block;
+    border-radius: 0.85rem;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08);
+  }
+}
+
 </style>

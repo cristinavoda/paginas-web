@@ -25,7 +25,7 @@
 
     
     <div :class="['nav-links', { open: isOpen }]">
-      <router-link to="/" class="nav-item" @click="closeMenu">HOME</router-link>
+      <router-link to="/" class="nav-item" @click="closeMenu">INICIO</router-link>
       <router-link to="/services" class="nav-item" @click="closeMenu">SERVICIOS</router-link>
       <router-link to="/muestras" class="nav-item" @click="closeMenu">MUESTRAS</router-link>
       <router-link to="/pricing" class="nav-item" @click="closeMenu">PRECIOS</router-link>
@@ -73,10 +73,11 @@ function switchLang() {
   color: #464949;
   backdrop-filter: blur(18px);
   padding: 1rem 2rem;
-  gap: 3rem;
+  gap: 4rem;
   position: fixed;
   width: 100%;
   top: 0;
+  left: 0;
   z-index: 1000;
   transition: background 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -94,11 +95,11 @@ function switchLang() {
 }
 
 .navbar-contact .nav-item {
-  color: #eef3f3 !important;
+  color: #b3bbbb !important;
 }
 
 .nav-item {
-  margin-left: 50 px ;
+  
   text-decoration: none;
   font-weight: 600;
   font-size: 1.5rem;
@@ -108,22 +109,30 @@ function switchLang() {
   
 }
 .nav-item:hover {
-  color: darkcyan;
+  color: rgb(70, 73, 73);
   transform: scale(1.1);
-  border-bottom: 2px solid darkcyan;
+  border-bottom: 2px solid rgb(101, 105, 105);
   
 }
 
+
 .navbar-home .nav-item {
-  color: rgb(104, 100, 100);
+  color: rgb(201, 194, 194);
 }
 .navbar-home .nav-item:hover {
-  color: #0b8a8a;
+  color: #454747;
+}
+
+.navbar-services.nav-item {
+  color: rgb(75, 73, 73);
+}
+.navbar-services.nav-item .nav-item:hover {
+  color: #454747;
 }
 .nav-item-home:hover {
-  color: darkcyan;
+  color: rgb(74, 77, 77);
   transform: scale(1.1);
-  border-bottom: 2px solid darkcyan;
+  border-bottom: 2px solid rgb(40, 43, 43);
   
 }
 
@@ -132,7 +141,7 @@ function switchLang() {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-left: -30px;
+  margin-left: 10px;
   
 }
 
@@ -221,7 +230,7 @@ function switchLang() {
   transform: rotate(45deg) translate(5px, 5px);
 }
 .bar.open:nth-child(2) {
-  opacity: 0;
+  opacity: 1;
 }
 .bar.open:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
@@ -239,47 +248,57 @@ function switchLang() {
 
 @media (min-width: 1200px) {
   .navbar {
-    gap: 3rem; 
+    gap: 5rem; 
   }
 }
 
 @media (max-width: 768px) {
   .navbar {
+    width: 100%;
+    margin-left: 0;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem0 1rem;
-    background-color: #f7f6fa;
-    box-shadow: 0 2px 8px rgba(77, 77, 78, 0.1);
+    padding: 1rem 1rem;
+    box-shadow: 3px 2px 8px rgba(92, 92, 94, 0.1);
     transition: background-color 0.3s ease;
-    color: #6b6e6e;
+    color:#414242;
   }
 
   
   .navbar-home {
-    background-color:transparent;
-    color: #fff;
-    margin-left: 30px;
+    background-color:transparent !important;
+    color: #eeeaea;
+    margin-left: 0;
   }
 .navbar-contact {
+  
   background: transparent !important;
   box-shadow: none !important;
 }
 
 .navbar-contact .nav-item {
-  color: #eef3f3 !important;
+  margin-top: -10px;
+  color: #888f8f !important;
+  gap: 2rem;
 }
  .navbar-contact .nav-links.open {
-    background-color: rgba(61, 81, 100, 0.603) ;
-     backdrop-filter: blur(20px);
+    background-color: transparent;
+    gap: 0.1rem;
+    color:#faffff;
     transition: background-color 0.3s ease;
   }
 
-  .nav-item {
-    color: inherit;
-    font-size: 1.1rem;
-    text-align: center;
+.navbar-pricing .nav-item {
+  color: #515555 !important;
+  gap: 2rem;
+}
+ .navbar-pricing .nav-links.open {
+    background-color: transparent;
+    gap: 0.1rem;
+    color:#444747;
+    transition: background-color 0.3s ease;
   }
 
   .hamburger {
@@ -299,24 +318,25 @@ function switchLang() {
 
   .nav-links {
     position: absolute;
-    top: 60px;
-    right: 70px;
-    background-color: rgba(255, 255, 255, 0.95);
-    color: #636969;
+    top: 42px;
+    right: 0px;
+    background-color: rgb(255, 251, 251);
+    color: #4b4e4e;
     flex-direction: column;
     align-items: right;
-    width: 30%;
+    width: 60%;
     padding: 1rem 0;
     gap: 1rem;
     display: none;
     opacity: 0;
     transform: translateY(-10px);
     transition: all 0.3s ease;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(30px);
   }
 
   
   .nav-links.open {
+    margin-top: 50px;
     display: flex;
     opacity: 1;
     transform: translateY(0);
@@ -324,13 +344,16 @@ function switchLang() {
 
   
   .navbar-home .nav-links.open {
-    background-color: rgba(42, 75, 107, 0.952) ;
+    top: 40px;
+    width:100%;
+    background: linear-gradient(59deg, #9fa1acfd, #2e69b8ee);
+    color: #f1f7f7;
      backdrop-filter: blur(20px);
     transition: background-color 0.3s ease;
   }
 
   .nav-item {
-    color: inherit;
+    color:#f0e3e3;
     font-size: 1.1rem;
     text-align: center;
   }
