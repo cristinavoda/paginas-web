@@ -9,7 +9,7 @@
         <h2 data-aos="fade-down">Contacto</h2>
        <a href="mailto:paginaswebpersonalizadas.es@gmail.com" class="btn email-btn" title="paginasweb">
     <span class="btn-text">paginasweb</span>
-  <img src="/icons/email-icon.png" alt="Email" class="btn-icon" />
+  <img src="/icons/logo.png" alt="Email" class="btn-icon" />
 </a>
 
         

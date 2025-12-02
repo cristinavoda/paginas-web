@@ -1,33 +1,33 @@
 <template>
   <section class="muestras">
+<div class="carousel"
+     @mouseenter="stopAutoPlay"
+     @mouseleave="startAutoPlay">
 
-    <div class="carrusel-section" data-aos="fade-down">
-      <h2>Web Pages</h2>
-      <div class="carousel">
-        <button @click="prevImage" class="nav-btn glass-btn">‹</button>
+  <div class="carousel-inner"
+       :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
 
-        <div class="carousel-window">
-         <transition name="slide" mode="out-in">
-            <img :src="currentImage" :key="currentImage" alt="" class="carousel-image" />
-          </transition>
-        </div>
+    <img v-for="(img, i) in images"
+         :key="i"
+         :src="img"
+         class="carousel-img"
+         alt="portfolio">
+  </div>
 
-        <button @click="nextImage" class="nav-btn glass-btn">›</button>
+  <!-- Flechas -->
+  <button class="arrow left" @click="prevImage">‹</button>
+  <button class="arrow right" @click="nextImage">›</button>
 
-         <div class="dots">
-        <span
-          v-for="(image, index) in images"
-          :key="index"
-          class="dot"
-          :class="{ active: index === currentIndex }"
-          @click="goToImage(index)"
-        ></span>
-      </div>
+  <!-- Paginación con puntitos -->
+  <div class="dots">
+    <span v-for="(img, i) in images" :key="i"
+          :class="{ active: i === currentIndex }"
+          @click="currentIndex = i">
+    </span>
+  </div>
+</div>
 
-
-      </div>
-      
-    </div>
+    
 
     
     <div class="cards-container">
@@ -54,50 +54,51 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-
 const images = [
   '/images/landings/img20.png',
-  
- '/images/landings/img20.png',
- '/images/landings/img3.png',
+  '/images/landings/img3.png',
   '/images/landings/img-4.png',
- '/images/landings/img7.png',
+  '/images/landings/img7.png',
   '/images/landings/img12.png',
   '/images/web-corporativo/img14.png',
   '/images/landings/img21.png',
   '/images/web-corporativo/img28.png',
-   '/images/blogs/img22.png',
-    '/images/tienda-online/img10.png'
-
-
+  '/images/blogs/img22.png',
+  '/images/tienda-online/img10.png'
 ]
 
 const currentIndex = ref(0)
-const currentImage = ref(images[currentIndex.value])
-let interval = null
+let autoPlay = null
 
-function nextImage() {
+const nextImage = () => {
   currentIndex.value = (currentIndex.value + 1) % images.length
-  currentImage.value = images[currentIndex.value]
 }
 
-function prevImage() {
+const prevImage = () => {
   currentIndex.value = (currentIndex.value - 1 + images.length) % images.length
-  currentImage.value = images[currentIndex.value]
+}
+
+const startAutoPlay = () => {
+  autoPlay = setInterval(nextImage, 3000)
+}
+
+const stopAutoPlay = () => {
+  clearInterval(autoPlay)
 }
 
 onMounted(() => {
-  interval = setInterval(nextImage, 4000)
+  startAutoPlay()
 })
+onUnmounted(() => stopAutoPlay())
 
-onUnmounted(() => clearInterval(interval))
+
 </script>
 
 <style scoped>
 h2{
    font-size: 2.1rem;
   margin-top: 4rem;
-   background: linear-gradient(45deg, darkcyan, #0596a0);
+   background: linear-gradient(45deg, rgb(184, 190, 190), #383a3a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.5s ease;
@@ -113,66 +114,6 @@ h2{
   gap: 4rem;
 }
 
-.carrusel-section {
-  text-align: center;
-}
-
-.carousel {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.carousel-window {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 16px;
-  
-}
-.slide-enter-active, .slide-leave-active {
-  transition: all 1.2s ease-in-out;
-  
-}
-.slide-enter-from {
-  transform: translateX(100%);
-  opacity: 0.9s ease-in-out;
-}
-.slide-leave-to {
-  transform: translateX(-100%);
-  opacity: 0.8s ease-in-out;
-}
-
-
-
-.carousel-image {
-  width: 100%;
-  height: 450px;
-  object-fit: cover;
-  border-radius: 16px;
-  box-shadow: 9px 18px 18px rgba(107, 113, 114, 0.959);
-  
-}
-
-.glass-btn {
-  background: rgb(250, 252, 252);
-  border: 1px solid rgba(193, 220, 238, 0.4);
-  backdrop-filter: blur(8px);
-  color: darkcyan;
-  font-size: 2rem;
-  padding: 0.4rem 0.8rem;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.glass-btn:hover {
-  background: rgba(156, 158, 158, 0.6);
-  color: white;
-  transform: scale(1.1);
-}
 
 
 .cards-container {
@@ -206,7 +147,7 @@ h2{
 }
 
 .card h3 {
-  color: darkcyan;
+  color: rgb(85, 88, 88);
    
    font-size: 1rem;
   margin-bottom: 0.5rem;
@@ -219,12 +160,68 @@ h2{
   transition: all 0.3s ease;
   
 }
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.65s ease-in-out;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Flechas */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(253, 252, 252, 0.35);
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 24px;
+  transition: 0.3s;
+}
+
+.arrow:hover {
+  background: rgba(0,0,0,0.55);
+}
+
+.left { left: 10px; }
+.right { right: 10px; }
+
+/* Paginación */
+.dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+}
+
+.dots span {
+  width: 10px;
+  height: 10px;
+  background: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dots .active {
+  background: #3d4142;
+}
 
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 3.8s ease;
-}
-.fade-enter-from, .fade-leave-to {
-  opacity: 0;
-}
 </style>

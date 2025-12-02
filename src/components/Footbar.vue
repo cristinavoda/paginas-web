@@ -88,18 +88,18 @@
 }
 
 .footer h2 {
-  color: #00b3b3;
+  color: #0062b3;
   margin-bottom: 0.5rem;
 }
 
 .footer h3 {
   margin-bottom: 1rem;
-  color: #00cccc;
+  color: #0070cc;
 }
 
 .footer-links ul {
   list-style: none;
-  padding: 0 ;
+  padding: 1rem ;
 }
 
 .footer-links a {
@@ -113,8 +113,8 @@ border-bottom: 2px solid transparent;
 }
 
 .footer-links a:hover {
-  color: darkcyan;
-  border-bottom: 2px solid #00cccc;
+  color: rgb(0, 83, 139);
+  border-bottom: 2px solid #0058cc;
 }
 
 .social-icons {
@@ -132,7 +132,7 @@ border-bottom: 2px solid transparent;
 }
 
 .social-icons a:hover {
-  color: #00cccc;
+  color: #114bb8;
   transform: scale(1.15);
 }
 

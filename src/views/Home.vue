@@ -163,8 +163,8 @@ onMounted(() => {
   height: 100%;
   background: linear-gradient(
     45deg,
-    rgba(5, 248, 248, 0.25),
-    rgba(0, 183, 255, 0.555)
+    rgba(5, 90, 248, 0.25),
+    rgba(35, 67, 116, 0.555)
   );
   mix-blend-mode: soft-light;
   z-index: -1;
@@ -174,7 +174,7 @@ onMounted(() => {
     background: linear-gradient(
       45deg,
       rgba(56, 226, 226, 0.918),
-      rgba(0, 128, 255, 0.35)
+      rgba(18, 56, 105, 0.35)
     );
   }
   50% {
@@ -188,7 +188,7 @@ onMounted(() => {
     background: linear-gradient(
       45deg,
       rgba(5, 162, 235, 0.966),
-      rgba(5, 126, 238, 0.932)
+      rgba(24, 95, 161, 0.932)
     );
   }
 }
@@ -216,7 +216,7 @@ onMounted(() => {
    max-width: 800px;
    margin-top: 8rem;;
   margin-bottom: 2rem;
-  border-right: 3px solid darkcyan;
+  border-right: 3px solid rgb(176, 187, 187);
   animation: blink 0.8s step-end infinite;
   text-shadow: 0 2px 8px rgba(46, 44, 51, 0.4);
 }
@@ -244,9 +244,9 @@ onMounted(() => {
 }
 .line-separator {
   width: 0;
-  height: 4px;
+  height: 5px;
   margin: 4rem auto;
-  background: linear-gradient(270deg, #00ffff, rgb(250, 252, 253), #00c3ff, cyan);
+
   border-radius: 5px;
   animation: drawFlow 2s ease-out forwards, gradientFlow 3s linear infinite;
   opacity: 0;
@@ -304,11 +304,11 @@ onMounted(() => {
 
 .process-section h2 {
   font-size: 2rem;
-  margin-bottom: 3rem;
-  color: #0d8067;
+  margin-bottom: 2px 3rem;
+  color: #2a5b88;
 }
  .process-section-h2-hover {
-  border-bottom: #0b628a;
+  border-bottom: 2px #a1a5a7;
  }
 .process-cards {
   display: grid;
@@ -333,7 +333,7 @@ onMounted(() => {
 
 .step-number {
   font-weight: bold;
-  color: darkcyan;
+  color: rgb(0, 76, 139);
   font-size: 1.2rem;
   margin-left: 80px;
   text-shadow: 1px 2px 2px#6ec1cf;
@@ -347,7 +347,7 @@ onMounted(() => {
 
 .features-section h2 {
   font-size: 2rem;
-  color: #0d8067;
+  color: #071b8f;
   margin-bottom: 3rem;
 }
 
@@ -359,7 +359,7 @@ onMounted(() => {
 
 .feature h3 {
   font-size: 1.5rem;
-  color: darkcyan;
+  color: rgb(34, 145, 209);
 }
 
 .feature p {

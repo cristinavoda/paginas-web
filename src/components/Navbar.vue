@@ -73,7 +73,7 @@ function switchLang() {
   color: #464949;
   backdrop-filter: blur(18px);
   padding: 1rem 2rem;
-  gap: 4rem;
+  gap: 7rem;
   position: fixed;
   width: 100%;
   top: 0;
@@ -105,7 +105,7 @@ function switchLang() {
   font-size: 1.5rem;
   transition: color 0.3s ease;
   color: #555858;
-  padding: 1.5rem 0.8rem;
+  padding: 1.5rem 1.8rem;
   
 }
 .nav-item:hover {
