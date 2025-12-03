@@ -18,6 +18,7 @@
       
     </div>
   </section>
+
 <div class="line-separator" data-aos="fade-up"></div>
 
  
@@ -243,10 +244,10 @@ onMounted(() => {
    transform: scale(1.1);
 }
 .line-separator {
-  width: 0;
-  height: 5px;
+  width: 350px;
+  height: 2px;
+   background: linear-gradient(to right,  rgb(17, 76, 153), white);
   margin: 4rem auto;
-
   border-radius: 5px;
   animation: drawFlow 2s ease-out forwards, gradientFlow 3s linear infinite;
   opacity: 0;
@@ -318,7 +319,7 @@ onMounted(() => {
 
 .card {
   background: #f9f9f9;
-  border-left: 4px solid darkcyan;
+  border-left: 4px solid rgb(0, 100, 139);
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   padding: 2rem;
@@ -359,7 +360,7 @@ onMounted(() => {
 
 .feature h3 {
   font-size: 1.5rem;
-  color: rgb(34, 145, 209);
+  color: rgb(34, 110, 209);
 }
 
 .feature p {
@@ -394,7 +395,7 @@ onMounted(() => {
 .section-divider {
   width: 60%;
   height: 2px;
-  background: linear-gradient(to right, transparent, darkcyan, transparent);
+  background: linear-gradient(to right, transparent, rgb(20, 68, 173), transparent);
   border: none;
   margin: 4rem auto;
   opacity: 0.6;

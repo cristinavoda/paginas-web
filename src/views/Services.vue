@@ -49,14 +49,14 @@ const servicios = [
 
 <style scoped>
 h1 {
-   background: linear-gradient(50deg, #121313fd, #ecf0f0ee);
+   background: linear-gradient(55deg, #0a0a0afd, #ecf0f0ee);
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
    text-align: center;
-   margin-top: 8rem;
+   margin-top: 6rem;
 }
 .servicios {
-  padding: 4rem 2rem;
+  padding: 2.rem 2rem;
   max-width: 1200px;
   margin: auto;
 }
@@ -67,6 +67,7 @@ h1 {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   place-items: center;
   gap: 3rem;
+
 }
 
 

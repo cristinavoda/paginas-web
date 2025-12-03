@@ -132,7 +132,7 @@ border-bottom: 2px solid transparent;
 }
 
 .social-icons a:hover {
-  color: #114bb8;
+  color: #0a3a81;
   transform: scale(1.15);
 }
 

@@ -5,7 +5,7 @@
     @click="scrollToTop"
     aria-label="Volver arriba"
   >
-    <i class="fas fa-arrow-up"></i>
+    <i class="fas fa-arrow-up">⭡</i>
   </button>
 </template>
 

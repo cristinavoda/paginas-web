@@ -70,7 +70,7 @@ function switchLang() {
  align-items:flex-start;
   justify-content: flex-start;
   background: rgba(251, 252, 252, 0.8);
-  color: #464949;
+  color: #686b6b;
   backdrop-filter: blur(18px);
   padding: 1rem 2rem;
   gap: 7rem;
@@ -86,7 +86,7 @@ function switchLang() {
 
 .navbar-home {
   background-color: transparent;
-  color:  #424646;
+  color:  #bac2c2;
   box-shadow: none;
 }
 .navbar-contact {
@@ -220,8 +220,9 @@ function switchLang() {
 
 .bar {
   width: 25px;
-  color: #646868;
-  background-color: #889191;
+  color: #949b9b;
+  background-color: #e7ecec;
+  box-shadow: 1px 1px  #f5f7f7;
   transition: all 0.3s ease;
   margin-right: 3rem;
 }
@@ -261,9 +262,9 @@ function switchLang() {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 1rem;
-    box-shadow: 3px 2px 8px rgba(92, 92, 94, 0.1);
+    box-shadow: 3px 2px 8px rgba(179, 179, 182, 0.1);
     transition: background-color 0.3s ease;
-    color:#414242;
+    color:#676868;
   }
 
   
