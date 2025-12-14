@@ -103,7 +103,7 @@ const lines = [
   "de presentación hacia el mundo.",
   "es más que un espacio digital",
   "Puede ser simple y convincente,",
-  "O dinámica y diferente,",
+  " dinámica y diferente,",
   "Puede ser como tú quieras.",
   "Una web con estilo no solo se ve bien", 
   "habla por ti incluso cuando tú no estás",

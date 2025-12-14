@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-brand">
-        <h2>Cristina Voda</h2>
+        <h2>Paginas web-Cristina Voda</h2>
         <p>Desarrollo de páginas web personalizadas y optimizadas para tu negocio.</p>
       </div>
 
