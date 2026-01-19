@@ -226,9 +226,15 @@ onMounted(() => {
 </script>
 
 <style scoped>
+  html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .home {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -293,11 +299,14 @@ onMounted(() => {
     transform: scale(1.1); 
   }
 }
-
 .hero-content {
   position: relative;
-  max-width: 600px;
+  z-index: 2;
+  max-width: 100%;
+  padding: 0 1.5rem; /* 🔑 evita que toque bordes */
+  text-align: center;
 }
+
 
 .typewriter p {
   font-size: 1.6rem;
@@ -675,6 +684,13 @@ h2 {
 }
 
 @media (max-width: 768px) {
+  home {
+    min-height: 100svh; 
+
+  .hero-content {
+    padding: 0 1rem;
+  }
+}
   .hero-content h1 {
     font-size: 2.2rem;
   }
