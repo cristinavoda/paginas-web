@@ -62,7 +62,7 @@ body {
 margin: 0;
 font-family: 'Inter', system-ui, sans-serif;
 background: var(--bg);
-color: #0f172a;
+color: #3a3b3d;
 }
 .promo-banner {
   top: 150px;

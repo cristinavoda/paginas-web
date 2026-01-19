@@ -25,11 +25,12 @@
 
     
     <div :class="['nav-links', { open: isOpen }]">
-      <router-link to="/" class="nav-item" @click="closeMenu">INICIO</router-link>
-      <router-link to="/services" class="nav-item" @click="closeMenu">SERVICIOS</router-link>
-      <router-link to="/muestras" class="nav-item" @click="closeMenu">MUESTRAS</router-link>
-      <router-link to="/pricing" class="nav-item" @click="closeMenu">PRECIOS</router-link>
-      <router-link to="/contact" class="nav-item" @click="closeMenu">CONTACTO</router-link>
+      <router-link to="/" class="nav-item" @click="closeMenu">Inicio</router-link>
+      <router-link to="/services" class="nav-item" @click="closeMenu">Servicios</router-link>
+      <router-link to="/proyectos" class="nav-item" @click="closeMenu">Proyectos</router-link>
+      <router-link to="/muestras" class="nav-item" @click="closeMenu">Muestras</router-link>
+      <router-link to="/pricing" class="nav-item" @click="closeMenu">Precios</router-link>
+      <router-link to="/contact" class="nav-item" @click="closeMenu">Contacto</router-link>
     </div>
 
    
@@ -71,6 +72,7 @@ function switchLang() {
   justify-content: flex-start;
   background: rgba(251, 252, 252, 0.8);
   color: #686b6b;
+  font-weight: 500;
   backdrop-filter: blur(18px);
   padding: 1rem 2rem;
   gap: 7rem;
@@ -101,10 +103,10 @@ function switchLang() {
 .nav-item {
   
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.5rem;
   transition: color 0.3s ease;
-  color: #555858;
+  color: #6a6d6d;
   padding: 1.5rem 1.8rem;
   
 }
@@ -124,10 +126,10 @@ function switchLang() {
 }
 
 .navbar-services.nav-item {
-  color: rgb(75, 73, 73);
+  color: rgb(87, 85, 85);
 }
 .navbar-services.nav-item .nav-item:hover {
-  color: #454747;
+  color: #7f8181;
 }
 .nav-item-home:hover {
   color: rgb(74, 77, 77);
@@ -191,21 +193,7 @@ function switchLang() {
  
 }
 
-.lang-switch {
-  margin-left: 0rem;
-  padding: 0.3rem 0.6rem;
-  border-radius: 6px;
-  border: 1px solid #292b2b;
-  background: white;
-  color: #007d7d;
-  font-weight: 600;
-  cursor: pointer;
-}
 
-.lang-switch:hover {
-  background: #00b8b8;
-  color: white;
-}
 
 .hamburger {
   
@@ -264,7 +252,7 @@ function switchLang() {
     padding: 1rem 1rem;
     box-shadow: 3px 2px 8px rgba(179, 179, 182, 0.1);
     transition: background-color 0.3s ease;
-    color:#676868;
+    color:#727575;
   }
 
   

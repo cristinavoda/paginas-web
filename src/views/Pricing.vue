@@ -114,6 +114,7 @@ h1 {
   transition: all 0.5s ease;
    
    font-size: 2rem;
+   font-weight: 500;
 }
 p {
   color: #333;
