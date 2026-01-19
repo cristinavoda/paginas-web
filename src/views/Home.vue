@@ -235,11 +235,12 @@ onMounted(() => {
   position: relative;
   min-height: 100vh;
   width: 100%;
+  max-width: 100%;
   overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding-left: 6rem;
+  justify-content: center;
+  padding-left: 1rem;
   color: #eaf7f7;
 }
 
@@ -303,7 +304,7 @@ onMounted(() => {
   position: relative;
   z-index: 2;
   max-width: 100%;
-  padding: 0 1.5rem; /* 🔑 evita que toque bordes */
+  padding: 0 1.5rem; 
   text-align: center;
 }
 
@@ -344,11 +345,11 @@ onMounted(() => {
    transform: scale(1.1);
 }
 .line-separator {
-  width: 350px;
-  height: 2px;
-   background: linear-gradient(to right,  rgb(17, 76, 153), white);
-  margin: 4rem auto;
-  border-radius: 5px;
+  width: 100%;
+  max-width: 100%;
+  height: 1px;
+  background: linear-gradient(to right,  rgb(17, 76, 153), white);
+  margin: 2rem 0;
   animation: drawFlow 2s ease-out forwards, gradientFlow 3s linear infinite;
   opacity: 0;
 }
@@ -376,8 +377,6 @@ onMounted(() => {
   }
 }
 
-.line-separator {
-  background-size: 200% 200%; }
 
 
 @keyframes drawLine {
@@ -625,7 +624,7 @@ onMounted(() => {
   position: absolute;
   top: 0;
   left: 0;
-  width: 190%;
+  width: 100%;
   height: 100%;
   z-index: 1;
   color: #fff;
@@ -686,11 +685,12 @@ h2 {
 @media (max-width: 768px) {
   home {
     min-height: 100svh; 
+    width: 100%;}
 
   .hero-content {
     padding: 0 1rem;
   }
-}
+
   .hero-content h1 {
     font-size: 2.2rem;
   }
@@ -711,6 +711,8 @@ text-align: center;
 margin: 1rem auto 0;
 width: 80%;
 }
+.line-separator {
+  width: 350px;}
  .contact-form {
     width: 90%;
     padding: 0,5rem;
