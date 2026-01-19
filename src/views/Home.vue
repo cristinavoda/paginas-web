@@ -52,7 +52,21 @@
     </div>
   </div>
     </section>
+
    <hr class="section-divider" /> 
+
+   <section class="portfolio container">
+      <h2 data-aos="fade-left">Proyectos Recientes</h2>
+      <div class="projects">
+        <div class="project-card" data-aos="flip-up" v-for="(project, index) in portfolio" :key="index">
+          <img :src="project.imagen" :alt="project.titulo" />
+          <h3>{{ project.titulo }}</h3>
+           <a :href="project.link" target="_blank" class="project-link">Ver proyecto</a>
+        </div>
+      </div>
+    </section>
+  
+     <hr class="section-divider" /> 
 
  <section class="features-section" data-aos="fade-up">
 <div class="feature">
@@ -68,6 +82,8 @@
     </div>
 
  <hr class="section-divider" />
+
+
     <div class="feature">
       <h3>Diseño UI/UX</h3>
       <p>Interfaces elegantes y intuitivas que convierten visitantes en clientes.</p>
@@ -79,12 +95,54 @@
       </ul>
        <img src="/images/ui-ux.jpg" alt="Blog Profesional" />
     </div>
-    <hr class="section-divider" />
+    
   </section>
+
+<hr class="section-divider" />
+ <div class="feature">
+
+   <section class="contact">
+  <div class="contact-container">
+
+      
+      <div class="contact-info">
+        <h2 data-aos="fade-down">Contacto</h2>
+       </div>
+
+      <div class="contact-form" data-aos="fade-down">
+         <form @submit.prevent="submitForm">
+        <input type="text" v-model="name" placeholder="Tu nombre" required />
+        <input type="email" v-model="email" placeholder="Tu email" required />
+        <textarea v-model="message" placeholder="Tu mensaje" required></textarea>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+     </div>
+    </div>
+
+    <div class="card-ubication" data-aos="fade-up" data-aos-delay="500">
+        <h2> Ubicación</h2>
+        <div class="map-container">
+        <iframe
+  width="100%"
+  height="350"
+  style="border:0; border-radius: 12px;"
+  loading="lazy"
+  allowfullscreen
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2985.037566902099!2d0.7984!3d41.6300!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a6a7b692cf2a05%3A0x93bf9f0f7e2e76cc!2sCarrer%20Sant%20Miquel%2C%2012%2C%2025254%20Bell-lloc%20d'Urgell%2C%20Lleida!5e0!3m2!1ses!2ses!4v1731589912345"
+>
+</iframe>
+</div>
+
+        <p>Lleida, Catalunya, España</p>
+    </div>
+  </section>
+  </div>
+<hr class="section-divider" />
 </template>
 
 <script setup>
-import { onMounted } from "vue";
+import {ref,  onMounted } from "vue";
 import { useRouter } from "vue-router";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -110,6 +168,39 @@ const lines = [
    "Nosotros podemos crearla para ti."
 ];
 
+const portfolio = [
+  {
+    titulo: 'Hotel Mirage',
+    imagen: '/images/proyecto.png',
+    link: 'https://hotelmirageweb.netlify.app/'
+  },
+  {
+    titulo: 'Studioart',
+    imagen: '/images/proyecto1.jpg',
+    link: 'https://interiorista.netlify.app/'
+  },
+  {
+    titulo: 'Proyecto 2',
+    imagen: '/images/proyecto7.png',
+    link: 'https://paginaswebpersonalizadas.es/'
+  },
+  {
+    titulo: 'Proyecto 3',
+    imagen: '/images/proyecto3.png',
+    link: 'https://maltratoemocionalpsicologicoeconomico.wordpress.com/2023/07/30/el-amor-no-duele/#more-34'
+  }
+]
+
+const name = ref('')
+const email = ref('')
+const message = ref('')
+
+function submitForm() {
+  alert(`Gracias ${name.value}, tu mensaje ha sido enviado!`)
+  name.value = ''
+  email.value = ''
+  message.value = ''
+}
 onMounted(() => {
   const messageElement = document.getElementById("message");
   let lineIndex = 0;
@@ -453,8 +544,118 @@ onMounted(() => {
 .features p {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+
+}
+.service-cards, .projects {
+  background-color: transparent;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
+.card, .project-card {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s,  box-shadow 0.3s ease;
+}
+
+.card:hover, .project-card:hover {
+  transform: translateY(-10px);
+}
+.project-card img {
+  width: 98%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.project-card h3 {
+  margin-top: 0.8rem;
+  color: #0f4392;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #1e90ff; 
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #4b4e4e; }
+
+.contact{
+  min-height: 100vh;
+  padding: 1rem 5rem;
+  text-align: center;
+  background-color: transparent;
+   background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat; 
+  color: #f3f8f8;
+  color: #eef3f3;
+}
+
+ p {
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: rgb(249, 253, 253);
+  }
+.contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 190%;
+  height: 100%;
+  z-index: 1;
+  color: #fff;
+}
+h2 {
+  font-size: 2rem;
+  margin-top: 0.1rem;
+  background: linear-gradient(45deg, #9a9e9a, #f8f5f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.5s ease;
+}
+
+
+
+.form-card h2 {
+  margin-bottom: 1rem;
+   margin-bottom: 1rem;
+  color: rgb(253, 253, 253);
+   
+  
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem 0;
+  margin-bottom: 1.8rem;
+
+  border: none !important;
+  border-bottom: 2px solid rgba(0, 128, 128, 0.6) !important;
+  background: transparent;
+  outline: none;
+
+  font-size: 1rem;
+  color: #eef3f3;
+
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.map-container {
+    right: 25px;
+    top: 1rem;
+  }
 @media (max-width: 1024px) {
   .hero-content h1 {
     font-size: 2.5rem;
@@ -489,7 +690,22 @@ text-align: center;
 margin: 1rem auto 0;
 width: 80%;
 }
+ .contact-form {
+    width: 90%;
+    padding: 0,5rem;
+  }
+
+  .contact {
+    padding: 1rem;
+    background-size: cover; 
+  }
+
+  .contact-form {
+    width: 90%;
+    padding: 1rem;
+  }
 }
+
 
 @media (max-width: 480px) {
   .hero-content h1 {

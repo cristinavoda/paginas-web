@@ -4,7 +4,7 @@
   { 
     open: isOpen, 
     'navbar-home': isHome,
-    'navbar-contact': $route.path === '/contact'
+    'navbar-contact': route.path === '/contact'
   }
 ]">
 
@@ -347,7 +347,7 @@ function switchLang() {
   .navbar-home .nav-links.open {
     top: 40px;
     width:100%;
-    background: linear-gradient(59deg, #9fa1acfd, #2e69b8ee);
+    background: linear-gradient(59deg, #9fa1acfd, #141da2ee);
     color: #f1f7f7;
      backdrop-filter: blur(20px);
     transition: background-color 0.3s ease;
