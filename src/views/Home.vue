@@ -180,12 +180,12 @@ const portfolio = [
     link: 'https://interiorista.netlify.app/'
   },
   {
-    titulo: 'Proyecto 2',
+    titulo: 'Web Design',
     imagen: '/images/proyecto7.png',
     link: 'https://paginaswebpersonalizadas.es/'
   },
   {
-    titulo: 'Proyecto 3',
+    titulo: 'Blog-Wordpress',
     imagen: '/images/proyecto3.png',
     link: 'https://maltratoemocionalpsicologicoeconomico.wordpress.com/2023/07/30/el-amor-no-duele/#more-34'
   }
