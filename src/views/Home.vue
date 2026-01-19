@@ -1,4 +1,5 @@
 <template>
+  
   <section class="home">
     <video autoplay muted loop playsinline class="background-video">
       <source src="/videos/world.mp4" type="video/mp4" />
@@ -56,7 +57,7 @@
    <hr class="section-divider" /> 
 
    <section class="portfolio container">
-      <h2 data-aos="fade-left">Proyectos Recientes</h2>
+      <h2 data-aos="fade-up">Proyectos Recientes</h2>
       <div class="projects">
         <div class="project-card" data-aos="flip-up" v-for="(project, index) in portfolio" :key="index">
           <img :src="project.imagen" :alt="project.titulo" />
@@ -99,6 +100,7 @@
   </section>
 
 <hr class="section-divider" />
+
  <div class="feature">
 
    <section class="contact">
@@ -229,6 +231,7 @@ onMounted(() => {
   html, body {
   max-width: 100%;
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .home {
@@ -240,8 +243,7 @@ onMounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 1rem;
-  color: #eaf7f7;
+  color: #565858;
 }
 
 .background-video {
@@ -348,47 +350,13 @@ onMounted(() => {
   width: 100%;
   max-width: 100%;
   height: 1px;
-  background: linear-gradient(to right,  rgb(17, 76, 153), white);
+  background: linear-gradient(to right,  rgb(25, 23, 168), rgb(235, 232, 232), rgb(13, 11, 129));
   margin: 2rem 0;
   animation: drawFlow 2s ease-out forwards, gradientFlow 3s linear infinite;
   opacity: 0;
 }
 
-@keyframes drawFlow {
-  0% {
-    width: 0;
-    opacity: 0;
-  }
-  100% {
-    width: 80%;
-    opacity: 1;
-  }
-}
 
-@keyframes gradientFlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-
-
-@keyframes drawLine {
-  0% {
-    width: 0;
-    opacity: 0;
-  }
-  100% {
-    width: 80%;
-    opacity: 1;
-  }
-}
 
 .process-section, .features-section {
   background-color: white;
@@ -435,7 +403,7 @@ onMounted(() => {
   font-weight: bold;
   color: rgb(0, 76, 139);
   font-size: 1.2rem;
-  margin-left: 80px;
+  
   
    
 }
@@ -497,36 +465,14 @@ onMounted(() => {
   margin-bottom: 1rem;
 }
 .section-divider {
-  width: 60%;
-  height: 2px;
-  background: linear-gradient(to right, transparent, rgb(20, 68, 173), transparent);
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right,rgb(110, 112, 112) , rgb(20, 68, 173), rgb(123, 126, 126));
   border: none;
   margin: 4rem auto;
   opacity: 0.6;
 }
 
-
-.section-divider::before {
-  content: "";
-  position: absolute;
-  width: 30%;
-  height: 2px;
-  background: darkcyan;
-  animation: moveLine 4s infinite alternate ease-in-out;
-}
-
-@keyframes moveLine {
-  0% { transform: translateX(-10%); opacity: 0.8; }
-  100% { transform: translateX(110%); opacity: 0.5; }
-}
-.feature {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  flex-wrap: wrap; 
-  margin-bottom: 2rem;
-}
 
 .feature ul {
   list-style: none;
@@ -611,13 +557,12 @@ onMounted(() => {
   background-position: center;  
   background-repeat: no-repeat; 
   color: #f3f8f8;
-  color: #eef3f3;
 }
 
  p {
   font-size: 1rem;
   margin-top: 1rem;
-  color: rgb(249, 253, 253);
+  color: rgb(166, 168, 168);
   }
 .contact::before {
   content: "";
@@ -632,7 +577,7 @@ onMounted(() => {
 h2 {
   font-size: 2rem;
   margin-top: 0.1rem;
-  background: linear-gradient(45deg, #9a9e9a, #f8f5f5);
+  background: linear-gradient(45deg, #4d504d, #f8f5f5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.5s ease;
@@ -654,7 +599,7 @@ h2 {
   margin-bottom: 1.8rem;
 
   border: none !important;
-  border-bottom: 2px solid rgba(0, 128, 128, 0.6) !important;
+  border-bottom: 2px solid rgba(73, 75, 75, 0.849) !important;
   background: transparent;
   outline: none;
 

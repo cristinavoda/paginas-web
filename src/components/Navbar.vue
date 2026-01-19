@@ -195,15 +195,6 @@ function switchLang() {
 
 
 
-.hamburger {
-  
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  margin-left: auto;
-  gap: 1rem;
-  padding: 2rem 1rem;
-}
 
 
 .bar {

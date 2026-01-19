@@ -94,14 +94,14 @@ onMounted(() => {
    background-size: cover;       
   background-position: center;  
   background-repeat: no-repeat; 
-  color: #f3f8f8;
-  color: #eef3f3;
+  color: #878a8a;
+  
 }
 
  p {
      font-size: 1rem;
   margin-top: 3rem;
-  color: rgb(249, 253, 253);
+  color: rgb(138, 143, 143);
   }
 .contact::before {
   content: "";
@@ -111,12 +111,12 @@ onMounted(() => {
   width: 190%;
   height: 100%;
   z-index: 1;
-  color: #fff;
+  color: #b4afaf;
 }
 h2 {
   font-size: 2rem;
   margin-top: 5rem;
-  background: linear-gradient(45deg, #9a9e9a, #f8f5f5);
+  background: linear-gradient(45deg, #838583, #f8f5f5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.5s ease;
