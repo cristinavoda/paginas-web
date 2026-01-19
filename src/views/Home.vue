@@ -428,9 +428,14 @@ onMounted(() => {
   color: rgb(0, 76, 139);
   font-size: 1.2rem;
   margin-left: 80px;
-  text-shadow: 1px 2px 2px#6ec1cf;
+  
    
 }
+.process-cards .card p {
+  color: #4b4e4e;
+  font-size: 1rem;
+}
+
 .features-section {
   background: #ffffff;
   padding: 5rem 2rem;
@@ -456,7 +461,7 @@ onMounted(() => {
 
 .feature p {
   margin-top: 0.5rem;
-  color: #333;
+  color: #222121;
   font-size: 1.2rem;
 }
 
