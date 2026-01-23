@@ -20,7 +20,7 @@
     </div>
   </section>
 
-<div class="line-separator" data-aos="fade-up"></div>
+<div class="line-separator" data-aos="fade-right"></div>
 
  
   <section class="process-section" data-aos="fade-up">
@@ -184,7 +184,7 @@ const portfolio = [
   {
     titulo: 'Web Design',
     imagen: '/images/proyecto7.png',
-    link: 'https://paginaswebpersonalizadas.es/'
+    link: 'https://paginaswebeconomicas-cristinavodacom.es/'
   },
   {
     titulo: 'Blog-Wordpress',
@@ -458,7 +458,7 @@ onMounted(() => {
   color: #555;
 }
 .feature img {
-  width: 220px;
+  width: 550px;
   height: 220px;
   object-fit: cover;
   border-radius: 12px;
@@ -484,11 +484,11 @@ onMounted(() => {
 }
 
 .feature img {
-  width: 220px;
-  height: 220px;
+  width: 60;
+  height: auto;
   border-radius: 12px;
   object-fit: cover;
-  box-shadow: 10px 4px 10px rgba(7, 106, 136, 0.87);
+  box-shadow: 10px 4px 10px rgba(31, 76, 90, 0.87);
 }
 
 
