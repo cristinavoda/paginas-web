@@ -71,7 +71,9 @@ function switchLang() {
  align-items:flex-start;
   justify-content: flex-start;
   background: rgba(251, 252, 252, 0.8);
-  color: #686b6b;
+  color: #edf3f3;
+   text-shadow: 1px 2px 2px black;
+   font-size: 1.5rem;
   font-weight: 500;
   backdrop-filter: blur(18px);
   padding: 1rem 2rem;
@@ -82,14 +84,19 @@ function switchLang() {
   left: 0;
   z-index: 1000;
   transition: background 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.nav-links {
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 1px 1px 1px black;
 }
 
 .navbar-home {
   background-color: transparent;
-  color:  #bac2c2;
+  color:  #ebf1f1;
   box-shadow: none;
+text-shadow: 1px 1px 1px black;
 }
 .navbar-contact {
   background: transparent !important;
@@ -97,17 +104,18 @@ function switchLang() {
 }
 
 .navbar-contact .nav-item {
-  color: #b3bbbb !important;
+  color: #b0b8b8 !important;
 }
 
 .nav-item {
   
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   transition: color 0.3s ease;
-  color: #6a6d6d;
+  color: #e7eeee;
   padding: 1.5rem 1.8rem;
+  text-shadow:  2PX 2px 4px black;
   
 }
 .nav-item:hover {
@@ -118,11 +126,10 @@ function switchLang() {
 }
 
 
-.navbar-home .nav-item {
-  color: rgb(201, 194, 194);
-}
-.navbar-home .nav-item:hover {
-  color: #454747;
+.navbar-item-home {
+  color: rgb(252, 248, 248);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+
 }
 
 .navbar-services.nav-item {
@@ -241,15 +248,18 @@ function switchLang() {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 1rem;
-    box-shadow: 3px 2px 8px rgba(179, 179, 182, 0.1);
+    box-shadow: 3px 2px 8px rgba(13, 13, 14, 0.925);
     transition: background-color 0.3s ease;
     color:#727575;
+    text-shadow: black solid 3px 2px;
   }
 
   
   .navbar-home {
     background-color:transparent !important;
     color: #eeeaea;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+
     margin-left: 0;
   }
 .navbar-contact {
@@ -300,8 +310,10 @@ function switchLang() {
     position: absolute;
     top: 42px;
     right: 0px;
+    font-size: 1.1rem;
     background-color: rgb(255, 251, 251);
     color: #4b4e4e;
+    text-shadow: black solid 3px 2px;
     flex-direction: column;
     align-items: right;
     width: 60%;
@@ -319,6 +331,7 @@ function switchLang() {
     margin-top: 50px;
     display: flex;
     opacity: 1;
+    text-shadow: black solid 3px 2px;
     transform: translateY(0);
   }
 
@@ -329,12 +342,21 @@ function switchLang() {
     background: linear-gradient(59deg, #9fa1acfd, #141da2ee);
     color: #f1f7f7;
      backdrop-filter: blur(20px);
+     text-shadow:
+  0 1px 2px rgba(0,0,0,0.6),
+  0 0 1px rgba(0,0,0,0.8);
+
+     
     transition: background-color 0.3s ease;
   }
 
   .nav-item {
     color:#f0e3e3;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+    text-shadow:
+  0 1px 2px rgba(0,0,0,0.6),
+  0 0 1px rgba(0,0,0,0.8);
+ 
     text-align: center;
   }
 
@@ -347,18 +369,19 @@ function switchLang() {
 
 .nav-links.open .nav-item {
   color: #4b4e4e !important;
+   text-shadow: black solid 3px 2px;
 }
 
 .nav-links.open .nav-item:hover {
-  color: rgb(107, 110, 110) !important;
+  color: rgb(60, 63, 63) !important;
   transform: scale(1.1);
-  border-bottom: 2px solid rgb(132, 134, 134);
+  border-bottom: 2px solid rgb(63, 66, 66);
 }
 
 
 .navbar-home .nav-links.open .nav-item,
 .navbar-contact .nav-links.open .nav-item {
-  color: #abb3b3 !important;
+  color: #3e3f3f !important;
 }
 
 </style>

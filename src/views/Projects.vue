@@ -30,6 +30,12 @@
 
 <script setup>
 const portfolio = [
+  
+   {
+    titulo: 'Web Design',
+    imagen: '/images/proyecto7.png',
+    link: 'https://paginaswebeconomicas-cristinavodacom.es/'
+  },
   {
     titulo: 'Hotel Mirage',
     imagen: '/images/proyecto.png',
@@ -40,11 +46,7 @@ const portfolio = [
     imagen: '/images/proyecto1.jpg',
     link: 'https://interiorista.netlify.app/'
   },
-  {
-    titulo: 'Web Design',
-    imagen: '/images/proyecto7.png',
-    link: 'https://paginaswebeconomicas-cristinavodacom.es/'
-  },
+  
   {
     titulo: 'Blog WordPress',
     imagen: '/images/proyecto3.png',

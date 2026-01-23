@@ -171,21 +171,23 @@ const lines = [
 ];
 
 const portfolio = [
-  {
-    titulo: 'Hotel Mirage',
-    imagen: '/images/proyecto.png',
-    link: 'https://hotelmirageweb.netlify.app/'
+   {
+    titulo: 'Web Design',
+    imagen: '/images/proyecto7.png',
+    link: 'https://paginaswebeconomicas-cristinavodacom.es/'
   },
+  
   {
     titulo: 'Studioart',
     imagen: '/images/proyecto1.jpg',
     link: 'https://interiorista.netlify.app/'
   },
   {
-    titulo: 'Web Design',
-    imagen: '/images/proyecto7.png',
-    link: 'https://paginaswebeconomicas-cristinavodacom.es/'
+    titulo: 'Hotel Mirage',
+    imagen: '/images/proyecto.png',
+    link: 'https://hotelmirageweb.netlify.app/'
   },
+  
   {
     titulo: 'Blog-Wordpress',
     imagen: '/images/proyecto3.png',
@@ -314,6 +316,7 @@ onMounted(() => {
 .typewriter p {
   font-size: 1.6rem;
   line-height: 1.8;
+  color: rgb(240, 232, 232);
   font-weight: 400;
   white-space: pre-line;
   text-align: left;
@@ -322,7 +325,7 @@ onMounted(() => {
   margin-bottom: 2rem;
   border-right: 3px solid rgb(176, 187, 187);
   animation: blink 0.8s step-end infinite;
-  text-shadow: 0 2px 8px rgba(46, 44, 51, 0.4);
+  text-shadow: 2px 2px 2px rgba(15, 15, 15, 0.925);
 }
 
 .btn {
@@ -577,7 +580,7 @@ onMounted(() => {
 h2 {
   font-size: 2rem;
   margin-top: 0.1rem;
-  background: linear-gradient(45deg, #4d504d, #f8f5f5);
+  background: linear-gradient(45deg, #141414, #f8f5f5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.5s ease;
