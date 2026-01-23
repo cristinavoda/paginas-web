@@ -43,7 +43,7 @@ const portfolio = [
   {
     titulo: 'Web Design',
     imagen: '/images/proyecto7.png',
-    link: 'https://paginaswebpersonalizadas.es/'
+    link: 'https://paginaswebeconomicas-cristinavodacom.es/'
   },
   {
     titulo: 'Blog WordPress',
