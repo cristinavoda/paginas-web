@@ -70,7 +70,7 @@ function switchLang() {
  display: flex;
  align-items:flex-start;
   justify-content: flex-start;
-  background: rgba(251, 252, 252, 0.8);
+  background: transparent;
   color: #7b8080;
   text-shadow: 1px 2px 2px rgb(241, 241, 241);
   font-size: 1rem;
@@ -227,86 +227,7 @@ text-shadow: 1px 1px 1px black;
   opacity: 0;
   transform: translateY(-15px);
 }
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 0 1rem;
-  z-index: 1000;
-
-  backdrop-filter: blur(18px);
-  transition: background-color 0.3s ease;
-}
-
-.navbar-home {
-  background: transparent;
-  color: #f1f1f1;
-}
-
-.navbar-contact {
-  background: rgba(68, 78, 105, 0.9);
-  color: #fff;
-}
-.hamburger {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  cursor: pointer;
-}
-
-.hamburger span {
-  width: 24px;
-  height: 3px;
-  background: currentColor;
-  border-radius: 2px;
-}
-.nav-links {
-  position: absolute;
-  top: 60px;
-  left: 0;
-
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-
-  gap: 1.2rem;   /* 👈 AQUÍ SÍ FUNCIONA */
-  padding: 1.5rem 0;
-
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(20px);
-
-  transform: translateY(-10px);
-  opacity: 0;
-  pointer-events: none;
-
-  transition: all 0.3s ease;
-}
-.nav-links.open {
-  transform: translateY(0);
-  opacity: 1;
-  pointer-events: auto;
-}
-.nav-item {
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #444;
-
-  text-decoration: none;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.nav-item:hover {
-  transform: scale(1.08);
-  color: #111;
-}
 
 @media (min-width: 1200px) {
   .navbar {
@@ -339,12 +260,12 @@ text-shadow: 1px 1px 1px black;
   color: #b1b4b4;
   padding: 1.5rem 1.8rem;
   text-shadow:  2PX 2px 4px black;
-  transition: transform 0.2s ease, color 0.2s ease;
+  
 }
   .navbar-home {
    
     color: #eeeaea;
-    background-color: transparent;
+    background-color: rgb(51, 55, 78);
     text-shadow: 0 2px 4px rgba(0,0,0,0.8);
     margin-left: 0;
   }
@@ -356,12 +277,12 @@ text-shadow: 1px 1px 1px black;
 
 .navbar-contact .nav-item {
   margin-top: -10px;
-   color: #888f8f !important;
+   
+  color: #888f8f !important;
   gap: 2rem;
 }
  .navbar-contact .nav-links.open {
      color: #515555 !important;
-     background: rgb(68, 78, 105) !important;
     gap: 0.1rem;
     color:#faffff;
     transition: background-color 0.3s ease;
@@ -395,7 +316,7 @@ text-shadow: 1px 1px 1px black;
 
   .nav-links {
     position: absolute;
-    top: 42px;
+    top: 20px;
     right: 0px;
     font-size: 1.1rem;
     background-color: rgb(255, 251, 251);
@@ -405,7 +326,7 @@ text-shadow: 1px 1px 1px black;
     width: 100%;
     height: 100%;
     padding: 1rem 0;
-    gap: 1rem;
+    gap: 0.1rem;
     display: none;
     opacity: 0;
     transform: translateY(-10px);
@@ -464,26 +385,17 @@ text-shadow: 1px 1px 1px black;
 }
 
 
-.nav-links {
-  position: absolute;
-  top: 60px;
-  left: 0;
-
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-
-  gap: 0.1rem;   
-  padding: 1.5rem 0;
-
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(20px);
-
-  transform: translateY(-10px);
-  opacity: 0;
-  pointer-events: none;
-
-  transition: all 0.3s ease;
+.navbar-home .nav-links.open .nav-item,
+.navbar-contact .nav-links.open .nav-item {
+  color: #5d5f5f !important;
+  background-color: #3b4770;
+  height: 100%;
 }
-
+.navbar-services .nav-links.open .nav-item,
+.navbar-projects .nav-links.open .nav-item,
+.navbar-muestrass .nav-links.open .nav-item {
+  color: #474747 !important;
+  background-color: white  !important;
+  height: 100%;
+}
 </style>
