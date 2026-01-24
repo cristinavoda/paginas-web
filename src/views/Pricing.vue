@@ -10,7 +10,7 @@
         <router-link class="btn-primary" to="/contact">Pedir presupuesto</router-link>
         <router-link class="btn-ghost" to="/services">Ver servicios</router-link>
       </div>
-      <p class="small">Pack básico desde <strong>250 €</strong> — Mantenimiento opcional / Precios orientativos</p>
+      <p class="small">Pack básico desde <strong>150 €</strong> — Mantenimiento opcional / Precios orientativos</p>
     </div>
 
     <aside class="info-box" data-aos="fade-up" data-aos-delay="200">
@@ -28,7 +28,7 @@
       <article class="card" data-aos="zoom-in">
         <div class="card-header">
           <h3>Pack Esencial</h3>
-          <div class="price">250 €</div>
+          <div class="price">150 €</div>
         </div>
         <p>Ideal para autónomos que necesitan presencia online profesional y rápida.</p>
         <ul>
@@ -47,7 +47,7 @@
       <article class="card popular" data-aos="flip-left" data-aos-delay="100">
         <div class="card-header">
           <h3>Pack Profesional <span>(Más popular)</span></h3>
-          <div class="price">450 €</div>
+          <div class="price">350 €</div>
         </div>
         <p>Para quienes buscan más control y una presencia de marca completa.</p>
         <ul>
@@ -66,7 +66,7 @@
       <article class="card" data-aos="zoom-in" data-aos-delay="200">
         <div class="card-header">
           <h3>Pack Premium</h3>
-          <div class="price">750 €</div>
+          <div class="price">650 €</div>
         </div>
         <p>Soluciones completas: ecommerce, integraciones y rendimiento avanzado.</p>
         <ul>
@@ -159,7 +159,7 @@ p {
   background: linear-gradient(180deg, #ffffff, #f2fbfb);
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,.04);
+  box-shadow: 4px 6px 20px rgba(0,0,0,.04);
   margin: 0 auto 3rem;
   max-width: 500px;
 }
@@ -195,7 +195,8 @@ p {
   align-items: center;
   margin-bottom: .5rem;
   color: #5b6163;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  font-size: 1.2rem;
+    
 }
 .price {
   font-weight: bold;
@@ -217,7 +218,7 @@ li{
   text-align: center;
   margin: 3rem 0 2rem;
  color: rgb(181, 190, 190);
-   text-shadow: 2px 2px 8px rgba(0, 0, 0,6);
+   
    font-size: 2rem;
 }
 </style>

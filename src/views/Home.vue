@@ -69,6 +69,65 @@
   
      <hr class="section-divider" /> 
 
+ <section id="precios" class="pricing-section" data-aos="fade-in">
+
+  <h2 class="section-title">Planes y Precios</h2>
+  
+<div class="pricing-container">
+   
+    <div class="pricing-card basic">
+      <h3>Básico</h3>
+      <p class="subtitle">Sencillo, eficiente, perfecto</p>
+      <p class="price">150€ </p>
+      <ul>
+        <li>Hosting incluido</li>
+        <li>Diseño web sencillo / corporativa</li>
+        <li>Hasta 3 secciones</li>
+        <li>Dominio y SSL incluidos</li>
+        <li>25GB SSD</li>
+        <li>Mantenimiento 24/5</li>
+        <li>SEO básico</li>
+      </ul>
+     
+    </div>
+
+    
+    <div class="pricing-card advanced">
+      <h3>Avanzado</h3>
+      <p class="subtitle">La excelencia hecha web</p>
+      <p class="price">350€ </p>
+      <ul>
+        <li>Todo lo del plan anterior</li>
+        <li>Diseño web avanzado</li>
+        <li>Hasta 4 secciones</li>
+        <li>100GB SSD</li>
+        <li>Mantenimiento 24/7</li>
+        <li>Optimización de rendimiento</li>
+        <li>Google My Business</li>
+      </ul>
+     
+    </div>
+
+    
+    <div class="pricing-card premium">
+      <h3>Premium</h3>
+      <p class="subtitle">Soluciones premium, resultados premium</p>
+      <p class="price">650€ </p>
+      <ul>
+        <li>Todo lo del plan anterior</li>
+        <li>Diseño web profesional</li>
+        <li>Secciones ilimitadas</li>
+        <li>200GB SSD</li>
+        <li>Mantenimiento prioritario 24/7</li>
+        <li>WooCommerce e IA</li>
+        <li>Copias de seguridad diarias</li>
+      </ul>
+      
+    </div>
+  </div>
+</section>
+
+ <hr class="section-divider" /> 
  <section class="features-section" data-aos="fade-up">
 <div class="feature">
       <h3>Performance</h3>
@@ -550,6 +609,108 @@ onMounted(() => {
 
 .project-link:hover {
   color: #4b4e4e; }
+
+
+  .pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+
+.pricing-card {
+  width: 300px;
+  border-radius: 20px;
+  padding: 2rem;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+.basic {
+  background: linear-gradient(135deg, #00bcd4, #f3f6f7);
+}
+.advanced {
+  background: linear-gradient(135deg, #009688, #dae6e3);
+}
+.premium {
+  background: linear-gradient(135deg, #a0f1eb, #00332a);
+}
+
+
+.pricing-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.subtitle {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.price {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 1px 2px#141414;
+}
+
+.price span {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+
+.pricing-card ul {
+  text-align: left;
+  margin: 1rem 0;
+  list-style: none;
+  padding: 0;
+}
+
+.pricing-card ul li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn {
+  background: #fff;
+  color: #004d40;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #e0f7fa;
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .contact{
   min-height: 100vh;
