@@ -12,20 +12,11 @@
       <div class="typewriter">
         <p id="message"></p>
       </div>
-
-      <button @click="goToServices" class="btn" data-aos="zoom-in">
-        Descubre mis servicios
-      </button>
-      
     </div>
   </section>
 
-<div class="line-separator" data-aos="fade-right"></div>
-
- 
-  <section class="process-section" data-aos="fade-up">
+<section class="process-section" data-aos="fade-up">
     <h2>Cómo trabajamos</h2>
-
 
 <div class="process-cards">
     <div class="card">
@@ -141,7 +132,7 @@
       <img src="/images/performance.jpg" alt="Blog Profesional" />
     </div>
 
- <hr class="section-divider" />
+ 
 
 
     <div class="feature">
@@ -158,7 +149,7 @@
     
   </section>
 
-<hr class="section-divider" />
+ <hr class="section-divider" /> 
 
  <div class="feature">
 
@@ -387,33 +378,12 @@ onMounted(() => {
   text-shadow: 2px 2px 2px rgba(15, 15, 15, 0.925);
 }
 
-.btn {
-  background-color: rgb(237, 241, 241);
-  background: linear-gradient(45deg, #c8e9e9, #f0eeee);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease;
- border: none;
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
-  cursor:  pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 2px 8px 20px rgba(239, 242, 243, 0.897);
-  color:black;
-}
-
-.btn:hover {
-  background-color: rgb(23, 100, 100);
-  
-   transform: scale(1.1);
-}
 .line-separator {
   width: 100%;
   max-width: 100%;
   height: 1px;
-  background: linear-gradient(to right,  rgb(25, 23, 168), rgb(235, 232, 232), rgb(13, 11, 129));
-  margin: 2rem 0;
+  background: linear-gradient(to right,  rgb(112, 112, 116), rgb(235, 232, 232), rgb(81, 81, 83));
+  margin: 0.1rem 0;
   animation: drawFlow 2s ease-out forwards, gradientFlow 3s linear infinite;
   opacity: 0;
 }
@@ -529,7 +499,7 @@ onMounted(() => {
 .section-divider {
   width: 100%;
   height: 1px;
-  background: linear-gradient(to right,rgb(110, 112, 112) , rgb(20, 68, 173), rgb(123, 126, 126));
+  background: linear-gradient(to right,rgb(148, 150, 150) , rgb(194, 195, 197), rgb(156, 158, 158));
   border: none;
   margin: 4rem auto;
   opacity: 0.6;
@@ -552,9 +522,6 @@ onMounted(() => {
   object-fit: cover;
   box-shadow: 10px 4px 10px rgba(31, 76, 90, 0.87);
 }
-
-
-
 
 .features h3 {
   color: darkcyan;
@@ -593,6 +560,15 @@ onMounted(() => {
   border-radius: 8px;
   margin-bottom: 1rem;
 }
+.portfolio h2,
+.pricing-section h2 {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  width: 100%;
+margin-bottom: 4rem;
+}
+
 .project-card h3 {
   margin-top: 0.8rem;
   color: #0f4392;
