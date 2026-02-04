@@ -48,9 +48,9 @@ const portfolio = [
   },
   
   {
-    titulo: 'Blog WordPress',
-    imagen: '/images/proyecto3.png',
-    link: 'https://maltratoemocionalpsicologicoeconomico.wordpress.com/2023/07/30/el-amor-no-duele/#more-34'
+    titulo: 'Landing page',
+    imagen: '/images/pagina-roxana.png',
+    link: 'https://roxana-oana-calin-pshicolog-terapeut.netlify.app/'
   }
 ]
 </script>
