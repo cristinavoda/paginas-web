@@ -413,7 +413,7 @@ function switchLang() {
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
-    right: 20px;
+    right: 40px;
   }
   @media (max-width: 768px) {
 
@@ -428,7 +428,7 @@ function switchLang() {
     justify-content: flex-start;  
     align-items: center;
 
-    padding-top: 10px; 
+    padding-top: -20px; 
     gap: 0.1rem;        
 
     overflow-y: auto;   
