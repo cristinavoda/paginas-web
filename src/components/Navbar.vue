@@ -268,7 +268,7 @@ function switchLang() {
   font-size: 0.9rem;
   transition: color 0.3s ease;
   color: #b1b4b4;
-  padding: 1rem 1.8rem;
+  padding: 0,1rem ;
   gap: 0.1rem;
   text-shadow:  2px 2px 4px black;
   
@@ -347,11 +347,7 @@ function switchLang() {
      width:100%;
     color: #575858;
      backdrop-filter: blur(20px);
-     text-shadow:
-  0 1px 2px rgba(0,0,0,0.6),
-  0 0 1px rgba(0,0,0,0.8);
-
-     gap:01rem;
+     gap: 0.1rem;
     transition: background-color 0.3s ease;
    
   }
@@ -359,10 +355,6 @@ function switchLang() {
   .nav-item {
     color:#615d5d;
     font-size: 1.5rem;
-    text-shadow:
-  0 1px 2px rgba(0,0,0,0.6),
-  0 0 1px rgba(0,0,0,0.8);
- 
     text-align: center;
     gap:0.1rem;
   }
@@ -421,6 +413,27 @@ function switchLang() {
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
+    right: 20px;
   }
+  @media (max-width: 768px) {
+
+  .nav-items {
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;  
+    align-items: center;
+
+    padding-top: 10px; 
+    gap: 0.1rem;        
+
+    overflow-y: auto;   
+  }
+
+}
 }
 </style>
