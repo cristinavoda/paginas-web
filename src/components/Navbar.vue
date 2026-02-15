@@ -338,7 +338,6 @@ function switchLang() {
     opacity: 1;
     gap: 0.1rem;
     color: #515555;
-    text-shadow: rgb(245, 236, 236) solid 3px 2px;
     transform: translateY(0);
   }
 
@@ -370,16 +369,15 @@ function switchLang() {
 
 .nav-links.open .nav-item:hover {
   color: rgb(16, 17, 17) !important;
-  text-shadow: 2p 2px white;
-  transform: scale(1.1);
+transform: scale(1.1);
   border-bottom: 2px solid rgb(63, 66, 66);
+  gap: 0.1em;
 }
 
 
 .navbar-home .nav-links.open .nav-item,
 .navbar-contact .nav-links.open .nav-item {
   color: #5d5f5f !important;
-  background-color: #3b4770;
   height: 100%;
   gap:0.1rem;
 }
@@ -407,13 +405,13 @@ function switchLang() {
 
 @media (min-width: 1200px) {
   .navbar {
-    gap: 5rem; 
+    gap: 4rem; 
   }
 }
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
-    right: 40px;
+    right: 70px;
   }
   @media (max-width: 768px) {
 
