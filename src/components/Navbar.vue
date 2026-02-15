@@ -1,6 +1,5 @@
 <template>
-  <nav :class="[
-  'navbar',
+  <nav :class="['navbar',
   { 
     open: isOpen, 
     'navbar-home': isHome,
@@ -12,10 +11,11 @@
     <div class="logo">
   <router-link to="/" class="logo-link">
     <img src="/logo.png" alt="Logo CV Páginas Web" class="logo-img" />
+  
   </router-link>
 </div>
 
-
+ <h1>Paginas web</h1>
    
     <div class="hamburger" @click="toggleMenu">
       <div :class="{ bar: true, open: isOpen }"></div>
@@ -71,12 +71,12 @@ function switchLang() {
  align-items:flex-start;
   justify-content: flex-start;
   background: transparent;
-  color: #7b8080;
+  color: #cbd3d3;
   text-shadow: 1px 2px 2px rgb(241, 241, 241);
   font-size: 1rem;
   font-weight: 500;
   backdrop-filter: blur(18px);
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
   gap: 7rem;
   position: fixed;
   width: 100%;
@@ -87,13 +87,13 @@ function switchLang() {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-
-.navbar-home {
-  background-color: transparent;
-  color:  #ebf1f1;
-  box-shadow: none;
-text-shadow: 1px 1px 1px black;
+.navbar-home .nav-item {
+  color: #ebf1f1;
+  text-shadow: 1px 1px 1px rgb(56, 55, 55);
 }
+
+
+
 .navbar-contact {
   background: transparent !important;
   box-shadow: none !important;
@@ -109,21 +109,25 @@ text-shadow: 1px 1px 1px black;
   font-weight: 500;
   font-size: 1.5rem;
   transition: color 0.3s ease;
-  color: #b1b4b4;
-  padding: 1.5rem 1.8rem;
+  color: #d5d8d8;
+  padding: 0.1rem 1.8rem;
   text-shadow:  2PX 2px 4px black;
   
 }
+.nav-links a.router-link-exact-active {
+  color: rgb(56, 58, 58);
+  border-bottom: 2px solid rgb(53, 51, 51);
+}
 .nav-item:hover {
-  color: rgb(70, 73, 73);
+  color: rgb(156, 163, 163);
   transform: scale(1.1);
-  border-bottom: 2px solid rgb(101, 105, 105);
+  border-bottom: 2px solid rgb(133, 131, 131);
   
 }
 
 
 .navbar-item-home {
-  color: rgb(156, 156, 156);
+  color: rgb(233, 226, 226);
   text-shadow: 0 2px 4px rgba(0,0,0,0.8);
 
 }
@@ -157,19 +161,33 @@ text-shadow: 1px 1px 1px black;
 }
 
 .logo-img {
-  width: 48px; 
-  height: 48px;
+  width: 38px; 
+  height: 38px;
   object-fit: contain;
   border-radius: 50%; 
   transition: transform 0.3s ease;
   margin-left: 1px;
+  
 }
 
 .logo-img:hover {
   transform: scale(1.1);
 }
 
+h1 {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+  color: #eef3f3;
+   
+  text-shadow:  2PX 2px 4px black;
 
+}
+.navbar h1 {
+  margin: 0;
+  line-height: 1;
+}
 .hamburger {
   display: none;
   flex-direction: column;
@@ -229,46 +247,35 @@ text-shadow: 1px 1px 1px black;
 }
 
 
-@media (min-width: 1200px) {
-  .navbar {
-    gap: 5rem; 
-  }
-}
 
 @media (max-width: 768px) {
-  .navbar {
-    width: 100%;
-    margin-left: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 1rem;
-    box-shadow: 3px 2px 8px rgba(13, 13, 14, 0.925);
-    transition: background-color 0.3s ease;
-    color:#727575;
-    text-shadow: black solid 3px 2px;
-  }
-
+ 
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 68px;
+ display: flex;
+  justify-content: space-between;
+  align-items: center;
+ padding: 20px 24px;
+  z-index: 1000;
+}
   
 .nav-item {
-  
+  margin-top: auto;
   text-decoration: none;
   font-weight: 500;
   font-size: 0.9rem;
   transition: color 0.3s ease;
   color: #b1b4b4;
-  padding: 1.5rem 1.8rem;
-  text-shadow:  2PX 2px 4px black;
+  padding: 2.3rem 1.8rem;
+  text-shadow:  2px 2px 4px black;
+  
   
 }
-  .navbar-home {
-   
-    color: #eeeaea;
-    background-color: rgb(51, 55, 78);
-    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
-    margin-left: 0;
-  }
+  
 .navbar-contact {
   
   background: rgb(68, 78, 105) !important;
@@ -277,25 +284,12 @@ text-shadow: 1px 1px 1px black;
 
 .navbar-contact .nav-item {
   margin-top: -10px;
-   
-  color: #888f8f !important;
+   color: #888f8f !important;
   gap: 2rem;
 }
  .navbar-contact .nav-links.open {
      color: #515555 !important;
     gap: 0.1rem;
-    color:#faffff;
-    transition: background-color 0.3s ease;
-  }
-
-.navbar-pricing .nav-item {
-  color: #515555 !important;
-  gap: 2rem;
-}
- .navbar-pricing .nav-links.open {
-    background-color: transparent;
-    gap: 0.1rem;
-    color:#444747;
     transition: background-color 0.3s ease;
   }
 
@@ -315,9 +309,9 @@ text-shadow: 1px 1px 1px black;
   }
 
   .nav-links {
-    position: absolute;
-    top: 20px;
-    right: 0px;
+    position: fixed;
+    top: 0;
+    right: 0;
     font-size: 1.1rem;
     background-color: rgb(255, 251, 251);
     color: #4b4e4e;
@@ -335,8 +329,35 @@ text-shadow: 1px 1px 1px black;
   }
 
   
+
+  .nav-links {
+    position: fixed;    
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;         
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(253, 253, 255, 0.97);
+    backdrop-filter: blur(25px);
+
+    z-index: 9999;        
+
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+  }
+
   .nav-links.open {
-    margin-top: 50px;
+    transform: translateX(0);
+    background-color: white;
+  }
+}
+  .nav-links.open {
+    margin-top: 80px;
     display: flex;
     opacity: 1;
     color: #515555;
@@ -346,8 +367,7 @@ text-shadow: 1px 1px 1px black;
 
   
   .navbar-home .nav-links.open {
-    top: 40px;
-    width:100%;
+     width:100%;
     color: #575858;
      backdrop-filter: blur(20px);
      text-shadow:
@@ -356,6 +376,7 @@ text-shadow: 1px 1px 1px black;
 
      
     transition: background-color 0.3s ease;
+   
   }
 
   .nav-item {
@@ -367,9 +388,18 @@ text-shadow: 1px 1px 1px black;
  
     text-align: center;
   }
-
+h1 {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  color: #5d6363;
+  padding: 0.1rem 1.8rem;
   
+
 }
+  
+
 
 .nav-links.open .nav-item {
   color: #4b4e4e !important;
@@ -398,4 +428,11 @@ text-shadow: 1px 1px 1px black;
   background-color: white  !important;
   height: 100%;
 }
+
+@media (min-width: 1200px) {
+  .navbar {
+    gap: 5rem; 
+  }
+}
+
 </style>
