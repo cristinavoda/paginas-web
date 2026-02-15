@@ -66,6 +66,7 @@ function switchLang() {
 </script>
 
 <style scoped>
+
 .navbar {
  display: flex;
  align-items:flex-start;
@@ -131,7 +132,10 @@ function switchLang() {
   text-shadow: 0 2px 4px rgba(0,0,0,0.8);
 
 }
-
+.navbar-home .nav-links a.router-link-exact-active {
+  color: rgb(244, 248, 248);
+  border-bottom: 2px solid rgb(247, 242, 242);
+}
 .navbar-services.nav-item {
   color: rgb(87, 85, 85);
 }
@@ -174,20 +178,17 @@ function switchLang() {
   transform: scale(1.1);
 }
 
-h1 {
+.navbar h1 {
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   transition: color 0.3s ease;
-  color: #eef3f3;
-   
+  color: #ecf0f0;
   text-shadow:  2PX 2px 4px black;
-
-}
-.navbar h1 {
   margin: 0;
   line-height: 1;
 }
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -196,6 +197,7 @@ h1 {
   cursor: pointer;
   color: #889191;
 }
+
 .hamburger span {
   width: 25px;
   height: 3px;
@@ -213,10 +215,6 @@ h1 {
   
  
 }
-
-
-
-
 
 .bar {
   width: 25px;
@@ -259,7 +257,7 @@ h1 {
  display: flex;
   justify-content: space-between;
   align-items: center;
- padding: 20px 24px;
+ padding:10px 24px;
   z-index: 1000;
 }
   
@@ -270,12 +268,13 @@ h1 {
   font-size: 0.9rem;
   transition: color 0.3s ease;
   color: #b1b4b4;
-  padding: 2.3rem 1.8rem;
+  padding: 1rem 1.8rem;
+  gap: 0.1rem;
   text-shadow:  2px 2px 4px black;
   
   
 }
-  
+ 
 .navbar-contact {
   
   background: rgb(68, 78, 105) !important;
@@ -285,7 +284,7 @@ h1 {
 .navbar-contact .nav-item {
   margin-top: -10px;
    color: #888f8f !important;
-  gap: 2rem;
+  gap: 0.2rem;
 }
  .navbar-contact .nav-links.open {
      color: #515555 !important;
@@ -308,25 +307,7 @@ h1 {
   
   }
 
-  .nav-links {
-    position: fixed;
-    top: 0;
-    right: 0;
-    font-size: 1.1rem;
-    background-color: rgb(255, 251, 251);
-    color: #4b4e4e;
-    flex-direction: column;
-    align-items: right;
-    width: 100%;
-    height: 100%;
-    padding: 1rem 0;
-    gap: 0.1rem;
-    display: none;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-    backdrop-filter: blur(30px);
-  }
+ 
 
   
 
@@ -336,12 +317,11 @@ h1 {
     left: 0;
     width: 100vw;
     height: 100vh;         
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    gap: 0.1rem;
     background: rgba(253, 253, 255, 0.97);
     backdrop-filter: blur(25px);
 
@@ -352,14 +332,11 @@ h1 {
   }
 
   .nav-links.open {
-    transform: translateX(0);
-    background-color: white;
-  }
-}
-  .nav-links.open {
     margin-top: 80px;
     display: flex;
+     background-color: white;
     opacity: 1;
+    gap: 0.1rem;
     color: #515555;
     text-shadow: rgb(245, 236, 236) solid 3px 2px;
     transform: translateY(0);
@@ -374,7 +351,7 @@ h1 {
   0 1px 2px rgba(0,0,0,0.6),
   0 0 1px rgba(0,0,0,0.8);
 
-     
+     gap:01rem;
     transition: background-color 0.3s ease;
    
   }
@@ -387,24 +364,16 @@ h1 {
   0 0 1px rgba(0,0,0,0.8);
  
     text-align: center;
+    gap:0.1rem;
   }
-h1 {
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-  color: #5d6363;
-  padding: 0.1rem 1.8rem;
-  
 
-}
-  
 
 
 .nav-links.open .nav-item {
-  color: #4b4e4e !important;
-   text-shadow: black solid 3px 2px;
+  color: #6b6e6e !important;
+   
     background-color: white  !important;
+    gap: 0.1rem;
 }
 
 .nav-links.open .nav-item:hover {
@@ -420,6 +389,7 @@ h1 {
   color: #5d5f5f !important;
   background-color: #3b4770;
   height: 100%;
+  gap:0.1rem;
 }
 .navbar-services .nav-links.open .nav-item,
 .navbar-projects .nav-links.open .nav-item,
@@ -427,6 +397,20 @@ h1 {
   color: #474747 !important;
   background-color: white  !important;
   height: 100%;
+   gap:0.1rem;
+}
+
+.navbar h1 {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  color: #ecf0f0;
+  text-shadow:  2px 2px 4px black;
+  margin: 0;
+  line-height: 1;
+  
+}
 }
 
 @media (min-width: 1200px) {
@@ -434,5 +418,9 @@ h1 {
     gap: 5rem; 
   }
 }
-
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+}
 </style>
