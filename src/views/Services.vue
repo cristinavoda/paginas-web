@@ -56,7 +56,7 @@ h1 {
    margin-top: 6rem;
 }
 .servicios {
-  padding: 2.rem 2rem;
+  padding: 3.5rem 2rem;
   max-width: 1200px;
   margin: auto;
 }
@@ -73,11 +73,11 @@ h1 {
 
 .card {
   width: 100%;
-  max-width: 350px;
+  max-width: 550px;
   background: #ffffff;
   border-radius: 1.25rem;
   box-shadow: 0px 12px 45px rgba(0, 0, 0, 0.06);
-  padding: 2rem 1.5rem;
+  padding: 2rem 3.5rem;
   text-align: center;
   transition: all 350ms ease;
   border: 1px solid #e9e9e9;
@@ -91,8 +91,8 @@ h1 {
 
 
 .card-img {
-  width: 90%;
-  height: 200px;
+  width: 100%;
+  height: 400px;
   border-radius: 1rem;
   object-fit: cover;
   margin-bottom: 1.2rem;

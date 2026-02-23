@@ -119,7 +119,11 @@
 </section>
 
  <hr class="section-divider" /> 
+
+
  <section class="features-section" data-aos="fade-up">
+
+  
 <div class="feature">
       <h3>Performance</h3>
       <p>Sitios web ultra rápidos que mejoran la experiencia del usuario.</p>
@@ -129,7 +133,7 @@
         <li>Image Optimization</li>
         <li>Caching</li>
       </ul>
-      <img src="/images/performance.jpg" alt="Blog Profesional" />
+      <img src="/images/performance.jpg" alt="Blog Profesional" class="responsive-img" />
     </div>
 
  
@@ -144,14 +148,14 @@
         <li>Branding</li>
         <li>Prototipado</li>
       </ul>
-       <img src="/images/ui-ux.jpg" alt="Blog Profesional" />
+       <img src="/images/ui-ux.jpg" alt="Blog Profesional"  class="responsive-img"/>
     </div>
     
   </section>
 
  <hr class="section-divider" /> 
 
- <div class="feature">
+ 
 
    <section class="contact">
   <div class="contact-container">
@@ -169,7 +173,7 @@
         <button type="submit" class="btn">Enviar</button>
       </form>
      </div>
-    </div>
+    
 
     <div class="card-ubication" data-aos="fade-up" data-aos-delay="500">
         <h2> Ubicación</h2>
@@ -188,8 +192,9 @@
 
         <p>Lleida, Catalunya, España</p>
     </div>
+    </div>
   </section>
-  </div>
+
 <hr class="section-divider" />
 </template>
 
@@ -489,12 +494,11 @@ onMounted(() => {
   padding: 0.3rem 0;
   color: #555;
 }
-.feature img {
-  width: 550px;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 1rem;
+
+.features-section .feature img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 .section-divider {
   width: 100%;
