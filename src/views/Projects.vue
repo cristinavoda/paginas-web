@@ -31,11 +31,6 @@
 <script setup>
 const portfolio = [
   
-   {
-    titulo: 'Web Design',
-    imagen: '/images/proyecto7.png',
-    link: 'https://paginaswebeconomicas-cristinavodacom.es/'
-  },
   {
     titulo: 'Hotel Mirage',
     imagen: '/images/proyecto.png',
@@ -51,7 +46,14 @@ const portfolio = [
     titulo: 'Landing page',
     imagen: '/images/pagina-roxana.png',
     link: 'https://roxana-oana-calin-pshicolog-terapeut.netlify.app/'
-  }
+  },
+  
+   {
+    titulo: 'Web Design',
+    imagen: '/images/proyecto7.png',
+    link: 'https://paginaswebeconomicas-cristinavodacom.es/'
+  },
+  
 ]
 </script>
 <style>

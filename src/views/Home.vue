@@ -248,10 +248,27 @@ const lines = [
 
 const portfolio = [
    {
-    titulo: 'Web Design',
-    imagen: '/images/proyecto7.png',
-    link: 'https://paginaswebeconomicas-cristinavodacom.es/'
+    titulo: 'Hotel Mirage',
+    imagen: '/images/proyecto.png',
+    link: 'https://hotelmirageweb.netlify.app/'
   },
+    {
+      titulo: 'Studioart',
+      imagen: '/images/proyecto1.jpg',
+      link: 'https://interiorista.netlify.app/'
+    },
+    
+    {
+      titulo: 'Landing page',
+      imagen: '/images/pagina-roxana.png',
+      link: 'https://roxana-oana-calin-pshicolog-terapeut.netlify.app/'
+    },
+    
+    {
+      titulo: 'Web Design',
+      imagen: '/images/proyecto7.png',
+      link: 'https://paginaswebeconomicas-cristinavodacom.es/'
+    },  
   
   {
     titulo: 'Studioart',
@@ -268,7 +285,12 @@ const portfolio = [
     titulo: 'Landing page',
     imagen: '/images/pagina-roxana.png',
     link: 'https://roxana-oana-calin-pshicolog-terapeut.netlify.app/'
-  }
+  },
+   {
+    titulo: 'Web Design',
+    imagen: '/images/proyecto7.png',
+    link: 'https://paginaswebeconomicas-cristinavodacom.es/'
+  },
 ]
 
 const name = ref('')
