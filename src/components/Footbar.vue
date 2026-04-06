@@ -10,9 +10,23 @@
         <h3></h3>
         <ul>
           <li><router-link to="/">Inicio</router-link></li>
+           <hr class="section-divider" /> 
           <li><router-link to="/services">Servicios</router-link></li>
+            <hr class="section-divider" /> 
+            <li><router-link to="/proyectos">Proyectos</router-link></li>
+             <hr class="section-divider" />
           <li><router-link to="/muestras">Muestras</router-link></li>
+            <hr class="section-divider" />
+            <li><router-link to="/pricing">Precios</router-link></li>
+             <hr class="section-divider" />
+
           <li><router-link to="/contact">Contacto</router-link></li>
+          <hr class="section-divider" />
+
+
+
+
+
         </ul>
       </div>
 
@@ -71,7 +85,7 @@
   backdrop-filter: blur(29px);
   color: #818586;
   
-  padding: 3rem 2rem 1rem;
+  padding: 0.1rem 2rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,6 +103,7 @@
 
 .footer h2 {
   color: #0062b3;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
   margin-bottom: 0.5rem;
 }
 
@@ -105,18 +120,24 @@
 .footer-links a {
   color: #77797a;
  text-decoration: none;
- padding: 1;
-  font-size: 1rem;
+ padding: 1rem 1.5rem 1rem 1rem;
+ gap: 1.5rem;
+  font-size: 1.3rem;
   transition: color 0.3s;
   transition: color 0.3s, border-bottom 0.3s;
 border-bottom: 2px solid transparent; 
 }
 
 .footer-links a:hover {
-  color: rgb(0, 83, 139);
+  color: #0058cc;
   border-bottom: 2px solid #0058cc;
 }
-
+.section-divider {
+  height: 0.5px;
+  background-color: rgba(238, 242, 245, 0.902);
+  width: 100px;
+  
+}
 .social-icons {
   display: flex;
   justify-content: center;

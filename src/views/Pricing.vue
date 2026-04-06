@@ -25,7 +25,7 @@
 
     <h2 class="section-title" data-aos="fade-up"></h2>
     <div class="cards">
-      <article class="card" data-aos="zoom-in">
+      <article class="card-esencial" data-aos="zoom-in">
         <div class="card-header">
           <h3>Pack Esencial</h3>
           <div class="price">150 €</div>
@@ -44,7 +44,7 @@
         </div>
       </article>
 
-      <article class="card popular" data-aos="flip-left" data-aos-delay="100">
+      <article class="card-profesional" data-aos="flip-left" data-aos-delay="100">
         <div class="card-header">
           <h3>Pack Profesional <span>(Más popular)</span></h3>
           <div class="price">350 €</div>
@@ -63,7 +63,7 @@
         </div>
       </article>
 
-      <article class="card" data-aos="zoom-in" data-aos-delay="200">
+      <article class="card-premium" data-aos="zoom-in" data-aos-delay="200">
         <div class="card-header">
           <h3>Pack Premium</h3>
           <div class="price">650 €</div>
@@ -120,21 +120,28 @@ p {
   color: #333;
   line-height: 1.6;
 }
+
 .cta-row {
-  margin: 1.5rem 0;
   display: flex;
-  justify-content: center;
-  gap: 1rem;
+  flex-wrap: wrap;          
+flex-direction: row;
+justify-content: center;
+margin-left: auto;
+  gap: 1rem;              
+  margin-top: 2rem;         
 }
 .btn-primary {
-  background-color: #f3f7f7;
-  color: rgb(87, 90, 90);
-   border: 0px solid #5e6868;
-   box-shadow: 2px 2px 2px rgba(79, 86, 90, 0.986);
-  padding: 0.7rem 1.4rem;
+   background-color: #f3f5f7;
+  border: 0px solid  #6a6e6e;
+  color: #595c5c;
+  box-shadow: 2px 2px 2px rgba(123, 125, 126, 0.986);
+  width: 140px;
+  padding: 0.7rem 0.4rem 0.1rem;
   border-radius: 8px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 1rem; 
+   transition: transform .3s ease, box-shadow .3s ease;
 }
 .btn-primary:hover {
   background-color: rgb(219, 245, 245);
@@ -145,10 +152,12 @@ p {
   border: 0px solid  #6a6e6e;
   color: #595c5c;
   box-shadow: 2px 2px 2px rgba(123, 125, 126, 0.986);
-  padding: .7rem 1.4rem;
+  width: 140px;
+  padding: 0.7rem 0.4rem 0.1rem;
   border-radius: 8px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 1rem;
    transition: transform .3s ease, box-shadow .3s ease;
 }
 .btn-ghost:hover {
@@ -172,22 +181,35 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
-.card {
+.cards-article {
   background: white;
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.08);
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   justify-content: space-between;
   transition: transform .3s ease, box-shadow .3s ease;
 }
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 32px rgba(0,0,0,.1);
+  box-shadow: 0 12px 32px #0000001a;
 }
-.popular {
-  border: 2px solid #e8f0f0;
+
+.esencial {
+  background: linear-gradient(135deg, #00bcd4, #f3f6f7);
+}
+.profesional {
+  background: linear-gradient(135deg, #009688, #dae6e3);
+}
+.premium {
+  background: linear-gradient(135deg, #a0f1eb, #00332a);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #004d40;
 }
 .card-header {
   display: flex;
@@ -205,7 +227,7 @@ p {
 }
 .btn-row {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: row;
   gap: .5rem;
   margin-top: 1rem;
 }
@@ -220,5 +242,162 @@ li{
  color: rgb(181, 190, 190);
    
    font-size: 2rem;
+}
+
+
+
+.card-esencial {
+  background: linear-gradient(120deg, #93edd5, #f3f6f7);
+   border-radius: 12px;
+   height: auto;
+   padding: 2rem 2rem;
+}
+.card-profesional {
+  background: linear-gradient(130deg, #7dd2ec, white);
+   border-radius: 12px;
+   height: auto;
+   padding: 2rem 2rem;
+
+}
+.card-premium {
+  background: linear-gradient(135deg, #deb3f0, #a6f0e5);
+   border-radius: 12px;
+    height: auto;
+    padding: 2rem 2rem; 
+
+
+}
+
+
+.pricing-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.subtitle {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.price {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 1px 2px#141414;
+}
+
+.price span {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+
+.pricing-card ul {
+  text-align: left;
+  margin: 1rem 0;
+  list-style: none;
+  padding: 0;
+}
+
+.pricing-card ul li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn {
+  background: #fff;
+  color: #004d40;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #e0f7fa;
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing {
+    padding: 2rem;
+  }
+  .intro h1 {
+    font-size: 1.8rem;
+  }
+  .cta-row {
+  display: flex;
+  flex-wrap: wrap;          
+flex-direction: row;
+margin-left: auto;
+  gap: 1rem;              
+  margin-top: 2rem;         
+}
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .cards-article {
+  width: 250px;
+  display:flex; 
+  margin-left: -1.3rem;
+  flex-direction: column  ;
+  border-radius: 20px;
+  padding: 2rem;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-esencial {
+  background: linear-gradient(120deg, #93edd5, #f3f6f7);
+   border-radius: 12px;
+   height: auto;
+   padding: 1.5rem 1.5rem;
+     margin-left: -1rem;
+     width: 300px;
+}
+.card-profesional {
+  background: linear-gradient(130deg, #7dd2ec, white);
+   border-radius: 12px;
+   height: auto;
+   padding:  1.5rem 1.5rem;
+   width: 300px;
+   margin-left: -1rem;
+
+}
+.card-premium {
+  background: linear-gradient(135deg, #deb3f0, #a6f0e5);
+   border-radius: 12px;
+    height: auto;
+    padding: 1.5rem 1.5rem; 
+    margin-left: -1rem;
+    width: 300px;
+
+
+}
+
 }
 </style>

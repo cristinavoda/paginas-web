@@ -7,7 +7,7 @@
   }
 ]">
 
-    
+    <h1>Paginas web</h1>
     <div class="logo">
   <router-link to="/" class="logo-link">
     <img src="/logo.png" alt="Logo CV Páginas Web" class="logo-img" />
@@ -15,7 +15,7 @@
   </router-link>
 </div>
 
- <h1>Paginas web</h1>
+ 
    
     <div class="hamburger" @click="toggleMenu">
       <div :class="{ bar: true, open: isOpen }"></div>

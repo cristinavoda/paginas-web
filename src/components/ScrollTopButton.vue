@@ -5,7 +5,7 @@
     @click="scrollToTop"
     aria-label="Volver arriba"
   >
-    <i class="fas fa-arrow-up">⭡</i>
+    <i class="fas fa-arrow-up"></i>
   </button>
 </template>
 
@@ -35,8 +35,8 @@ onBeforeUnmount(() => {
   position: fixed;
   bottom: 25px;
   right: 95px;
-  background-color: #1e6f6f; 
-  color: white;
+  background-color: #f5f6f6; 
+  color: darkcyan;
   border: none;
   border-radius: 50%;
   width: 55px;
@@ -52,10 +52,14 @@ onBeforeUnmount(() => {
   opacity: 0.9;
 }
 
+@keyframes float {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-5px); }
+}
 .scroll-top:hover {
   transform: scale(1.1);
-  background-color: #25d366; 
-  color: #fff;
+  background-color: #f2f6f3; 
+  color:darkcyan;
 }
 
 @media (max-width: 768px) {
@@ -64,7 +68,8 @@ onBeforeUnmount(() => {
     bottom: 90px; 
     width: 50px;
     height: 50px;
-    font-size: 1rem;
+    font-size: 1.3rem;
+    color: darkcyan;
   }
 
 }

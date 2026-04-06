@@ -3,15 +3,11 @@
 
   <Navbar />
   <router-view />
-   <button 
-      v-show="showButton"
-      @click="scrollToTop"
-      class="scroll-top-btn"
-      title="Volver arriba"
-    >
-      <span class="arrow">⭡</span>
-    </button>
 
+
+
+    
+<ScrollTopButton />
   <Footer />
   <WhatsAppButton />
   <PhoneButton />
@@ -27,6 +23,7 @@ import Navbar from './components/Navbar.vue'
 import Footer from './components/Footbar.vue'
 import WhatsAppButton from './components/WhatsAppButton.vue'
 import PhoneButton from "./components/PhoneButton.vue";
+import ScrollTopButton from "./components/ScrollTopButton.vue";
 import { ref, onMounted, onUnmounted } from 'vue';
 
 const showButton = ref(false);
@@ -133,6 +130,7 @@ display: inline-block;
 font-weight: bold;
 font-size: 1.8rem;
 animation: float 1.5s ease-in-out infinite;
+color: darkcyan;
 }
 
 
@@ -140,13 +138,34 @@ animation: float 1.5s ease-in-out infinite;
 0%, 100% { transform: translateY(0); }
 50% { transform: translateY(-5px); }
 }
+
+
+
+
 @media (max-width: 768px) {
-.scroll-up {
-width: 45px;
-height: 45px;
-font-size: 18px;
-bottom: 15px;
-right: 15px;
+  .scroll-top-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.8rem;
+    bottom: 7.5rem;  /* más cerca del borde inferior */
+    right:1.5rem;
+  }
+    .arrow {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.8rem;
+  animation: float 1.5s ease-in-out infinite;
+  color: darkcyan;
 }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
+  }
+
+
+
+
+
 </style>

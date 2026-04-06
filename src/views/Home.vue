@@ -1,51 +1,11 @@
 <template>
-  
-  <section class="home">
-    <video autoplay muted loop playsinline class="background-video">
-      <source src="/videos/world.mp4" type="video/mp4" />
-      Tu navegador no soporta videos HTML5.
-    </video>
-
-    <div class="color-overlay"></div>
-
-    <div class="hero-content" data-aos="fade-up">
-      <div class="typewriter">
-        <p id="message"></p>
-      </div>
-    </div>
-  </section>
-
-<section class="process-section" data-aos="fade-up">
-    <h2>Cómo trabajamos</h2>
-
-<div class="process-cards">
-    <div class="card">
-      <span class="step-number">01</span>
-      <h3>Consulta Inicial</h3>
-      <p>Analizamos tu negocio y objetivos para crear una estrategia web enfocada en resultados y preparada para convertir.</p>
-    </div>
-
-    <div class="card">
-      <span class="step-number">02</span>
-      <h3>Diseño & Prototipo</h3>
-      <p>Creamos un diseño moderno y funcional que refleje tu marca y potencie la conversión desde el primer clic.</p>
-    </div>
-
-    <div class="card">
-      <span class="step-number">03</span>
-      <h3>Desarrollo</h3>
-      <p>Construimos tu sitio con tecnologías actuales (HTML, JS, Tailwind) priorizando velocidad, SEO y seguridad.</p>
-    </div>
-
-    <div class="card">
-      <span class="step-number">04</span>
-      <h3>Lanzamiento</h3>
-      <p>Optimizamos cada detalle, realizamos pruebas y lanzamos tu web lista para atraer clientes desde el primer día. No pagas hasta que la web esté funcionando.</p>
-    </div>
-  </div>
-    </section>
-
    <hr class="section-divider" /> 
+
+   <section class="hero">
+      <Hero />
+   </section>
+
+  <hr class="section-divider" /> 
 
    <section class="portfolio container">
       <h2 data-aos="fade-up">Proyectos Recientes</h2>
@@ -57,8 +17,11 @@
         </div>
       </div>
     </section>
-  
-     <hr class="section-divider" /> 
+
+
+
+   <hr class="section-divider" /> 
+
 
  <section id="precios" class="pricing-section" data-aos="fade-in">
 
@@ -155,7 +118,53 @@
 
  <hr class="section-divider" /> 
 
- 
+ <section class="process-section" data-aos="fade-up">
+    <h2>Cómo trabajamos</h2>
+
+<div class="process-cards">
+    <div class="card">
+      <span class="step-number">01</span>
+      <h3>Consulta Inicial</h3>
+      <p>Analizamos tu negocio y objetivos para crear una estrategia web enfocada en resultados y preparada para convertir.</p>
+    </div>
+
+    <div class="card">
+      <span class="step-number">02</span>
+      <h3>Diseño & Prototipo</h3>
+      <p>Creamos un diseño moderno y funcional que refleje tu marca y potencie la conversión desde el primer clic.</p>
+    </div>
+
+    <div class="card">
+      <span class="step-number">03</span>
+      <h3>Desarrollo</h3>
+      <p>Construimos tu sitio con tecnologías actuales (HTML, JS, Tailwind) priorizando velocidad, SEO y seguridad.</p>
+    </div>
+
+    <div class="card">
+      <span class="step-number">04</span>
+      <h3>Lanzamiento</h3>
+      <p>Optimizamos cada detalle, realizamos pruebas y lanzamos tu web lista para atraer clientes desde el primer día. No pagas hasta que la web esté funcionando.</p>
+    </div>
+  </div>
+    </section>
+
+
+    <section class="home">
+    <video  ref="bgVideo" autoplay muted loop playsinline class="background-video">
+      <source src="/videos/world.mp4" type="video/mp4" />
+      Tu navegador no soporta videos HTML5.
+    </video>
+
+    <div class="color-overlay"></div>
+
+    <div class="hero-content" data-aos="fade-up">
+      <div class="typewriter">
+        <p id="message"></p>
+      </div>
+    </div>
+  </section>
+
+    <hr class="section-divider" /> 
 
    <section class="contact">
   <div class="contact-container">
@@ -201,7 +210,8 @@
 <script setup>
 import {ref,  onMounted } from "vue";
 import { useRouter } from "vue-router";
-import AOS from 'aos'
+import AOS from 'aos';
+import Hero from "../components/Hero.vue";
 import 'aos/dist/aos.css'
 
 onMounted(() => {
@@ -213,6 +223,17 @@ function goToServices() {
   router.push("/services");
 }
 
+const bgVideo = ref(null);
+
+onMounted(() => {
+  const video = bgVideo.value;
+
+  // Esto garantiza que el loop funcione en todos los navegadores
+  video.addEventListener('ended', () => {
+    video.currentTime = 0;
+    video.play();
+  });
+});
 const lines = [
   "Tu página web es tu carta",
   "de presentación hacia el mundo.",
@@ -293,9 +314,10 @@ onMounted(() => {
 
 .home {
   position: relative;
-  min-height: 100vh;
-  width: 100%;
+  min-height: 80vh;
+  width: 90%;
   max-width: 100%;
+  margin-left: 1rem;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -308,17 +330,18 @@ onMounted(() => {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 90%;
   object-fit: cover;
   z-index: -2;
 }
+
 
 .color-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 80%;
   background: linear-gradient(
     45deg,
     rgba(5, 90, 248, 0.25),
@@ -376,8 +399,8 @@ onMounted(() => {
   white-space: pre-line;
   text-align: left;
    max-width: 800px;
-   margin-top: 8rem;;
-  margin-bottom: 2rem;
+   margin-top: 0.1rem;
+  
   border-right: 3px solid rgb(176, 187, 187);
   animation: blink 0.8s step-end infinite;
   text-shadow: 2px 2px 2px rgba(15, 15, 15, 0.925);
@@ -419,34 +442,56 @@ onMounted(() => {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .card {
   background: #f9f9f9;
   border-left: 4px solid rgb(0, 100, 139);
   border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   padding: 2rem;
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  max-width: 400px;
 }
+
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  border-left-color: #00bcd4;
 }
 
-.step-number {
-  font-weight: bold;
-  color: rgb(0, 76, 139);
-  font-size: 1.2rem;
-  
-  
-   
+
+@media (max-width: 768px) {
+  .process-cards {
+    grid-template-columns: repeat(2, 1fr);
+    width: 95%;
+    height: auto;
+    gap: 1.5rem;
+    margin-left:30px; 
+  }
+  .card {
+    max-width: 270px; 
+    width: 100%;      
+    margin-left: -10%; 
+    margin-right: 10%;
+    height: 250px;     
+  }
 }
-.process-cards .card p {
-  color: #4b4e4e;
-  font-size: 1rem;
+
+@media (max-width: 480px) {
+  .process-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .card {
+    width: 105%;
+    margin-left: -7%;
+  }
 }
 
 .features-section {
@@ -551,7 +596,7 @@ onMounted(() => {
   padding: 2rem;
   border-radius: 12px;
   text-align: center;
-  width: 250px;
+  width: 270px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s,  box-shadow 0.3s ease;
 }
@@ -600,7 +645,7 @@ margin-bottom: 4rem;
 
 
 .pricing-card {
-  width: 300px;
+  width: 260px;
   border-radius: 20px;
   padding: 2rem;
   color: #fff;
