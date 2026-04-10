@@ -32,6 +32,12 @@
 const portfolio = [
   
   {
+    titulo: 'Abogada Maria de Luca',
+    imagen: '/images/maria.png',
+    link: 'https://abogada-maria-de-luca.netlify.app/'
+  },
+  
+  {
     titulo: 'Hotel Mirage',
     imagen: '/images/proyecto.png',
     link: 'https://hotelmirageweb.netlify.app/'

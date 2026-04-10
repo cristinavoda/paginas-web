@@ -228,7 +228,7 @@ const bgVideo = ref(null);
 onMounted(() => {
   const video = bgVideo.value;
 
-  // Esto garantiza que el loop funcione en todos los navegadores
+  
   video.addEventListener('ended', () => {
     video.currentTime = 0;
     video.play();
@@ -247,6 +247,11 @@ const lines = [
 ];
 
 const portfolio = [
+  {
+    titulo: 'Abogada Maria de Luca',
+    imagen: '/images/maria.png',
+    link: 'https://abogada-maria-de-luca.netlify.app/'
+  },
    {
     titulo: 'Hotel Mirage',
     imagen: '/images/proyecto.png',
