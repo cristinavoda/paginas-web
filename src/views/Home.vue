@@ -617,7 +617,9 @@ onMounted(() => {
   flex-wrap: wrap;
   justify-content: center;
 }
-
+.h3 {
+  color: white;
+}
 .card, .project-card {
   background-color: #f9f9f9;
   padding: 2rem;
@@ -647,20 +649,21 @@ margin-bottom: 4rem;
 
 .project-card h3 {
   margin-top: 0.8rem;
-  color: #0f4392;
+  color: #f5f6f7;
+  text-shadow: 2px 2px #141414;
 }
 
 .project-link {
   display: inline-block;
   margin-top: 0.5rem;
-  color: #1e90ff; 
-  text-decoration: underline;
+  color: #36383a; 
+  text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .project-link:hover {
-  color: #4b4e4e; }
+  color: #107e7e; }
 
 
   .pricing-container {

@@ -122,12 +122,9 @@ h1 {
 
 p {
   font-size: 1.8rem;
-  color: #373434;
+  color: white;
    font-family: Roboto Slab;
-  text-shadow:
-    2px 2px 4px black,   
-   -2px -2px 2px white;  
-  
+  text-shadow: 2px 2px 4px black  ;  
   margin-top: 0px;
   opacity: 1;
   margin-left: -2rem;
@@ -142,14 +139,14 @@ p {
 
 
 
-.stair-text span:nth-child(1) { margin-left: -190px; color: rgb(77, 82, 83);font-size: 1.9rem; }
-.stair-text span:nth-child(2) { margin-left: -120px; color: rgb(102, 107, 108); font-size: 1.6rem;}
-.stair-text span:nth-child(3) { margin-left: 40px; color:rgb(106, 110, 110); font-size: 1.4rem; }
+.stair-text span:nth-child(1) { margin-left: -190px; margin-top: 2.5rem; color: white;font-size: 1.8rem; text-shadow: 2px 2px 4px solid black  ;   }
+.stair-text span:nth-child(2) { margin-left: -120px; color: white; font-size: 1.8rem;}
+.stair-text span:nth-child(3) { margin-left: 40px; color: white; font-size: 1.8rem; }
 
-.stair-text span:nth-child(4) { margin-left: 160px;  color:rgb(37, 39, 39); font-size: 1.2rem; }
+.stair-text span:nth-child(4) { margin-left: 90px;  color: white; font-size: 1.8rem; }
 .stair-text span {
   opacity: 0;
-  filter: blur(4px);
+  
   animation: reveal 0.8s ease forwards;
 }
 
@@ -278,12 +275,23 @@ position: relative;
     max-width: none;
     margin-left: 1rem;
   }
+  p {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 480px) {
   .hero-video {
     width: 90%;       
   }
-  
+   p {
+    font-size: 1.1rem;
+  }
+  .stair-text {
+    font-size: 1.1rem;
+  }
+  .stair-text span {
+  font-size: 1rem;
+}
 }
 </style>
