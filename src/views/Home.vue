@@ -447,6 +447,7 @@ onMounted(() => {
   border-right: 3px solid rgb(176, 187, 187);
   animation: blink 0.8s step-end infinite;
   text-shadow: 2px 2px 2px rgba(15, 15, 15, 0.925);
+  margin-bottom: 4rem;
 }
 
 .line-separator {

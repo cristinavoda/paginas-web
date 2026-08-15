@@ -69,14 +69,14 @@ function switchLang() {
 
 .navbar {
  display: flex;
- align-items:flex-start;
-  justify-content: flex-start;
+ align-items: center;
+  justify-content: center;
   background: transparent;
   color: #cbd3d3;
   text-shadow: 1px 2px 2px rgb(15, 15, 15);
   backdrop-filter: blur(18px);
   padding: 1rem 2rem;
-  gap: 2rem;
+  gap: 2.5rem;
   position: fixed;
   width: 100%;
   top: 0;
@@ -86,21 +86,9 @@ function switchLang() {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.navbar-home .nav-item {
-  color: #ebf1f1;
-  text-shadow: 1px 1px 1px rgb(56, 55, 55);
-}
 
 
 
-.navbar-contact {
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
-.navbar-contact .nav-item {
-  color: #b0b8b8 !important;
-}
 
 .nav-item {
   
@@ -110,14 +98,14 @@ function switchLang() {
   transition: color 0.3s ease;
   color: #d5d8d8;
   padding: 0.1rem 1.8rem;
-  text-shadow:  2px 2px 4px black;
-  gap: 2rem;
-  margin-left: -10px;
+  text-shadow:  1px 1px 1px black;
+
+
   
 }
 .nav-links a.router-link-exact-active {
   color: rgb(56, 58, 58);
-  border-bottom: 2px solid rgb(53, 51, 51);
+  border-bottom: 1px solid rgb(95, 92, 92);
   background-color: transparent;
 }
 .nav-item:hover {
@@ -128,28 +116,6 @@ function switchLang() {
 }
 
 
-.navbar-item-home {
-  color: rgb(233, 226, 226);
-  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
-
-}
-.navbar-home .nav-links a.router-link-exact-active {
-  color: rgb(244, 248, 248);
-  border-bottom: 2px solid rgb(247, 242, 242);
-}
-.navbar-services.nav-item {
-  color: rgb(87, 85, 85);
-}
-.navbar-services.nav-item .nav-item:hover {
-  color: #7f8181;
-}
-.nav-item-home:hover {
-  color: rgb(74, 77, 77);
-  transform: scale(1.1);
-  border-bottom: 2px solid rgb(40, 43, 43);
-  
-}
-
 
 
 
@@ -159,7 +125,7 @@ function switchLang() {
   font-size: 1.5rem;
   transition: color 0.3s ease;
   color: #ecf0f0;
-  text-shadow:  2PX 2px 4px black;
+  text-shadow:  1px 1px 1px black;
   margin: 0;
   line-height: 1;
 }
@@ -178,7 +144,7 @@ function switchLang() {
   font-size: 1rem;
   transition: color 0.3s ease;
   color: #c8cece;
-  text-shadow:  2PX 2px 4px black;
+  text-shadow:  1px 1px 1px black;
   margin: 0;
   line-height: 1;
   margin-left: 0.1rem;
@@ -337,7 +303,7 @@ function switchLang() {
 
   .nav-links a.router-link-exact-active {
     color: #000;
-    border-bottom: 2px solid #000;
+    border-bottom: 1px solid #000;
   }
 
 }
@@ -346,7 +312,7 @@ function switchLang() {
 
 @media (min-width: 1200px) {
   .navbar {
-    gap: 4rem; 
+    gap: 6rem; 
   }
 }
 

@@ -102,14 +102,14 @@
 }
 
 .footer h2 {
-  color: #0062b3;
+  color: #555758;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
   margin-bottom: 0.5rem;
 }
 
 .footer h3 {
   margin-bottom: 1rem;
-  color: #0070cc;
+  color: #545758;
 }
 
 .footer-links ul {
@@ -129,8 +129,8 @@ border-bottom: 2px solid transparent;
 }
 
 .footer-links a:hover {
-  color: #0058cc;
-  border-bottom: 2px solid #0058cc;
+  color: #171718;
+  border-bottom: 1px solid #1e1f20;
 }
 .section-divider {
   height: 0.5px;
