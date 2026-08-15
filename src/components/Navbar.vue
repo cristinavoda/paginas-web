@@ -76,7 +76,7 @@ function switchLang() {
   text-shadow: 1px 2px 2px rgb(15, 15, 15);
   backdrop-filter: blur(18px);
   padding: 1rem 2rem;
-  gap: 5rem;
+  gap: 2rem;
   position: fixed;
   width: 100%;
   top: 0;
@@ -106,12 +106,12 @@ function switchLang() {
   
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   transition: color 0.3s ease;
   color: #d5d8d8;
   padding: 0.1rem 1.8rem;
   text-shadow:  2px 2px 4px black;
-  gap: 2.8rem;
+  gap: 2rem;
   margin-left: -10px;
   
 }
@@ -156,7 +156,7 @@ function switchLang() {
 .navbar h1 {
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   transition: color 0.3s ease;
   color: #ecf0f0;
   text-shadow:  2PX 2px 4px black;
@@ -168,21 +168,20 @@ function switchLang() {
   align-items: center;
   gap: 2px;
   white-space: nowrap;
+  margin-left: -0.5rem;
 }
 
 .navbar-title {
-  margin-left: -15px;
-  margin-top: -15px;
-  padding: 0;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
+ 
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  color: #c8cece;
+  text-shadow:  2PX 2px 4px black;
+  margin: 0;
   line-height: 1;
-  font-weight: 600;
-
-  color: #f2f7f5;
-  background: linear-gradient(45deg, #3a3b3a, #fffefe);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  margin-left: 0.1rem;
 }
 
 .navbar-logo {

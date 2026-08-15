@@ -486,7 +486,7 @@ onMounted(() => {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  width: min(1150px, 92%);
+  width: max(1050px, 92%);
   margin: 0 auto;
   text-align: left;
 }
@@ -536,8 +536,41 @@ onMounted(() => {
   font-size: 0.95rem;
   line-height: 1.75;
 }
+@media (max-width: 1200px) and (min-width: 768px) {
+ 
+  .process-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  width: min(1150px, 92%);
+  margin: 0 auto;
+  text-align: left;
+}
+.card {
+    max-width: 200px; 
+    width: 100%;      
+    margin-left: -10%; 
+    margin-right: 10%;
+    height: 250px;     
+  }
+}
 
+@media (max-width: 700px) {
+  .process-section {
+    padding: 5rem 1.2rem;
+  }
 
+  .process-cards {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 1.2rem;
+  }
+
+  .process-cards .card {
+    min-height: auto;
+    padding: 2rem 1.5rem;
+  }
+}
 @media (max-width: 768px) {
   .process-cards {
     grid-template-columns: repeat(2, 1fr);
@@ -908,5 +941,9 @@ width: 80%;
   }
 }
 
-
+@media (max-width: 1400px) {
+  .process-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
 </style>

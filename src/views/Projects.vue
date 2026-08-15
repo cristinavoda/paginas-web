@@ -98,7 +98,7 @@ const portfolio = [
 
 .project-card img {
   width: 98%;
-  border-radius: 8px;
+  border-radius: 0px;
   margin-bottom: 1rem;
 }
 roject-card h3 {
