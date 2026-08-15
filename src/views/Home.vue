@@ -248,6 +248,11 @@ const lines = [
 
 const portfolio = [
   {
+    titulo: 'Restaurante Sensus ',
+    imagen: '/images/sensus.png',
+    link: 'https://sensusrestaurante.netlify.app/'
+  },
+  {
     titulo: 'Abogada Maria de Luca',
     imagen: '/images/maria.png',
     link: 'https://abogada-maria-de-luca.netlify.app/'
