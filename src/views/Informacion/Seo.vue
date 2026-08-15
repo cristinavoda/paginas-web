@@ -24,9 +24,9 @@
 </template>
 
 <style scoped>
-h1{
-  margin-top: 7rem;
-  color: darkcyan;
+h2{
+  margin-top: 5rem;
+  color: rgb(107, 114, 114);
 }
 .detalle-servicio {
   text-align: center;
@@ -37,19 +37,20 @@ h1{
 .detalle-img {
   width: 100%;
   max-width: 600px;
-  border-radius: 1rem;
+  border-radius: 0rem;
+  margin-top: 3rem;
   margin-bottom: 2rem;
 }
 .btn {
   display: inline-block;
   margin-top: 2rem;
   padding: .5rem 1rem;
-  background: rgb(90, 87, 87);
-  color: white;
-  border-radius: .5rem;
+  font-weight: 600;
+  color: rgb(70, 68, 68);
   text-decoration: none;
+  border-bottom: 2px solid rgb(80, 74, 74);
 }
 .btn-volver:hover {
-  background: darkcyan;
+  background: rgb(122, 126, 126);
 }
 </style>

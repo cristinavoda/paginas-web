@@ -5,16 +5,7 @@
     <div class="contact-container">
 
       
-      <div class="contact-info">
-        <h2 data-aos="fade-down">Contacto</h2>
-       <a href="mailto:paginaswebpersonalizadas.es@gmail.com" class="btn email-btn" title="paginasweb">
-    <span class="btn-text">paginasweb</span>
-  <img src="/icons/logo.png" alt="Email" class="btn-icon" />
-</a>
-
-        
-       
-      </div>
+      
 
       <div class="contact-form" data-aos="fade-down">
          <form @submit.prevent="submitForm">
@@ -159,6 +150,8 @@ h2 {
   flex-direction: column;
   align-items: center;
   background: transparent;
+  margin-top: 5rem;
+  border-radius: 0px;
   padding: 2rem;
    color: #fcf9f9;
 width: 90%;
@@ -171,7 +164,7 @@ width: 90%;
   color: #fff;
   background-color: transparent; 
   padding: 0.8rem;
-  border-radius: 8px;
+  border-radius: 0px;
   width: 80%;
 }
 
@@ -204,12 +197,11 @@ width: 90%;
 
 .btn {
   background-color: transparent;
-   box-shadow: 0 1px 2px rgb(191, 197, 197);
+  border-bottom: 1px solid #4c5050;
   color: rgba(118, 120, 122, 0.938);
   width: fit-content;
   border: none;
   padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
@@ -329,7 +321,7 @@ background-position: center;
   background-color: rgba(240, 234, 234, 0.062);
    backdrop-filter: blur(20px); 
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: 0px;
   backdrop-filter: blur(19px);
   border: 1px solid rgba(185, 184, 184, 0.918);
   color: #fff;
@@ -394,8 +386,8 @@ input, textarea {
   background-color: transparent;
   border: none;
   font-weight: bold;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0px;
   color: #f5efef;
   
   transition: all 0.3s ease;

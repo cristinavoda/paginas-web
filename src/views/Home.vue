@@ -1,9 +1,16 @@
 <template>
    <hr class="section-divider" /> 
+  
 
    <section class="hero">
       <Hero />
    </section>
+ <p class="stair-text1">
+        <span>Tu web</span>
+        <span>es tu esencia</span>
+        <span>así te ve</span>
+        <span>el mundo</span>
+      </p>
 
   <hr class="section-divider" /> 
 
@@ -33,16 +40,18 @@
       <h3>Básico</h3>
       <p class="subtitle">Sencillo, eficiente, perfecto</p>
       <p class="price">150€ </p>
+       <p>Precio orientativo · presupuesto personalizado </p>
       <ul>
+         <li>Diseño web personalizado</li>
+          <li>Entrega en 3 días</li>
         <li>Hosting incluido</li>
-        <li>Diseño web sencillo / corporativa</li>
         <li>Hasta 3 secciones</li>
         <li>Dominio y SSL incluidos</li>
         <li>25GB SSD</li>
-        <li>Mantenimiento 24/5</li>
+         <li>Soporte inicial incluido</li>
         <li>SEO básico</li>
       </ul>
-     
+      * Los plazos son orientativos y dependen de la entrega de contenidos y materiales por parte del cliente.
     </div>
 
     
@@ -50,16 +59,17 @@
       <h3>Avanzado</h3>
       <p class="subtitle">La excelencia hecha web</p>
       <p class="price">350€ </p>
+       <p>Precio orientativo · presupuesto personalizado </p>
       <ul>
-        <li>Todo lo del plan anterior</li>
+        <li>Entrega en 5 días</li>
         <li>Diseño web avanzado</li>
-        <li>Hasta 4 secciones</li>
+        <li>4 secciones</li>
         <li>100GB SSD</li>
-        <li>Mantenimiento 24/7</li>
+         <li>Soporte inicial incluido</li>
         <li>Optimización de rendimiento</li>
-        <li>Google My Business</li>
+         <li>SEO básico</li>
       </ul>
-     
+      * Los plazos son orientativos y dependen de la entrega de contenidos y materiales por parte del cliente.
     </div>
 
     
@@ -67,16 +77,19 @@
       <h3>Premium</h3>
       <p class="subtitle">Soluciones premium, resultados premium</p>
       <p class="price">650€ </p>
+       <p>Precio orientativo · presupuesto personalizado </p>
       <ul>
-        <li>Todo lo del plan anterior</li>
+         <li>Entrega en 7–10 días</li>
         <li>Diseño web profesional</li>
         <li>Secciones ilimitadas</li>
         <li>200GB SSD</li>
         <li>Mantenimiento prioritario 24/7</li>
         <li>WooCommerce e IA</li>
-        <li>Copias de seguridad diarias</li>
+        <li>Backup optimizado</li>
+          <li>Soporte prioritario </li>
+        
       </ul>
-      
+     * Los plazos son orientativos y dependen de la entrega de contenidos y materiales por parte del cliente. 
     </div>
   </div>
 </section>
@@ -88,7 +101,7 @@
 
   
 <div class="feature">
-      <h3>Performance</h3>
+      <h3>Servicios</h3>
       <p>Sitios web ultra rápidos que mejoran la experiencia del usuario.</p>
       <ul>
         <li>Core Web Vitals</li>
@@ -119,7 +132,7 @@
  <hr class="section-divider" /> 
 
  <section class="process-section" data-aos="fade-up">
-    <h2>Cómo trabajamos</h2>
+    <h2>Metodologia</h2>
 
 <div class="process-cards">
     <div class="card">
@@ -280,27 +293,7 @@ const portfolio = [
       link: 'https://paginaswebeconomicas-cristinavodacom.es/'
     },  
   
-  {
-    titulo: 'Studioart',
-    imagen: '/images/proyecto1.jpg',
-    link: 'https://interiorista.netlify.app/'
-  },
-  {
-    titulo: 'Hotel Mirage',
-    imagen: '/images/proyecto.png',
-    link: 'https://hotelmirageweb.netlify.app/'
-  },
   
-  {
-    titulo: 'Landing page',
-    imagen: '/images/pagina-roxana.png',
-    link: 'https://roxana-oana-calin-pshicolog-terapeut.netlify.app/'
-  },
-   {
-    titulo: 'Web Design',
-    imagen: '/images/proyecto7.png',
-    link: 'https://paginaswebeconomicas-cristinavodacom.es/'
-  },
 ]
 
 const name = ref('')
@@ -362,7 +355,7 @@ onMounted(() => {
   top: 0;
   left: 0;
   width: 100%;
-  height: 90%;
+  height: 100%;
   object-fit: cover;
   z-index: -2;
 }
@@ -414,6 +407,24 @@ onMounted(() => {
     transform: scale(1.1); 
   }
 }
+.stair-text1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+   font-size: 1.3rem;
+  color: #fdfdfd;
+
+  text-shadow:
+    -1px -1px 0 #363636,
+     1px -1px 0 #353434,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+
+  gap: 0.5rem;
+  margin-top: 3.5rem;
+}
+
 .hero-content {
   position: relative;
   z-index: 2;
@@ -431,7 +442,7 @@ onMounted(() => {
   white-space: pre-line;
   text-align: left;
    max-width: 800px;
-   margin-top: 0.1rem;
+   margin-top: -1rem;
   
   border-right: 3px solid rgb(176, 187, 187);
   animation: blink 0.8s step-end infinite;
@@ -450,51 +461,80 @@ onMounted(() => {
 
 
 
-.process-section, .features-section {
+ .features-section {
   background-color: white;
   padding: 4rem 2rem;
   text-align: left;
 }
-
 .process-section {
-  background-color: #fff;
-  padding: 5rem 2rem;
+  width: 100%;
+  padding: 7rem 2rem;
+  background: #fff;
   text-align: center;
 }
 
 .process-section h2 {
-  font-size: 2rem;
-  margin-bottom: 2px 3rem;
-  color: #2a5b88;
+  margin: 0 0 4rem;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #171818;
 }
- .process-section-h2-hover {
-  border-bottom: 2px #a1a5a7;
- }
+
 .process-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  justify-content: center;
-  width: 90%;
+  width: min(1150px, 92%);
   margin: 0 auto;
-}
-
-.card {
-  background: #f9f9f9;
-  border-left: 4px solid rgb(0, 100, 139);
-  border-radius: 1rem;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  padding: 2rem;
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  max-width: 400px;
 }
 
+.process-cards .card {
+  position: relative;
+  min-height: 280px;
+  padding: 2.5rem 2rem;
+  background: #fff;
+  border: 1px solid #dedbd5;
+  border-radius: 0;
+  border-left: none;
+  box-shadow: none;
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-  border-left-color: #00bcd4;
+.process-cards .card:hover {
+  transform: translateY(-6px);
+  border-color: #9d8c73;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+.step-number {
+  display: block;
+  margin-bottom: 2rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #9d8c73;
+  letter-spacing: 0.05em;
+}
+
+.process-cards .card h3 {
+  margin: 0 0 1rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #171818;
+}
+
+.process-cards .card p {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.75;
 }
 
 
@@ -504,10 +544,10 @@ onMounted(() => {
     width: 95%;
     height: auto;
     gap: 1.5rem;
-    margin-left:30px; 
+  
   }
   .card {
-    max-width: 270px; 
+    max-width: 200px; 
     width: 100%;      
     margin-left: -10%; 
     margin-right: 10%;
@@ -545,8 +585,11 @@ onMounted(() => {
 }
 
 .feature h3 {
-  font-size: 1.5rem;
-  color: rgb(34, 110, 209);
+  font-size: 1.7rem;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(10, 30, 56);
+  margin-bottom: 3.5rem;
+  font-weight: 500;
 }
 
 .feature p {
@@ -599,9 +642,9 @@ onMounted(() => {
 .feature img {
   width: 60;
   height: auto;
-  border-radius: 12px;
+  border-radius: 0px;
   object-fit: cover;
-  box-shadow: 10px 4px 10px rgba(31, 76, 90, 0.87);
+  box-shadow: 4px 4px 4px rgba(31, 76, 90, 0.87);
 }
 
 .features h3 {
@@ -628,10 +671,10 @@ onMounted(() => {
 .card, .project-card {
   background-color: #f9f9f9;
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: 0px;
   text-align: center;
   width: 270px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 5px rgba(0,0,0,0.1);
   transition: transform 0.3s,  box-shadow 0.3s ease;
 }
 
@@ -640,7 +683,7 @@ onMounted(() => {
 }
 .project-card img {
   width: 98%;
-  border-radius: 8px;
+  border-radius: 0px;
   margin-bottom: 1rem;
 }
 .portfolio h2,
@@ -670,81 +713,34 @@ margin-bottom: 4rem;
 .project-link:hover {
   color: #107e7e; }
 
-
-  .pricing-container {
+.pricing-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  padding: 2rem 1rem;
 }
-
 
 .pricing-card {
   width: 260px;
-  border-radius: 20px;
   padding: 2rem;
-  color: #fff;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  animation: fadeInUp 0.8s ease forwards;
+  color: #222;
+  background: #fff;
+  border: 1px solid #dedbd5;
+  border-radius: 0;
+  box-shadow: none;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
 }
 
 .pricing-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(-6px);
+  border-color: #9d8c73;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
 }
-
-
-.basic {
-  background: linear-gradient(135deg, #00bcd4, #f3f6f7);
-}
-.advanced {
-  background: linear-gradient(135deg, #009688, #dae6e3);
-}
-.premium {
-  background: linear-gradient(135deg, #a0f1eb, #00332a);
-}
-
-
-.pricing-card h3 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-  color: white;
-}
-
-.subtitle {
-  font-size: 1rem;
-  opacity: 0.9;
-  margin-bottom: 1rem;
-  color: white;
-}
-
-.price {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: white;
-  text-shadow: 1px 2px#141414;
-}
-
-.price span {
-  font-size: 1rem;
-  opacity: 0.8;
-}
-
-
-.pricing-card ul {
-  text-align: left;
-  margin: 1rem 0;
-  list-style: none;
-  padding: 0;
-}
-
-.pricing-card ul li {
-  padding: 0.4rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
+  
 .btn {
   background: #fff;
   color: #004d40;

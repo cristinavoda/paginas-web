@@ -1,6 +1,9 @@
 <template>
   <section class="servicios">
     <h1>Servicios</h1>
+
+     <hr class="section-divider" /> 
+
     <div class="servicios">
       <div
         v-for="servicio in servicios"
@@ -8,12 +11,16 @@
         class="servicios"
         data-aos="fade-up"
       >
+
+      <h2 class="h2">{{ servicio.titulo }}</h2>
         <img :src="servicio.imagen" :alt="servicio.titulo" class="card-img" />
-        <h2>{{ servicio.titulo }}</h2>
+       
         <p>{{ servicio.descripcion }}</p>
         <router-link :to="servicio.ruta" class="btn-info">Más información</router-link>
+          <hr class="section-divider" /> 
       </div>
     </div>
+    
   </section>
 </template>
 
@@ -60,7 +67,15 @@ h1 {
   max-width: 1200px;
   margin: auto;
 }
-
+.line-separator {
+  width: 100%;
+  max-width: 100%;
+  height: 1px;
+  background: linear-gradient(to right,  rgb(112, 112, 116), rgb(235, 232, 232), rgb(81, 81, 83));
+  margin: 0.1rem 0;
+  animation: drawFlow 2s ease-out forwards, gradientFlow 3s linear infinite;
+  opacity: 0;
+}
 
 .cards {
   display: grid;
@@ -74,8 +89,8 @@ h1 {
 .card {
   width: 100%;
   max-width: 550px;
-  background: #ffffff;
-  border-radius: 1.25rem;
+  background: #f7f5f5;
+  border-radius: 0rem;
   box-shadow: 0px 12px 45px rgba(0, 0, 0, 0.06);
   padding: 2rem 3.5rem;
   text-align: center;
@@ -93,7 +108,7 @@ h1 {
 .card-img {
   width: 100%;
   height: 400px;
-  border-radius: 1rem;
+  border-radius: 0rem;
   object-fit: cover;
   margin-bottom: 1.2rem;
 }
@@ -101,8 +116,11 @@ h1 {
 
  h2 {
   font-size: 1.4rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  margin-bottom: 3rem;
   color: #464949;
-  margin-bottom: 0.8rem;
+  
 }
 
 
@@ -117,18 +135,18 @@ h1 {
 .btn-info {
   display: inline-block;
   margin-top: 1.2rem;
+  margin-bottom: 3.5rem;
   padding: 0.7rem 1.4rem;
-  border-radius: 0.75rem;
-  box-shadow: 2px 3px 4px#535555;
-  color: rgb(61, 63, 63);
+  border-bottom: 1px solid #4c5050;
+  color: rgb(106, 109, 109);
   font-weight: 600;
   text-decoration: none;
   transition: 0.3s ease;
 }
 
 .btn-info:hover {
-  background: darkcyan;
-  color: #fff;
+  background: rgb(241, 245, 245);
+  color: #222121;
 }
 
 
@@ -148,7 +166,7 @@ h1 {
     height: auto;
     margin: 0 auto 1rem;
     display: block;
-    border-radius: 0.85rem;
+    border-radius: 0rem;
   }
 }
 
@@ -159,7 +177,7 @@ h1 {
     height: auto;
     margin: 0 auto 1.2rem;
     display: block;
-    border-radius: 0.85rem;
+    border-radius: 0rem;
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08);
   }
 }

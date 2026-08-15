@@ -79,10 +79,10 @@ const portfolio = [
 .card, .project-card {
   background-color: #f9f9f9;
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: 0px;
   text-align: center;
   width: 350px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 5px rgba(0,0,0,0.1);
   transition: transform 0.3s,  box-shadow 0.3s ease;
 }
 
@@ -91,7 +91,7 @@ const portfolio = [
 }
 .service-cards img {
   width: 98%;
-  border-radius: 8px;
+  border-radius: 0px;
   margin-bottom: 1rem;
 
 }

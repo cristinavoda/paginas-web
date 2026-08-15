@@ -14,11 +14,11 @@
          alt="portfolio">
   </div>
 
-  <!-- Flechas -->
+ 
   <button class="arrow left" @click="prevImage">‹</button>
   <button class="arrow right" @click="nextImage">›</button>
 
-  <!-- Paginación con puntitos -->
+  
   <div class="dots">
     <span v-for="(img, i) in images" :key="i"
           :class="{ active: i === currentIndex }"
@@ -126,7 +126,7 @@ h2{
 
 .card {
   background: white;
-  border-radius: 16px;
+  border-radius: 0px;
   box-shadow: 0 6px 18px rgba(119, 115, 115, 0.1);
   padding: 1rem;
   text-align: center;
@@ -142,7 +142,7 @@ h2{
   width: 100%;
   height: 220px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 0px;
   margin-bottom: 1rem;
 }
 
@@ -164,7 +164,7 @@ h2{
   position: relative;
   width: 100%;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 0px;
 }
 
 .carousel-inner {
@@ -179,7 +179,7 @@ h2{
   pointer-events: none;
 }
 
-/* Flechas */
+
 .arrow {
   position: absolute;
   top: 50%;
@@ -201,7 +201,7 @@ h2{
 .left { left: 10px; }
 .right { right: 10px; }
 
-/* Paginación */
+
 .dots {
   position: absolute;
   bottom: 12px;

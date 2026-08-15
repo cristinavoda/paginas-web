@@ -32,21 +32,21 @@
 .detalle-img {
   width: 100%;
   max-width: 600px;
-  border-radius: 1rem;
+  border-radius: 0rem;
   margin-bottom: 2rem;
 }
 .btn-volver {
   display: inline-block;
   margin-top: 2rem;
   padding: .5rem 1rem;
-  background: rgb(94, 91, 91);
-  color: white;
-  border-radius: .5rem;
+  font-weight: 600;
+  color: rgb(41, 39, 39);
+  border-radius: .0rem;
+  border-bottom: 2px solid rgb(80, 74, 74);
   text-decoration: none;
-  box-shadow: 2px 6px darkcyan;
 }
 .btn-volver:hover {
-  background: darkcyan;
+  background: rgb(151, 156, 156);
 } 
 
 </style>

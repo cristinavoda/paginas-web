@@ -31,7 +31,9 @@
 <style scoped>
 h1{
   margin-top: 7rem;
-  color: darkcyan;
+  color: rgb(83, 87, 87);
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
 }
 .detalle-servicio {
   text-align: center;
@@ -42,19 +44,19 @@ h1{
 .detalle-img {
   width: 100%;
   max-width: 600px;
-  border-radius: 1rem;
+  border-radius: 0rem;
   margin-bottom: 2rem;
 }
 .btn-volver {
   display: inline-block;
   margin-top: 2rem;
   padding: .5rem 1rem;
-  background: black;
-  color: white;
-  border-radius: .5rem;
+  border-bottom: 2px solid rgb(80, 74, 74);
+  color: rgb(70, 67, 67);
+  font-weight: 600;
   text-decoration: none;
 }
 .btn-volver:hover {
-  background: darkcyan;
+  background: rgb(150, 153, 153);
 }
 </style>

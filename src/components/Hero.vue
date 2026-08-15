@@ -11,29 +11,16 @@
      <div class="white-reveal">
        <h1 class="title">Tu web de diseño</h1>
 
-      <p class="stair-text">
-        <span>Tu web</span>
-        <span>es tu esencia</span>
-        <span>así te ve</span>
-        <span>el mundo</span>
-      </p>
-
+     <p class="stair-text">
+  <span>Diseño web</span>
+  <span>personalizado</span>
+  <span>con enfoque</span>
+  <span>profesional</span>
+</p>
 
      </div>
 
     
-    <div class="hero-content">
-      <h1 class="title">Tu web de diseño</h1>
-
-      <p class="stair-text">
-        <span>Tu web</span>
-        <span>es tu esencia</span>
-        <span>así te ve</span>
-        <span>el mundo</span>
-      </p>
-
-      <router-link to="/contact" class="btn">Contact</router-link>
-    </div>
 
   </section>
 </template>
@@ -129,21 +116,35 @@ p {
   opacity: 1;
   margin-left: -2rem;
 }
+
+
 .stair-text {
   display: flex;
   flex-direction: column;
+   align-items: center;
+  justify-content: center;
   font-size: 1.3rem;
   color: #fdfdfd;
+ 
+}
+.stair-text1 {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.3rem;
+  color: #fdfdfd;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  
  
 }
 
 
 
-.stair-text span:nth-child(1) { margin-left: -190px; margin-top: 2.5rem; color: white;font-size: 1.8rem; text-shadow: 2px 2px 4px solid black  ;   }
-.stair-text span:nth-child(2) { margin-left: -120px; color: white; font-size: 1.8rem;}
-.stair-text span:nth-child(3) { margin-left: 40px; color: white; font-size: 1.8rem; }
+.stair-text span:nth-child(1) { margin-left: 60px; margin-top: 2.5rem; color: white;font-size: 1.8rem; text-shadow: 2px 2px 4px solid black  ;   }
+.stair-text span:nth-child(2) { margin-left: 160px; color: white; font-size: 1.8rem;}
+.stair-text span:nth-child(3) { margin-left: 220px; color: white; font-size: 1.8rem; }
 
-.stair-text span:nth-child(4) { margin-left: 90px;  color: white; font-size: 1.8rem; }
+.stair-text span:nth-child(4) { margin-left: 240px;  color: white; font-size: 1.8rem; }
 .stair-text span {
   opacity: 0;
   

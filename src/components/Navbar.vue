@@ -6,15 +6,15 @@
     'navbar-contact': route.path === '/contact'
   }
 ]">
-
-    <h1>Paginas web</h1>
-    <div class="logo">
-  <router-link to="/" class="logo-link">
-    <img src="/logo.png" alt="Logo CV Páginas Web" class="logo-img" />
-  
-  </router-link>
+<div class="navbar-brand" data-aos="fade-up">
+  <h1 class="navbar-title">Páginas Web</h1>
+  <img
+    src="/icons/logo.png"
+    class="navbar-logo"
+    alt="Cristina Voda"
+  />
 </div>
-
+  
  
    
     <div class="hamburger" @click="toggleMenu">
@@ -151,41 +151,7 @@ function switchLang() {
 }
 
 
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-left: 1px;
-  
-}
 
-.logo-link {
-  display: flex;
-  
-  text-decoration: none;
-}
-
-.logo-img {
-  width: 38px; 
-  height: 38px;
-  object-fit: contain;
-  border-radius: 50%; 
-  transition: transform 0.3s ease;
-  margin-left: 1px;
-  
-}
-.logo a {
- color: #5c5959;
-  text-shadow: 2px 2px 8px rgb(0, 0, 0);
-  font-size: 2rem;
-  font-weight: 500;
-  text-decoration: none;
-  
- 
-}
-.logo-img:hover {
-  transform: scale(1.1);
-}
 
 .navbar h1 {
   text-decoration: none;
@@ -197,7 +163,36 @@ function switchLang() {
   margin: 0;
   line-height: 1;
 }
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  white-space: nowrap;
+}
 
+.navbar-title {
+  margin-left: -15px;
+  margin-top: -15px;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 600;
+
+  color: #f2f7f5;
+  background: linear-gradient(45deg, #3a3b3a, #fffefe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin-left: 1px;
+}
 .hamburger {
   display: none;
   flex-direction: column;

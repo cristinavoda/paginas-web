@@ -35,17 +35,13 @@ onBeforeUnmount(() => {
   position: fixed;
   bottom: 25px;
   right: 95px;
-  background-color: #f5f6f6; 
-  color: darkcyan;
-  border: none;
-  border-radius: 50%;
-  width: 55px;
-  height: 55px;
-  font-size: 1.4rem;
+  background-color: transparent; 
+  color: rgb(49, 51, 51);
+  font-size: 1.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+ border: none;
   z-index: 9998;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -57,9 +53,8 @@ onBeforeUnmount(() => {
 50% { transform: translateY(-5px); }
 }
 .scroll-top:hover {
-  transform: scale(1.1);
-  background-color: #f2f6f3; 
-  color:darkcyan;
+  transform: scale(1.3);
+  color:rgb(63, 66, 66);
 }
 
 @media (max-width: 768px) {
@@ -69,7 +64,7 @@ onBeforeUnmount(() => {
     width: 50px;
     height: 50px;
     font-size: 1.3rem;
-    color: darkcyan;
+    color: rgb(63, 66, 66);
   }
 
 }
