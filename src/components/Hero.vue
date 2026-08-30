@@ -192,6 +192,7 @@ p {
   height: 100%;
   background: white;
   z-index: 2;
+  margin-left: 2rem;
 }
 .white-reveal {
   position: absolute;
@@ -211,7 +212,7 @@ p {
 position: relative;
   z-index: 3;
   text-align: center;
-  max-width: 800px;
+  max-width: 1800px;
   margin-top: -8rem;
   
   color: black;
@@ -258,7 +259,7 @@ position: relative;
     height: 60vh;
   }
 
-}
+
 .fade-up-enter-from {
   opacity: 0;
   transform: translateY(60px);
@@ -270,17 +271,27 @@ position: relative;
 .fade-up-enter-active {
   transition: all 1s ease;
 }
-@media (max-width: 768px) {
+
   .hero-video {
-    width: 90%;       
+    width: 100%;       
     max-width: none;
-    margin-left: 1rem;
+    margin-left: 2rem;
   }
   p {
     font-size: 1.1rem;
   }
+  
+.stair-text1 {
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+  color: #fdfdfd;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+  
+ 
 }
-
+}
 @media (max-width: 480px) {
   .hero-video {
     width: 90%;       
@@ -288,11 +299,38 @@ position: relative;
    p {
     font-size: 1.1rem;
   }
+  
+}
+@media (max-width: 600px) {
+
   .stair-text {
+    width: 100%;
+    box-sizing: border-box;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 1rem;
     font-size: 1.1rem;
   }
+
   .stair-text span {
-  font-size: 1rem;
-}
+    font-size: 1.3rem;
+  }
+
+  .stair-text span:nth-child(1) {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+
+  .stair-text span:nth-child(2) {
+    margin-left: 30px;
+  }
+
+  .stair-text span:nth-child(3) {
+    margin-left: 60px;
+  }
+
+  .stair-text span:nth-child(4) {
+    margin-left: 90px;
+  }
 }
 </style>

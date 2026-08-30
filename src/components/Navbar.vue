@@ -156,7 +156,7 @@ function switchLang() {
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  margin-left: 1px;
+  margin-left: 21px;
 }
 .hamburger {
   display: none;
@@ -233,6 +233,7 @@ function switchLang() {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    margin-right: 28px;
   }
 .hamburger span {
   width: 25px;
@@ -240,6 +241,7 @@ function switchLang() {
   background-color: currentColor;
   border-radius: 2px;
   color: #cacece;
+  margin-right: 8px;
 }
   .bar {
     width: 24px;

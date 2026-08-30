@@ -18,9 +18,10 @@
       <h2 data-aos="fade-up">Proyectos Recientes</h2>
       <div class="projects">
         <div class="project-card" data-aos="flip-up" v-for="(project, index) in portfolio" :key="index">
+           <h3>{{ project.titulo }}</h3>
           <img :src="project.imagen" :alt="project.titulo" />
-          <h3>{{ project.titulo }}</h3>
-           <a :href="project.link" target="_blank" class="project-link">Ver proyecto</a>
+        
+           <a :href="project.link" target="_blank" class="project-link">Ver proyecto →</a>
         </div>
       </div>
     </section>
@@ -156,7 +157,7 @@
     <div class="card">
       <span class="step-number">04</span>
       <h3>Lanzamiento</h3>
-      <p>Optimizamos cada detalle, realizamos pruebas y lanzamos tu web lista para atraer clientes desde el primer día. No pagas hasta que la web esté funcionando.</p>
+      <p>Optimizamos cada detalle, realizamos pruebas y lanzamos tu web lista para atraer clientes desde el primer día. </p>
     </div>
   </div>
     </section>
@@ -289,7 +290,7 @@ const portfolio = [
     
     {
       titulo: 'Web Design',
-      imagen: '/images/proyecto7.png',
+      imagen: '/images/Innovaweb.png',
       link: 'https://paginaswebeconomicas-cristinavodacom.es/'
     },  
   
@@ -340,9 +341,8 @@ onMounted(() => {
 .home {
   position: relative;
   min-height: 80vh;
-  width: 90%;
+  width: 100%;
   max-width: 100%;
-  margin-left: 1rem;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -451,7 +451,7 @@ onMounted(() => {
 }
 
 .line-separator {
-  width: 100%;
+  width: 90%;
   max-width: 100%;
   height: 1px;
   background: linear-gradient(to right,  rgb(112, 112, 116), rgb(235, 232, 232), rgb(81, 81, 83));
@@ -537,6 +537,9 @@ onMounted(() => {
   font-size: 0.95rem;
   line-height: 1.75;
 }
+.section- {
+  width: 70%;
+}
 @media (max-width: 1200px) and (min-width: 768px) {
  
   .process-cards {
@@ -581,22 +584,21 @@ onMounted(() => {
   
   }
   .card {
-    max-width: 200px; 
-    width: 100%;      
-    margin-left: -10%; 
-    margin-right: 10%;
-    height: 250px;     
+    max-width: 150px; 
+    width: 85%;      
+    margin-right: 5px;     
   }
 }
 
 @media (max-width: 480px) {
   .process-cards {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 0.5rem;
+    width: 90%;
   }
   .card {
-    width: 105%;
-    margin-left: -7%;
+    width: 85%;
+    margin-left: -18%;
   }
 }
 
@@ -655,12 +657,13 @@ onMounted(() => {
   display: block;
 }
 .section-divider {
-  width: 100%;
+  width: 85%;
   height: 1px;
   background: linear-gradient(to right,rgb(148, 150, 150) , rgb(194, 195, 197), rgb(156, 158, 158));
   border: none;
-  margin: 4rem auto;
+  margin: 3rem  auto;
   opacity: 0.6;
+ 
 }
 
 
@@ -726,7 +729,7 @@ onMounted(() => {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   width: 100%;
-margin-bottom: 4rem;
+  margin-bottom: 4rem;
 }
 
 .project-card h3 {
@@ -745,7 +748,9 @@ margin-bottom: 4rem;
 }
 
 .project-link:hover {
-  color: #107e7e; }
+  color: #191a1a;
+font-weight: 800;
+border-bottom: 1px solid #242323; }
 
 .pricing-container {
   display: flex;
@@ -763,10 +768,12 @@ margin-bottom: 4rem;
   border: 1px solid #dedbd5;
   border-radius: 0;
   box-shadow: none;
+  list-style: none!important;
   transition:
     transform 0.35s ease,
     box-shadow 0.35s ease,
     border-color 0.35s ease;
+
 }
 
 .pricing-card:hover {
@@ -853,7 +860,7 @@ h2 {
   margin-bottom: 1.8rem;
 
   border: none !important;
-  border-bottom: 2px solid rgba(73, 75, 75, 0.849) !important;
+  border-bottom: 1px solid rgba(73, 75, 75, 0.849) !important;
   background: transparent;
   outline: none;
 
@@ -911,7 +918,7 @@ margin: 1rem auto 0;
 width: 80%;
 }
 .line-separator {
-  width: 350px;}
+  max-width: 350px;}
  .contact-form {
     width: 90%;
     padding: 0,5rem;
@@ -932,6 +939,26 @@ width: 80%;
 @media (max-width: 480px) {
   .hero-content h1 {
     font-size: 1.8rem;
+
+    .stair-text1 {
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+  justify-content:flex-start;
+   font-size: 1.3rem;
+  color: #fdfdfd;
+
+  text-shadow:
+    -1px -1px 0 #363636,
+     1px -1px 0 #353434,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+
+  gap: 0.5rem;
+  margin-top: 3.5rem;
+  margin-left: -40px;
+}
+
   }
   .hero-content p {
     font-size: 1rem;
@@ -940,7 +967,15 @@ width: 80%;
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
   }
+   .section-divider {
+    width: 90%;
+    margin: 2.5rem auto;
+  }
+  .process-cards-card {
+    max-width: 150px;
+  }
 }
+
 
 @media (max-width: 1400px) {
   .process-cards {

@@ -10,10 +10,11 @@
         :key="index"
         data-aos="fade-up"
       >
+        <h3>{{ project.titulo }}</h3>
         <img :src="project.imagen" :alt="project.titulo" />
 
         <div class="project-info">
-          <h3>{{ project.titulo }}</h3>
+       
           <a
             :href="project.link"
             target="_blank"
@@ -60,7 +61,7 @@ const portfolio = [
   
    {
     titulo: 'Web Design',
-    imagen: '/images/proyecto7.png',
+    imagen: '/images/Innovaweb.png',
     link: 'https://paginaswebeconomicas-cristinavodacom.es/'
   },
   
@@ -81,7 +82,8 @@ const portfolio = [
   padding: 2rem;
   border-radius: 0px;
   text-align: center;
-  width: 350px;
+ width: 270px;
+  height: 480px;
   box-shadow: 0 4px 5px rgba(0,0,0,0.1);
   transition: transform 0.3s,  box-shadow 0.3s ease;
 }
@@ -98,24 +100,31 @@ const portfolio = [
 
 .project-card img {
   width: 98%;
+  height: 70%;
   border-radius: 0px;
   margin-bottom: 1rem;
 }
-roject-card h3 {
+.project-card h3 {
   margin-top: 0.8rem;
-  color: #0f4392;
+  color: #454647;
+  font-family: "Roboto Slab";
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
 }
 
 .project-link {
   display: inline-block;
   margin-top: 0.5rem;
-  color: #1e90ff; 
-  text-decoration: underline;
+  font-family: 'Roboto Slab';
+  color: #474849; 
+  text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .project-link:hover {
-  color: #4b4e4e; }
+  color: #171818;
+  font-weight: 800;
+border-bottom: 1px solid black }
  
 </style>

@@ -102,7 +102,7 @@
 }
 
 .footer h2 {
-  color: #555758;
+  color: #f4f7f8;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
   margin-bottom: 0.5rem;
 }
